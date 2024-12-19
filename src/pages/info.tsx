@@ -1,4 +1,7 @@
+// pages/info.js
 import React from 'react';
+import Image from 'next/image';
+
 export default function InfoPage() {
   return (
     <>
@@ -13,7 +16,7 @@ export default function InfoPage() {
           Hier kannst du mehr über unsere Geschichte, unsere Werte und unser Team erfahren.
           Wir sind stolz darauf, ...
         </p>
-        <img src="/img/team.jpg" alt="Unser Team" />
+        <Image src="/img/team.jpg" alt="Unser Team" width={500} height={300} />
       </section>
       <section className="our-services">
         <h2>Unsere Leistungen</h2>
@@ -37,6 +40,6 @@ export default function InfoPage() {
         </p>
         <a href="mailto:info@deinefirma.de" className="email-link">Schreibe uns!</a>
       </section>
-      </>
+    </>
   );
 }

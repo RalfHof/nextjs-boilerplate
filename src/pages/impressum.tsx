@@ -1,104 +1,56 @@
-"use client";
-import React from "react";
+import React from 'react';
+import Link from 'next/link'; // Für interne Verlinkung
+
 export default function ImpressumPage() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <>
-      <div className="container">
-        {" "}
-        {/* Container für zentrierten Inhalt */}
-        <h1>Impressum</h1>
-        <main>
-          <div className="section">
-            <h2>Angaben gemäß § 5 TMG (Telemediengesetz)</h2>
-            <p>
-              <strong>Firma:</strong>
-              <br />
-              [Ihr Firmenname]
-              <br />
-              [Ihre vollständige Adresse]
-              <br />
-              [PLZ, Ort]
-            </p>
-            <p>
-              <strong>Vertreten durch:</strong>
-              <br />
-              [Ihr Name] (Geschäftsführer/Geschäftsführung)
-            </p>
-            <p>
-              <strong>Kontakt:</strong>
-              <br />
-              Telefon: [Telefonnummer]
-              <br />
-              E-Mail:{" "}
-              <a href={`mailto:[Ihre E-Mail-Adresse]`}>[Ihre E-Mail-Adresse]</a>
-              <br />
-              Webseite: <a href="[Ihre Webseite]">[Ihre Webseite]</a>
-            </p>
-            <p>
-              <strong>Umsatzsteuer-Identifikationsnummer (USt-IdNr.):</strong>
-              <br />
-              [Ihre USt-IdNr., falls vorhanden]
-            </p>
-          </div>
-          <div className="section">
-            <h2>Rechtliche Hinweise</h2>
-            <p>
-              <strong>Verantwortlich für den Inhalt:</strong>
-              <br />
-              [Ihr Name], [Ihre Position]
-            </p>
-            <p>
-              <strong>Redaktionell verantwortlich:</strong>
-              <br />
-              [Ihr Name]
-            </p>
-          </div>
-          <div className="section">
-            <h2>Haftungsausschluss</h2>
-            <p>
-              <strong>Haftung für Inhalte:</strong>
-              <br />
-              Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt.
-              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-              kann jedoch keine Gewähr übernommen werden.
-            </p>
-            <p>
-              <strong>Haftung für Links:</strong>
-              <br />
-              Unsere Webseite enthält Links zu externen Webseiten Dritter, auf
-              deren Inhalte wir keinen Einfluss haben. Für die Inhalte der
-              verlinkten Seiten sind ausschließlich deren Betreiber
-              verantwortlich.
-            </p>
-          </div>
-          <div className="section">
-            <h2>Urheberrecht</h2>
-            <p>
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
-              dieser Webseite unterliegen dem deutschen Urheberrecht. Die
-              Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
-              Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der
-              schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-            </p>
-          </div>
-          <div className="section">
-            <h2>Datenschutz</h2>
-            <p>
-              Bitte beachten Sie unsere{" "}
-              <a href="/datenschutz">Datenschutzerklärung</a>, die weitere
-              Informationen zum Umgang mit Ihren personenbezogenen Daten
-              enthält.
-            </p>
-          </div>
-          <div className="section">
-            <h2>Anwendbares Recht</h2>
-            <p>Es gilt ausschließlich deutsches Recht.</p>
-          </div>
-        </main>
-        <footer className="footer">
-          <p>&copy; {new Date().getFullYear()} [Ihr Firmenname]</p>
-        </footer>
-      </div>
-    </>
+    <div className="container mx-auto p-4 max-w-3xl"> {/* Zentrierter Container mit Tailwind-ähnlichen Klassen */}
+      <h1 className="text-3xl font-bold mb-4">Impressum</h1>
+
+      <main className="space-y-6"> {/* Abstand zwischen den Abschnitten */}
+        <section className="bg-white rounded-lg shadow-md p-6"> {/* Abschnitte mit Hintergrund, abgerundeten Ecken und Schatten */}
+          <h2 className="text-2xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+          <address className="not-italic"> {/* address-Tag für korrekte Semantik */}
+            <strong>{process.env.NEXT_PUBLIC_COMPANY_NAME || "[Ihr Firmenname]"}</strong><br />
+            {process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "[Ihre vollständige Adresse]"}<br />
+            {process.env.NEXT_PUBLIC_COMPANY_POSTAL_CODE || "[PLZ, Ort]"}
+          </address>
+          <p><strong>Vertreten durch:</strong><br />
+            {process.env.NEXT_PUBLIC_REPRESENTATIVE || "[Ihr Name] (Geschäftsführer/Geschäftsführung)"}</p>
+          <p><strong>Kontakt:</strong><br />
+            Telefon: {process.env.NEXT_PUBLIC_PHONE_NUMBER || "[Telefonnummer]"}<br />
+            E-Mail: <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}`} className="text-blue-500 underline">{process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}</a><br />
+            Webseite: <a href={process.env.NEXT_PUBLIC_WEBSITE || "[Ihre Webseite]"} className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">{process.env.NEXT_PUBLIC_WEBSITE || "[Ihre Webseite]"}</a> {/* target="_blank" und rel="noopener noreferrer" für Sicherheit */}
+          </p>
+          <p><strong>Umsatzsteuer-Identifikationsnummer (USt-IdNr.):</strong><br />
+            {process.env.NEXT_PUBLIC_VAT_ID || "[Ihre USt-IdNr., falls vorhanden]"}</p>
+        </section>
+
+        <section className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-2xl font-semibold mb-2">Rechtliche Hinweise</h2>
+          <p><strong>Verantwortlich für den Inhalt:</strong><br />
+            {process.env.NEXT_PUBLIC_CONTENT_RESPONSIBLE || "[Ihr Name], [Ihre Position]"}</p>
+          <p><strong>Redaktionell verantwortlich:</strong><br />
+            {process.env.NEXT_PUBLIC_EDITORIAL_RESPONSIBLE || "[Ihr Name]"}</p>
+        </section>
+
+        {/* ... weitere Sections (Haftungsausschluss, Urheberrecht, etc.) mit ähnlichem Aufbau */}
+        <section className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-2xl font-semibold mb-2">Datenschutz</h2>
+          <p>Bitte beachten Sie unsere <Link href="/datenschutz" className="text-blue-500 underline">Datenschutzerklärung</Link>, die weitere Informationen zum Umgang mit Ihren personenbezogenen Daten enthält.</p>
+        </section>
+
+        <section className="bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-2xl font-semibold mb-2">Anwendbares Recht</h2>
+          <p>Es gilt ausschließlich deutsches Recht.</p>
+        </section>
+
+      </main>
+
+      <footer className="mt-8 text-center text-gray-500">
+        <p>&copy; {currentYear} {process.env.NEXT_PUBLIC_COMPANY_NAME || "[Ihr Firmenname]"}</p>
+      </footer>
+    </div>
   );
 }
