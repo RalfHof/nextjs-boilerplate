@@ -1,7 +1,7 @@
 // pages/info.js
 import React from 'react';
 import Image from 'next/image';
-import Footer from '@/src/components/footer';
+
 
 export default function InfoPage() {
   return (

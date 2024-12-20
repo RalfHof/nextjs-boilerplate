@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link'; // Für interne Verlinkung
 
 export default function ImpressumPage() {
-  const currentYear = new Date().getFullYear();
+ 
 
   return (
     <div className="container mx-auto p-4 max-w-3xl"> {/* Zentrierter Container mit Tailwind-ähnlichen Klassen */}
