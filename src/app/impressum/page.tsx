@@ -48,9 +48,9 @@ export default function ImpressumPage() {
 
       </main>
 
-      <footer className="mt-8 text-center text-gray-500">
+      {/* <footer className="mt-8 text-center text-gray-500">
         <p>&copy; {currentYear} {process.env.NEXT_PUBLIC_COMPANY_NAME || "[Ihr Firmenname]"}</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

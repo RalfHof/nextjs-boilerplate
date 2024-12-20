@@ -1,10 +1,12 @@
 // pages/info.js
 import React from 'react';
 import Image from 'next/image';
+import Footer from '@/src/components/footer';
 
 export default function InfoPage() {
   return (
     <>
+  
       <h1>Willkommen bei Linkify</h1>
       <p>
         Wir sind ein dynamisches Team, das sich auf innovative Lösungen spezialisiert hat.
@@ -40,6 +42,8 @@ export default function InfoPage() {
         </p>
         <a href="mailto:info@deinefirma.de" className="email-link">Schreibe uns!</a>
       </section>
+    
     </>
+    
   );
 }
