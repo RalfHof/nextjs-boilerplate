@@ -46,12 +46,12 @@ export default function Navigation() {
             </Link>
           </li>
           <li className="nav-item login">
-            <Link href="/login" className="nav-link">
+            <Link href="https://app.linkify.cloud/login" className="nav-link">
               Login
             </Link>
           </li>
           <li className="nav-item registrieren">
-            <Link href="/registrieren" className="nav-link">
+            <Link href="https://app.linkify.cloud/registrieren" className="nav-link">
               Registrieren
             </Link>
           </li>
