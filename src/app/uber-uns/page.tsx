@@ -100,7 +100,8 @@ export default function AboutUs() {
                 height={150}
                 style={{
                   ...styles.teamImage,
-                  objectPosition: member.objectPosition || "center", // Standard: mittig
+                  objectPosition: member.objectPosition || "center",
+                  marginTop: "50px"
                 }}
               />
               <p style={styles.teamName}>{member.name}</p>

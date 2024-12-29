@@ -118,7 +118,6 @@ html,
   margin-bottom: 15px;
   color: #2c3e50;
   text-align: center;
-
 }
 
 .content {
@@ -181,7 +180,6 @@ a:hover {
 .privacy-link a:hover {
   color: #1abc9c;
 }
-
 
 /* ----------------------------------------------------- */
 
@@ -298,9 +296,7 @@ a:hover {
   margin: 0 auto;
   padding: 40px;
   font-family: 'Inter', sans-serif;
-  /* Moderne Schriftart für bessere Lesbarkeit */
   color: #333;
-  /* Standardtextfarbe für bessere Lesbarkeit */
   line-height: 1.6;
 }
 
@@ -312,17 +308,13 @@ a:hover {
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 12px;
-  /* Abgerundete Ecken für modernes Design */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  /* Stärkerer Schatten für Tiefenwirkung */
   transition: all 0.3s ease-in-out;
-  /* Sanfter Übergangseffekt */
 }
 
 .info-introduction h1 {
   font-size: 36px;
   color: #005f8c;
-  /* Dunkleres Blau für starke visuelle Hierarchie */
   margin-bottom: 16px;
   font-weight: 700;
   line-height: 1.3;
@@ -364,7 +356,6 @@ a:hover {
 .info-features li::before {
   content: "✔";
   color: #4CAF50;
-  /* Grüner Haken für positive Markierung */
   margin-right: 12px;
   font-size: 24px;
 }
@@ -381,21 +372,14 @@ a:hover {
 .info-features,
 .info-conclusion {
   border-radius: 12px;
-  /* Einheitliches modernes Design */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  /* Weicher Schatten */
-  transition: all 0.3s ease;
-  /* Sanfter Übergangseffekt */
 }
 
 .info-introduction:hover,
 .info-benefits:hover,
 .info-features:hover,
 .info-conclusion:hover {
-  transform: translateY(-5px);
-  /* Hover-Effekt für interaktive Elemente */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  /* Erhöhter Schatten bei Hover */
 }
 
 /* Responsivität */
@@ -406,7 +390,6 @@ a:hover {
 
   .info-introduction h1 {
     font-size: 28px;
-    /* Kleinere Schriftgröße für die Header */
   }
 
   .info-introduction p,
@@ -414,7 +397,6 @@ a:hover {
   .info-features li,
   .info-conclusion p {
     font-size: 16px;
-    /* Kleinere Schriftgröße für besseren Lesekomfort auf mobilen Geräten */
   }
 
   .info-introduction,
@@ -427,6 +409,45 @@ a:hover {
   .info-benefits li,
   .info-features li {
     font-size: 16px;
-    /* Kleinere Schrift für Aufzählungspunkte */
   }
+}
+
+/* ---------------------------------------- */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 813px;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 3px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact h2 {
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.contact p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.contact a.email-link {
+  display: inline-block;
+  padding: 15px 70px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact a.email-link:hover {
+  background-color: #444;
 }
