@@ -19,28 +19,29 @@ export default function Navigation() {
 
   return (
     <header className="header">
-      {/* Logo */}
       <div className="logo">
         <Logo />
       </div>
 
-      {/* Burger-Menü */}
-      {isMobile && (
+      {/* Burger-Menü für mobile Ansicht */}
+      {isMobile && !isMenuOpen && ( // Zeige Burger-Menü nur, wenn das Menü nicht offen ist
         <button
           className="burger-menu"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle isMenuOpen
         >
           ☰
         </button>
       )}
 
       {/* Navigation */}
-      <nav className={`main-navigation ${isMenuOpen && isMobile ? "open" : ""}`}>
+      <nav className={`main-navigation ${isMenuOpen ? "open" : ""}`}>
+        {isMenuOpen && isMobile && (
+          <div id="CloseMenuDIV">
+            <p id="CloseMenu" onClick={() => setIsMenuOpen(false)}>X</p>
+          </div>
+        )}
         <ul className="nav-list">
-          <li className="nav-item">
-            
-          </li>
-          <li className="nav-item">
+          <li>
             <Link href="/technology" className="nav-link">
               Technology
             </Link>
@@ -51,7 +52,7 @@ export default function Navigation() {
             </Link>
           </li>
           <li className="nav-item registrieren">
-            <Link href="https://app.linkify.cloud/registrieren" className="nav-link">
+            <Link href="https://app.linkify.cloud/registrierung" className="nav-link">
               Registrieren
             </Link>
           </li>
@@ -60,4 +61,3 @@ export default function Navigation() {
     </header>
   );
 }
-

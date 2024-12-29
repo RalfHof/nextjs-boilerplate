@@ -1,49 +1,40 @@
 // pages/info.js
 import React from 'react';
-import Image from 'next/image';
-
 
 export default function InfoPage() {
   return (
-    <>
-  
-      <h1>Willkommen bei Linkify</h1>
-      <p>
-        Wir sind ein dynamisches Team, das sich auf innovative Lösungen spezialisiert hat.
-        Unsere Leidenschaft liegt darin, ...
-      </p>
-      <section className="about-us">
-        <h2>Über uns</h2>
-        <p>
-          Hier kannst du mehr über unsere Geschichte, unsere Werte und unser Team erfahren.
-          Wir sind stolz darauf, ...
-        </p>
-        <Image src="/img/team.jpg" alt="Unser Team" width={500} height={300} />
+    <div id='InfoContainer'>
+      <section className="info-introduction">
+        <h1>Schluss mit manuellem Aufwand! Linkify automatisiert Lexware Office & DMS.</h1>
+        <p>Steigern Sie Ihre Effizienz und sparen Sie wertvolle Zeit!</p>
+        <p>Linkify verbindet Lexware Office mit Ihrem Dokumentenmanagementsystem (DMS) und automatisiert lästige Routineaufgaben.</p>
       </section>
-      <section className="our-services">
-        <h2>Unsere Leistungen</h2>
+
+      <section className="info-benefits">
+        <h2>Ihre Vorteile:</h2>
         <ul>
-          <li>Beratung</li>
-          <li>Entwicklung</li>
-          <li>Design</li>
+          <li>Automatische Belegerfassung: Rechnungen, Lieferscheine und andere Belege werden automatisch erkannt, in Lexware Office verbucht und im DMS archiviert.</li>
+          <li>Zeitersparnis: Manuelle Dateneingabe und Ablage gehören der Vergangenheit an.</li>
+          <li>Weniger Fehler: Die automatisierte Verarbeitung minimiert das Risiko von Fehlern.</li>
+          <li>Besserer Überblick: Alle wichtigen Dokumente sind zentral und jederzeit verfügbar.</li>
+          <li>Verbesserte Zusammenarbeit: Nahtlose Integration von Lexware Office und DMS für optimierte Teamarbeit.</li>
         </ul>
-        <p>
-          Wir bieten maßgeschneiderte Lösungen für deine individuellen Bedürfnisse.
-        </p>
       </section>
-      <section className="contact">
-        <h2>Kontakt</h2>
-        <p>
-          Du erreichst uns unter:
-          <br />
-          Telefon: +49 123 456 789
-          <br />
-          E-Mail: info@deinefirma.de
-        </p>
-        <a href="mailto:info@deinefirma.de" className="email-link">Schreibe uns!</a>
+
+      <section className="info-features">
+        <h2>Linkify bietet Ihnen:</h2>
+        <ul>
+          <li>Intelligente OCR-Texterkennung: Extrahiert automatisch relevante Daten aus Ihren Dokumenten.</li>
+          <li>Flexible Workflows: Passen Sie die Automatisierung an Ihre individuellen Bedürfnisse an.</li>
+          <li>Direkte Integration: Nahtlose Verbindung mit Lexware Office und gängigen DMS-Systemen.</li>
+          <li>Benutzerfreundliche Oberfläche: Einfache Bedienung und intuitive Navigation.</li>
+          <li>Sicherer Datenschutz: Ihre Daten werden sicher und DSGVO-konform verarbeitet.</li>
+        </ul>
       </section>
-    
-    </>
-    
+
+      <section className="info-conclusion">
+        <p>Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern wollen.</p>
+      </section>
+    </div>
   );
 }

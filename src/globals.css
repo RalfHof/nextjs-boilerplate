@@ -1,11 +1,21 @@
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+
 /* Header Styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
   background-color: #1e293b;
   color: white;
+  width: 100%;
+  height: 60px;
 }
 
 /* Logo */
@@ -14,15 +24,19 @@
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .logo-text:hover {
-  color: #38bdf8; /* Hellblau */
+  color: #38bdf8;
+  /* Hellblau */
 }
 
 /* Navigation */
 .main-navigation {
   display: flex;
+  margin-right: 20px;
+
 }
 
 .nav-list {
@@ -33,10 +47,6 @@
   padding: 0;
 }
 
-.nav-item {
-  position: relative;
-}
-
 .nav-link {
   text-decoration: none;
   color: #f8fafc;
@@ -45,12 +55,14 @@
 }
 
 .nav-link:hover {
-  color: #38bdf8; /* Hellblau */
+  color: #38bdf8;
+  /* Hellblau */
 }
 
 .login,
 .registrieren {
-  margin-left: auto; /* Rechtsbündig */
+  margin-left: auto;
+  /* Rechtsbündig */
 }
 
 .burger-menu {
@@ -66,19 +78,20 @@
 .footer {
   background-color: #1e293b;
   color: white;
-  text-align: center;
-  padding: 10px;
+  width: 100%;
+  height: 60px;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  left: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .footer-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 50px;
 }
 
 .footer-links a {
@@ -87,23 +100,329 @@
 }
 
 .footer-links a:hover {
-  color: #38bdf8; /* Hellblau */
+  color: #38bdf8;
+  /* Hellblau */
 }
 
-/* Responsives Design */
+/* ----------------------------------------------------- */
+
+.impressum-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: #34495e;
+  border-bottom: 2px solid #2980b9;
+  margin-bottom: 10px;
+}
+
+.company-address,
+.contact,
+.representative,
+.vat-id,
+.content-responsible,
+.editorial-responsible,
+.privacy-link,
+.law-text {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.company-name {
+  font-weight: bold;
+}
+
+.phone-number,
+.email-link,
+.website-link {
+  font-style: italic;
+}
+
+.privacy-link a {
+  font-weight: bold;
+  color: #16a085;
+}
+
+.privacy-link a:hover {
+  color: #1abc9c;
+}
+
+
+/* ----------------------------------------------------- */
+
+
+.datenschutz-page {
+  background-color: #f9f9f9;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+
+}
+
+#ContainerDIV {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  padding: 2rem;
+  margin-bottom: 80px;
+  width: 78%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.purposes-list,
+.legal-basis-list,
+.rights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.DataProtectionParagraphs {
+  line-height: 1.2;
+}
+
+
+/* -------------------------------------------------------------- */
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .nav-list {
-    display: none; /* Links ausblenden */
+
+  .main-navigation {
+    background-color: #1e293b;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    display: none;
   }
 
-  .main-navigation.open .nav-list {
-    display: block; /* Menü anzeigen */
-    background-color: #1e293b;
-    padding: 10px;
+  .open {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li {
+    margin: 0;
+    padding: 0;
+  }
+
+  #CloseMenuDIV {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+  }
+
+  #CloseMenu {
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 30px;
+    transform: rotate(90deg);
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
   }
 
   .burger-menu {
-    display: block; /* Burger-Menü anzeigen */
+    display: block;
+    margin-right: 5px;
+    font-size: 25px;
   }
 }
 
+/* ---------------------------------------*/
+
+#InfoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.info-introduction {
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-introduction h1 {
+  font-size: 32px;
+  color: #0064a1;
+  margin-bottom: 10px;
+}
+
+.info-introduction p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Sektion für die Vorteile */
+.info-benefits {
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-benefits h2 {
+  font-size: 28px;
+  color: #0064a1;
+  margin-bottom: 20px;
+}
+
+.info-benefits ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-benefits li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info-benefits li::before {
+  content: "✔";
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Sektion für die Features */
+.info-features {
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-features h2 {
+  font-size: 28px;
+  color: #0064a1;
+  margin-bottom: 20px;
+}
+
+.info-features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-features li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info-features li::before {
+  content: "✔";
+  color: #28a745;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Sektion für die Abschluss-Information */
+.info-conclusion {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-conclusion p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+  .info-introduction h1 {
+    font-size: 24px;
+  }
+
+  .info-introduction p,
+  .info-benefits li,
+  .info-features li,
+  .info-conclusion p {
+    font-size: 16px;
+  }
+
+  .info-introduction,
+  .info-benefits,
+  .info-features,
+  .info-conclusion {
+    padding: 20px;
+  }
+}
