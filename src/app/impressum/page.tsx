@@ -19,7 +19,7 @@ export default function ImpressumPage() {
             <strong>Vertreten durch:</strong><br />
             {process.env.NEXT_PUBLIC_REPRESENTATIVE || "[Ihr Name] (Geschäftsführer/Geschäftsführung)"}
           </p>
-          <p className="contact">
+          <p className="contactImpressum">
             <strong>Kontakt:</strong><br />
             Telefon: <span className="phone-number">{process.env.NEXT_PUBLIC_PHONE_NUMBER || "[Telefonnummer]"}</span><br />
             E-Mail: <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}`} className="email-link">{process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}</a><br />
