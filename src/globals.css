@@ -462,3 +462,42 @@ a:hover {
 .contact a.email-link:hover {
   background-color: #444;
 }
+
+
+/* ---------------------------------- */
+
+
+#ContainerNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+  background: #f4f4f9;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+#NotFoundHeader {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff5c5c;
+  margin-bottom: 20px;
+}
+
+#NotFoundLink {
+  background-color: #ff5c5c;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#NotFoundLink:hover {
+  background-color: #e04e4e;
+  transform: translateY(-3px);
+}
