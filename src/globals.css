@@ -233,9 +233,7 @@ a:hover {
   line-height: 1.2;
 }
 
-
 /* -------------------------------------------------------------- */
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -463,9 +461,7 @@ a:hover {
   background-color: #444;
 }
 
-
 /* ---------------------------------- */
-
 
 #ContainerNotFound {
   display: flex;
