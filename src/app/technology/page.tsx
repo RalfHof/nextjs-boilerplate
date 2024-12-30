@@ -46,55 +46,66 @@ export default function TechnologyPage() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "20px",
     lineHeight: "1.5",
-    borderRadius: "10px",
-    height: "1400px"
-  },
-  heroSection: {
-    textAlign: "center",
-    padding: "10px 50px",
-    backgroundColor: "linear-gradient(90deg, #1e3a8a, #1e293b)",
     borderRadius: "12px",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+    backgroundColor: "#f5f5f5",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingBottom: "120px",
   },
 
   title: {
     fontSize: "2.5rem",
     fontWeight: "bold",
-    marginBottom: "20px",
+    color: "#007acc",
     textAlign: "center",
-    color: "#007acc"
   },
+
+  heroSection: {
+    padding: "20px",
+    borderRadius: "12px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+    backgroundColor: "#fff",
+    width: "82%",
+    maxWidth: "800px",
+  },
+
   subtitle: {
     fontSize: "1.5rem",
-    marginBottom: "15px",
     fontStyle: "italic",
+    textAlign: "center",
   },
+
   text: {
     fontSize: "1.2rem",
-    margin: "15px 0",
-    textAlign: "left",
+    textAlign: "center",
   },
+
   section: {
     marginTop: "40px",
-    padding: "20px",
+    padding: "30px",
     backgroundColor: "#ffffff",
-    borderRadius: "8px",
+    borderRadius: "12px",
     boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
+    width: "80%",
+    maxWidth: "800px",
   },
+
   sectionTitle: {
     fontSize: "2rem",
     borderBottom: "2px solid #64748b",
     paddingBottom: "8px",
     marginBottom: "20px",
+    textAlign: "center",
   },
+
   list: {
     listStyleType: "disc",
-    paddingLeft: "40px",
+    paddingLeft: "20px",
   },
+
   listItem: {
     fontSize: "1.2rem",
     marginBottom: "10px",
