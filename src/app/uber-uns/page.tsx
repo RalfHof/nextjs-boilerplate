@@ -128,10 +128,10 @@ const styles: Record<string, React.CSSProperties> = {
     paddingBottom: "60px",
     lineHeight: " 1.2",
     backgroundColor: "#f5f5f5",
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-    flexDirection:"column",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   },
   section: {
     marginBottom: "40px",
@@ -139,13 +139,15 @@ const styles: Record<string, React.CSSProperties> = {
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
     padding: "20px",
     backgroundColor: "#fff",
-
+    width: "90%",
+    maxWidth: "800px", // Maximale Breite der Abschnitte
   },
   title: {
     fontSize: "2.5rem",
     color: "#007acc",
-    textAlign: "center"
-
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "800px", // Maximale Breite des Titels
   },
   subtitle: {
     fontSize: "1.8rem",
@@ -164,8 +166,10 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(10px, 2fr))",
-    gap: "20px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    width: "100%",
+    marginBottom: "50px",
+    gap: "50px",
   },
   teamMember: {
     textAlign: "center",
