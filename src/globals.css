@@ -119,12 +119,15 @@ html,
 /* Titel der Seite */
 .page-title {
   font-size: 2em;
-  margin-bottom: 20px;
   color: #007acc;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+
+
 /* Kontaktdaten und Abschnitte */
-.contactImpressum,
 .section {
   background: #fff;
   border-radius: 8px;
@@ -191,22 +194,24 @@ a:hover {
   justify-content: center;
   flex-direction: column;
   font-family: Arial, sans-serif;
-
 }
 
 #ContainerDIV {
-  border: 1px solid #ddd;
-  background-color: #fff;
   border-radius: 8px;
-  padding: 0;
   margin: 0;
   padding: 2rem;
   margin-bottom: 80px;
   margin-left: 20px;
   margin-right: 20px;
   max-width: 800px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.page-title-DataProtection {
+  font-size: 2em;
+  color: #007acc;
+  margin: 0;
+  text-align: center;
+  margin-top: 35px;
 }
 
 .section {
@@ -426,26 +431,32 @@ a:hover {
   padding: 0;
   letter-spacing: 3px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  gap: 10px;
 }
 
 .contact h2 {
-  font-size: 4rem;
   padding: 0;
   margin: 0;
+  font-size: 3rem;
+  color: #007acc;
 }
 
 .contact p {
   font-size: 1.3rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .contact a.email-link {
   display: inline-block;
-  padding: 15px 70px;
+  padding: 15px 120px;
   background-color: #000;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 10px;
+
 }
 
 .contact a.email-link:hover {

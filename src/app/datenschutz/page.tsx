@@ -3,13 +3,15 @@
 export default function DatenschutzPage() {
   return (<>
     <div className="datenschutz-page">
-      <h1 className="page-title">Datenschutzerklärung</h1>
+      <h1 className="page-title-DataProtection">Datenschutzerklärung</h1>
       <div id="ContainerDIV">
+        <section className="section">
         <p className="intro">
           Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. In
           dieser Datenschutzerklärung informieren wir Sie darüber, wie wir Ihre
           personenbezogenen Daten erheben, verarbeiten und nutzen.
         </p>
+        </section>
         <section className="section responsible">
           <h2 className="section-title">1. Verantwortliche Stelle</h2>
           <p className="DataProtectionParagraphs">
