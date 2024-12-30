@@ -88,7 +88,7 @@ export default function InfoPage() {
 
 
 
-      {/*  <h2  className='RemoveMarginAndPaddingAll'>Ihre Vorteile:</h2>
+      <h2  className='RemoveMarginAndPaddingAll'>Ihre Vorteile:</h2>
         <ul  className='RemoveMarginAndPaddingAll'>
           {advantages.map((advantage, index) => (
             <li key={index}  className='RemoveMarginAndPaddingAll' >
@@ -109,7 +109,7 @@ export default function InfoPage() {
         <p  className='RemoveMarginAndPaddingAll'>
           Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern
           wollen.
-        </p> */}
+        </p>
     </div>
   </>
   )
