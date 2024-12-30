@@ -8,7 +8,7 @@ const teamMembers = [
     objectPosition: "center top", // Verschiebt das Bild nach unten
   },
   {
-    name: "Mark Erlich",
+    name: "Mark Ehrlich",
     image: "/img/bild2.jpg", // Pfad zum Bild von Mark Erlich
   },
   {
@@ -25,8 +25,8 @@ const teamMembers = [
 export default function AboutUs() {
   return (
     <div style={styles.container}>
+      <h1 style={styles.title}>Über uns</h1>
       <section style={styles.section}>
-        <h1 style={styles.title}>Über uns</h1>
         <p style={styles.subtitle}>
           <strong>Die Brücke zwischen Lexware Office und Ihrem DMS</strong>
         </p>
@@ -90,25 +90,26 @@ export default function AboutUs() {
           und Lexware-Experten. Wir brennen für Innovation und haben es uns zur
           Aufgabe gemacht, die Arbeitswelt von morgen zu gestalten.
         </p>
-        <div style={styles.teamGrid}>
-          {teamMembers.map((member) => (
-            <div key={member.name} style={styles.teamMember}>
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={150}
-                height={150}
-                style={{
-                  ...styles.teamImage,
-                  objectPosition: member.objectPosition || "center",
-                  marginTop: "50px"
-                }}
-              />
-              <p style={styles.teamName}>{member.name}</p>
-            </div>
-          ))}
-        </div>
       </section>
+
+      <div style={styles.teamGrid}>
+        {teamMembers.map((member) => (
+          <div key={member.name} style={styles.teamMember}>
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={150}
+              height={150}
+              style={{
+                ...styles.teamImage,
+                objectPosition: member.objectPosition || "center",
+                marginTop: "50px"
+              }}
+            />
+            <p style={styles.teamName}>{member.name}</p>
+          </div>
+        ))}
+      </div>
 
       <section style={styles.section}>
         <h2 style={styles.subtitle}>Bereit für die Zukunft?</h2>
@@ -125,15 +126,28 @@ const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
     paddingBottom: "60px",
+    lineHeight: " 1.2",
+    backgroundColor: "#f5f5f5",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   },
   section: {
     marginBottom: "40px",
+    borderRadius: "5px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    padding: "20px",
+    backgroundColor: "#fff",
+    width: "90%",
+    maxWidth: "800px", // Maximale Breite der Abschnitte
   },
   title: {
     fontSize: "2.5rem",
     color: "#007acc",
-    textAlign: "center"
-
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "800px", // Maximale Breite des Titels
   },
   subtitle: {
     fontSize: "1.8rem",
@@ -152,8 +166,10 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 2fr))",
-    gap: "20px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    width: "100%",
+    marginBottom: "50px",
+    gap: "50px",
   },
   teamMember: {
     textAlign: "center",

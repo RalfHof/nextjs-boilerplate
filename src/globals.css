@@ -92,7 +92,9 @@ html,
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-links a {
