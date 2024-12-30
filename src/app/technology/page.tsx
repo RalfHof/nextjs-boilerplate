@@ -3,8 +3,8 @@
 export default function TechnologyPage() {
   return (
     <div style={styles.container}>
-      <section style={styles.section}>
-        <h1 style={styles.title}>Technologien</h1>
+      <h1 style={styles.title}>Technologien</h1>
+      <section style={styles.heroSection}>
         <p style={styles.subtitle}>
           <strong>Die Werkzeuge, die uns antreiben</strong>
         </p>
@@ -16,7 +16,7 @@ export default function TechnologyPage() {
       </section>
 
       <section style={styles.section}>
-        <h2 style={styles.subtitle}>Unsere Technologien:</h2>
+        <h2 style={styles.sectionTitle}>Unsere Technologien:</h2>
         <ul style={styles.list}>
           <li style={styles.listItem}>Next.js</li>
           <li style={styles.listItem}>TypeScript</li>
@@ -31,7 +31,7 @@ export default function TechnologyPage() {
       </section>
 
       <section style={styles.section}>
-        <h2 style={styles.subtitle}>Warum diese Technologien?</h2>
+        <h2 style={styles.sectionTitle}>Warum diese Technologien?</h2>
         <p style={styles.text}>
           Mit diesen Tools und Frameworks können wir moderne, performante und
           skalierbare Anwendungen erstellen, die sowohl effizient als auch
@@ -46,26 +46,51 @@ export default function TechnologyPage() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
+    maxWidth: "1200px",
+    margin: "0 auto",
     padding: "20px",
-    fontFamily: "'Arial', sans-serif",
-    color: "#475569",
+    fontFamily: "cursive",
+    lineHeight: "1.5",
+    borderRadius: "10px",
+    height: "1400px"
   },
-  section: {
-    marginBottom: "40px",
+  heroSection: {
+    textAlign: "center",
+    padding: "10px 50px",
+    backgroundColor: "linear-gradient(90deg, #1e3a8a, #1e293b)",
+    borderRadius: "12px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
   },
+
   title: {
     fontSize: "2.5rem",
-    color: "#1e293b",
+    fontWeight: "bold",
     marginBottom: "20px",
+    textAlign: "center",
+    color: "#007acc"
   },
   subtitle: {
-    fontSize: "1.8rem",
-    color: "#334155",
+    fontSize: "1.5rem",
     marginBottom: "15px",
+    fontStyle: "italic",
   },
   text: {
     fontSize: "1.2rem",
-    marginBottom: "10px",
+    margin: "15px 0",
+    textAlign: "left",
+  },
+  section: {
+    marginTop: "40px",
+    padding: "20px",
+    backgroundColor: "#ffffff",
+    borderRadius: "8px",
+    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
+  },
+  sectionTitle: {
+    fontSize: "2rem",
+    borderBottom: "2px solid #64748b",
+    paddingBottom: "8px",
+    marginBottom: "20px",
   },
   list: {
     listStyleType: "disc",
@@ -73,6 +98,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   listItem: {
     fontSize: "1.2rem",
-    marginBottom: "8px",
+    marginBottom: "10px",
+    padding: "5px 0",
+    borderBottom: "1px solid #e2e8f0",
   },
 };
