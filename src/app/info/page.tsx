@@ -14,6 +14,7 @@ export default function InfoPage() {
           Routineaufgaben.
         </p>
       </section>
+      
 
       {/* Vorteile */}
       <section style={styles.section}>
