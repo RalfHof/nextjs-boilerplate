@@ -8,7 +8,7 @@ const teamMembers = [
     objectPosition: "center top", // Verschiebt das Bild nach unten
   },
   {
-    name: "Mark Ehrlich",
+    name: "Marc Ehrlich",
     image: "/img/bild2.jpg", // Pfad zum Bild von Mark Erlich
   },
   {
