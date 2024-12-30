@@ -42,8 +42,8 @@ export default function Navigation() {
         )}
         <ul className="nav-list">
           <li>
-            <Link href="/technology" className="nav-link">
-              Technology
+            <Link href="/technologie" className="nav-link">
+              Technologie
             </Link>
           </li>
           <li className="nav-item login">
