@@ -125,7 +125,6 @@ const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
     paddingBottom: "60px", // Abstand zum Footer
-    fontFamily: "'Arial', sans-serif",
   },
   section: {
     marginBottom: "40px",

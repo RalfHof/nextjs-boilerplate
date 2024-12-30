@@ -49,7 +49,6 @@ const styles: Record<string, React.CSSProperties> = {
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "20px",
-    fontFamily: "cursive",
     lineHeight: "1.5",
     borderRadius: "10px",
     height: "1400px"
