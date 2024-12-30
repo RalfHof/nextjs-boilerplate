@@ -124,15 +124,16 @@ export default function AboutUs() {
 const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
-    paddingBottom: "60px", // Abstand zum Footer
+    paddingBottom: "60px",
   },
   section: {
     marginBottom: "40px",
   },
   title: {
     fontSize: "2.5rem",
-    color: "#1e293b",
-    marginBottom: "20px",
+    color: "#007acc",
+    textAlign: "center"
+
   },
   subtitle: {
     fontSize: "1.8rem",
@@ -151,7 +152,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 2fr))",
     gap: "20px",
   },
   teamMember: {

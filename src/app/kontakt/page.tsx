@@ -2,7 +2,7 @@
 export default function KontaktPage() {
   return (
     <>
-      <div style={{ backgroundColor: "#f9f9f9", height: "93vmax" }}>
+      <div style={{ backgroundColor: "#f9f9f9", height: "93%", overflow:"hidden" }}>
         <section className="contact">
           <h2>Kontakt</h2>
           <p>
