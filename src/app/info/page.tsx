@@ -55,7 +55,7 @@ export default function InfoPage() {
     <div id="ContainerInfo">
       <div id="ContainerHeader">
         <div id="ContentInHeader">
-          <h1 className="RemoveMarginAndPaddingAll" style={{ fontSize: "3rem" }}>
+          <h1 className="RemoveMarginAndPaddingAll" style={{ fontSize: "3rem", textDecoration: "line-through" }}>
             Schluss mit manuellem Aufwand!
           </h1>
           <p className="RemoveMarginAndPaddingAll">
@@ -67,6 +67,10 @@ export default function InfoPage() {
           </p>
           <p className="RemoveMarginAndPaddingAll">
             Steigern Sie Ihre Effizienz und sparen Sie wertvolle Zeit!
+          </p>
+          <p className='RemoveMarginAndPaddingAll' id='InfoFooterContent'>
+            Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern
+            wollen.
           </p>
         </div>
 
@@ -80,44 +84,46 @@ export default function InfoPage() {
         </div>
       </div>
 
-      <h2 className='SmallerHeader'>Ihre Vorteile:</h2>
-      <ul className='InfoUnsortedList'>
-        {advantages.map((advantage, index) => (
-          <li key={index} className='InfoListitems' >
-            <strong>{advantage.title}</strong> {advantage.description}
-          </li>
-        ))}
-      </ul>
+      <div id='ContainerPros'>
+        <h2 className='SmallerHeader' style={{ textAlign: "center", paddingBottom:"20px"}}>Ihre Vorteile:</h2>
+        <ul className='InfoUnsortedList' style={{ paddingLeft: "50px", paddingRight:"50px", listStyleType: "none", margin: "0" }}>
+          {advantages.map((advantage, index) => (
+            <li key={index} className='InfoListitems' style={{ color: "#fff", }} >
+              <strong>{advantage.title}</strong> {advantage.description}✅
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div id='LogoImages' >
         <div>
           <Image className='ImageItems' title='EcoDMS' src="/img/EcoDMS.png" alt='EcoDMS' width={200} height={200} /><span className='ContentImage'>EcoDMS</span></div>
-
-
         <div>
           <Image className='ImageItems' title='Linkify' src="/img/Linkify.png" alt='Linkify' width={200} height={200} /><span className='ContentImage'>Linkify</span>
         </div>
-
         <div>
           <Image className='ImageItems' title='Lexware' src="/img/Lexware.png" alt='Lexware' width={200} height={200} />
           <span className='ContentImage'>Lexware</span>
         </div>
       </div>
 
-      <h2 className='SmallerHeader'>Linkify bietet Ihnen:</h2>
-      <ul className='InfoUnsortedList'>
-        {features.map((feature, index) => (
-          <li className='InfoListitemsOffer' key={index} >
-            <strong>{feature.title}</strong> {feature.description}
-          </li>
-        ))}
-      </ul>
+      <div
+        id='ContainerLinkifyOffer'>
 
-      <p className='RemoveMarginAndPaddingAll'>
-        Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern
-        wollen.
-      </p>
-    </div>
+        <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", alignContent: "center", justifyContent: "center", flexDirection: "column", }}>
+          <h2 className='SmallerHeader' style={{ color: "#fff" }}>Linkify bietet Ihnen:</h2>
+
+          <ul className='InfoUnsortedList'>
+            {features.map((feature, index) => (
+              <li className='InfoListitemsOffer' key={index} >
+                <strong>{feature.title}</strong> {feature.description}
+              </li>
+            ))}
+          </ul>
+
+        </div>
+      </div>
+    </div >
   </>
   )
 }

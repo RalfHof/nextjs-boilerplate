@@ -245,7 +245,7 @@ a:hover {
     right: 0;
     top: 0;
     height: 100%;
-    width: 200px;
+    width: 250px;
     margin: 0;
     padding: 0;
     display: none;
@@ -517,7 +517,8 @@ a:hover {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  height: 1300px;
+  height: auto;
+  padding-bottom: 100px;
 }
 
 #ContainerHeader {
@@ -547,6 +548,23 @@ a:hover {
   margin-bottom: 15px;
 }
 
+#ContainerPros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+  background: linear-gradient(220deg, #f000ac 30%, #000000 50%);
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  height: 600px;
+  border-radius: 20% 10%;
+}
+
 #ContentInHeaderImg {
   max-width: 30%;
 }
@@ -559,17 +577,11 @@ a:hover {
 
 .SmallerHeader {
   font-size: 2rem;
-  color: #34495e;
   margin: 0;
   padding: 0;
   margin-top: 30px;
   margin-bottom: 10px;
 }
-
-.InfoUnsortedList {
-  padding-left: 20px;
-}
-
 
 #LogoImages {
   display: flex;
@@ -583,7 +595,6 @@ a:hover {
   border-radius: 50%;
   cursor: pointer;
 }
-
 
 .ContentImage {
   display: flex;
@@ -599,24 +610,22 @@ a:hover {
   color: #555;
 }
 
+#ContainerLinkifyOffer {
+  margin-top: 100px;
+  width: 100%;
+  background: linear-gradient(50deg, #00f024 30%, #000000 50%);
+  height: 600px;
+  border-radius: 10% 20%;
+}
+
 .InfoListitemsOffer {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.InfoListitems:hover {
-  background: linear-gradient(90deg, rgb(0, 26, 255) 10%, rgb(9, 255, 0) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
   font-weight: 900;
-}
-
-.InfoListitemsOffer:hover {
-  background: linear-gradient(90deg, rgb(0, 26, 255) 50%, rgb(9, 255, 0) 10%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  font-weight: 900;
+  list-style-type: none;
+  padding-right: 20px;
+  color: #fff;
 }
 
 .InfoUnsortedList .InfoListitems strong {
@@ -632,9 +641,9 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
 
-
   #ContainerInfo {
-    height: 1500px;
+    height: fit-content;
+    padding-bottom: 100px;
   }
 
   #ContainerHeader {
