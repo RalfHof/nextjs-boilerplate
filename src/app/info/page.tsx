@@ -58,20 +58,16 @@ export default function InfoPage() {
           <h1 className="RemoveMarginAndPaddingAll" style={{ fontSize: "3rem" }}>
             Schluss mit manuellem Aufwand!
           </h1>
-
           <p className="RemoveMarginAndPaddingAll">
             Linkify verbindet Lexware Office mit Ihrem Dokumentenmanagementsystem (DMS) und automatisiert
             lästige Routineaufgaben.
           </p>
-
           <p className="RemoveMarginAndPaddingAll">
             Linkify automatisiert Lexware Office & DMS.
           </p>
-
           <p className="RemoveMarginAndPaddingAll">
             Steigern Sie Ihre Effizienz und sparen Sie wertvolle Zeit!
           </p>
-
         </div>
 
         <div id="ContentInHeaderImg">
@@ -84,32 +80,43 @@ export default function InfoPage() {
         </div>
       </div>
 
+      <h2 className='SmallerHeader'>Ihre Vorteile:</h2>
+      <ul className='InfoUnsortedList'>
+        {advantages.map((advantage, index) => (
+          <li key={index} className='InfoListitems' >
+            <strong>{advantage.title}</strong> {advantage.description}
+          </li>
+        ))}
+      </ul>
+
+      <div id='LogoImages' >
+        <div>
+          <Image className='ImageItems' title='EcoDMS' src="/img/EcoDMS.png" alt='EcoDMS' width={200} height={200} /><span className='ContentImage'>EcoDMS</span></div>
 
 
+        <div>
+          <Image className='ImageItems' title='Linkify' src="/img/Linkify.png" alt='Linkify' width={200} height={200} /><span className='ContentImage'>Linkify</span>
+        </div>
 
+        <div>
+          <Image className='ImageItems' title='Lexware' src="/img/Lexware.png" alt='Lexware' width={200} height={200} />
+          <span className='ContentImage'>Lexware</span>
+        </div>
+      </div>
 
-      <h2  className='RemoveMarginAndPaddingAll'>Ihre Vorteile:</h2>
-        <ul  className='RemoveMarginAndPaddingAll'>
-          {advantages.map((advantage, index) => (
-            <li key={index}  className='RemoveMarginAndPaddingAll' >
-              <strong>{advantage.title}</strong> {advantage.description}
-            </li>
-          ))}
-        </ul>
+      <h2 className='SmallerHeader'>Linkify bietet Ihnen:</h2>
+      <ul className='InfoUnsortedList'>
+        {features.map((feature, index) => (
+          <li className='InfoListitemsOffer' key={index} >
+            <strong>{feature.title}</strong> {feature.description}
+          </li>
+        ))}
+      </ul>
 
-        <h2  className='RemoveMarginAndPaddingAll'>Linkify bietet Ihnen:</h2>
-        <ul  className='RemoveMarginAndPaddingAll'>
-          {features.map((feature, index) => (
-            <li  className='RemoveMarginAndPaddingAll' key={index} >
-              <strong>{feature.title}</strong> {feature.description}
-            </li>
-          ))}
-        </ul>
-
-        <p  className='RemoveMarginAndPaddingAll'>
-          Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern
-          wollen.
-        </p>
+      <p className='RemoveMarginAndPaddingAll'>
+        Linkify ist die ideale Lösung für alle Unternehmen, die ihre Prozesse optimieren und die Effizienz steigern
+        wollen.
+      </p>
     </div>
   </>
   )

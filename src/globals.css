@@ -498,46 +498,152 @@ a:hover {
 }
 
 /* --------------------------------------- */
-
 #ContainerInfo {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1300px;
 }
 
 #ContainerHeader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  height: fit-content;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 30px;
 }
 
 #ContentInHeader {
-  width: 100%;
-  text-align: center;
+  max-width: 60%;
+  padding-right: 20px;
+}
+
+#ContentInHeader h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#ContentInHeader p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
 }
 
 #ContentInHeaderImg {
-  width: 50%;
-  text-align: left;
+  max-width: 30%;
+}
+
+#ContentInHeaderImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.SmallerHeader {
+  font-size: 2rem;
+  color: #34495e;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.InfoUnsortedList {
+  padding-left: 20px;
 }
 
 
-@media (max-width: 768px) {
-  #ContainerHeader {
-    grid-template-columns: 1fr;
-  }
+#LogoImages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-  #ContentInHeaderImg {
-    margin-top: 20px;
-  }
+.ImageItems {
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.ContentImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.InfoUnsortedList .InfoListitems {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.InfoListitemsOffer {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.InfoListitems:hover {
+  background: linear-gradient(90deg, rgb(0, 26, 255) 10%, rgb(9, 255, 0) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900;
+}
+
+.InfoListitemsOffer:hover {
+  background: linear-gradient(90deg, rgb(0, 26, 255) 50%, rgb(9, 255, 0) 10%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 900;
+}
+
+.InfoUnsortedList .InfoListitems strong {
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 .RemoveMarginAndPaddingAll {
   margin: 0;
   padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+
+  #ContainerInfo {
+    height: 1500px;
+  }
+
+  #ContainerHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #ContentInHeader {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  #ContentInHeaderImg {
+    max-width: 40%;
+    margin-top: 20px;
+  }
+
+  .SmallerHeader {
+    font-size: 1.5rem;
+  }
+
+  .InfoUnsortedList .InfoListitems {
+    font-size: 1rem;
+  }
 }
