@@ -548,21 +548,29 @@ a:hover {
   margin-bottom: 15px;
 }
 
+
+.ContainerAllAround{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 #ContainerPros {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-content: center;
-  width: 100%;
+  width: 800px;
   background: linear-gradient(220deg, #f000ac 30%, #000000 50%);
   color: #fff;
   padding: 0;
   margin: 0;
   margin-bottom: 100px;
   margin-top: 100px;
-  height: 600px;
-  border-radius: 20% 10%;
+  height: 550px;
 }
 
 #ContentInHeaderImg {
@@ -612,10 +620,9 @@ a:hover {
 
 #ContainerLinkifyOffer {
   margin-top: 100px;
-  width: 100%;
+  width: 800px;
   background: linear-gradient(50deg, #00f024 30%, #000000 50%);
-  height: 600px;
-  border-radius: 10% 20%;
+  height: 550px;
 }
 
 .InfoListitemsOffer {

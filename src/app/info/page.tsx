@@ -84,15 +84,17 @@ export default function InfoPage() {
         </div>
       </div>
 
-      <div id='ContainerPros'>
-        <h2 className='SmallerHeader' style={{ textAlign: "center", paddingBottom:"20px"}}>Ihre Vorteile:</h2>
-        <ul className='InfoUnsortedList' style={{ paddingLeft: "50px", paddingRight:"50px", listStyleType: "none", margin: "0" }}>
-          {advantages.map((advantage, index) => (
-            <li key={index} className='InfoListitems' style={{ color: "#fff", }} >
-              <strong>{advantage.title}</strong> {advantage.description}✅
-            </li>
-          ))}
-        </ul>
+      <div className='ContainerAllAround'>
+        <div id='ContainerPros'>
+          <h2 className='SmallerHeader' style={{ textAlign: "center", paddingBottom: "20px" }}>Ihre Vorteile:</h2>
+          <ul className='InfoUnsortedList' style={{ paddingLeft: "50px", paddingRight: "50px", listStyleType: "none", margin: "0" }}>
+            {advantages.map((advantage, index) => (
+              <li key={index} className='InfoListitems' style={{ color: "#fff", }} >
+                <strong>{advantage.title}</strong> {advantage.description}✅
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div id='LogoImages' >
@@ -107,19 +109,18 @@ export default function InfoPage() {
         </div>
       </div>
 
-      <div
-        id='ContainerLinkifyOffer'>
+      <div className='ContainerAllAround'>
+        <div id='ContainerLinkifyOffer'>
+          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", alignContent: "center", justifyContent: "center", flexDirection: "column", }}>
+            <h2 className='SmallerHeader' style={{ color: "#fff" }}>Linkify bietet Ihnen:</h2>
 
-        <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", alignContent: "center", justifyContent: "center", flexDirection: "column", }}>
-          <h2 className='SmallerHeader' style={{ color: "#fff" }}>Linkify bietet Ihnen:</h2>
-
-          <ul className='InfoUnsortedList'>
-            {features.map((feature, index) => (
-              <li className='InfoListitemsOffer' key={index} >
-                <strong>{feature.title}</strong> {feature.description}
-              </li>
-            ))}
-          </ul>
+            <ul className='InfoUnsortedList'>
+              {features.map((feature, index) => (
+                <li className='InfoListitemsOffer' key={index} >
+                  <strong>{feature.title}</strong> {feature.description}
+                </li>
+              ))}
+            </ul></div>
 
         </div>
       </div>
