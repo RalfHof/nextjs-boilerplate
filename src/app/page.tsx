@@ -2,21 +2,13 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import "../globals.css";
 
-interface AppProps {
-  children: React.ReactNode;
-}
-
-const App: React.FC<AppProps> = ({ children }) => {
-
-  const router = useRouter()
+export default function Page() {
+  const router = useRouter();
 
   useEffect(() => {
-    router.push("/info")
-  }, [router])
+    router.push("/info");
+  }, [router]);
 
-  return <>{children}</>;
-};
-
-export default App;
+  return null; 
+}
