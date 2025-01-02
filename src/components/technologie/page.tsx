@@ -55,7 +55,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
-    paddingBottom:"80px"
+    paddingBottom: "80px"
   },
 
   title: {
