@@ -3,10 +3,9 @@ import Image from "next/image";
 
 export default function Navigation() {
   return (
-    <nav className="navigation">
       <Link href="/info">
         
-          <div style={{ backgroundColor: "red", height:"100%",margin:"0",padding:"0" }}>
+          <div style={{ backgroundColor: "inherit", height:"100%",margin:"0",padding:"0" }}>
             <Image 
               src="/img/logo.png" 
               alt="Logo" 
@@ -16,7 +15,6 @@ export default function Navigation() {
           </div>
         
       </Link>
-    </nav>
   );
 }
 

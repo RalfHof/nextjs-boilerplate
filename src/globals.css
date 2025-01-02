@@ -4,13 +4,13 @@ html,
   margin: 0;
   padding: 0;
   height: 100vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header Styles */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #1c042e;
   color: white;
@@ -270,13 +270,19 @@ a:hover {
   }
 
   .nav-link {
-    color: black;
+    color: #fff;
+  }
+
+  .navbtn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background-color: red;
   }
 
   .nav-list li {
     margin: 0;
     padding: 0;
-
   }
 
   #CloseMenuDIV {

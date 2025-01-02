@@ -19,31 +19,39 @@ export default function Navigation() {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll); // Scroll-Event hinzufügen
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll); // Scroll-Event entfernen
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   // Ändere die Hintergrundfarbe, wenn 10% gescrollt sind
   const navBackgroundColor = scrollY > window.innerHeight * 0.2 ? "#1d0332" : "inherit";
 
+  // Scrollen ohne URL-Änderung
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="header" style={{
       backgroundColor: navBackgroundColor,
-      transition: "background-color 0.7s ease" // Übergang für Hintergrundfarbe
+      transition: "background-color 0.7s ease"
     }}>
       <div className="logo">
         <Logo />
       </div>
 
       {/* Burger-Menü für mobile Ansicht */}
-      {isMobile && !isMenuOpen && ( // Zeige Burger-Menü nur, wenn das Menü nicht offen ist
+      {isMobile && !isMenuOpen && (
         <button
           className="burger-menu"
-          onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle isMenuOpen
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           ☰
         </button>
@@ -57,14 +65,34 @@ export default function Navigation() {
           </div>
         )}
         <ul className="nav-list">
+          <li className="nav-item">
+            <button onClick={() => scrollToSection("Home")} className="navbtn">
+              HOME
+            </button>
+          </li>
+          <li className="nav-item">
+            <button onClick={() => scrollToSection("Team")} className="nav-btn">
+              TEAM
+            </button>
+          </li>
+          <li className="nav-item">
+            <button onClick={() => scrollToSection("Technologien")} className="nav-btn">
+              TECHNOLOGIEN
+            </button>
+          </li>
+          <li className="nav-item">
+            <button onClick={() => scrollToSection("Kontakt")} className="nav-btn">
+              KONTAKT
+            </button>
+          </li>
           <li className="nav-item login">
             <Link href="https://app.linkify.cloud/login" className="nav-link">
-              Login
+              LOGIN
             </Link>
           </li>
           <li className="nav-item registrieren">
             <Link href="https://app.linkify.cloud/registrierung" className="nav-link">
-              Registrieren
+              REGISTRIEREN
             </Link>
           </li>
         </ul>

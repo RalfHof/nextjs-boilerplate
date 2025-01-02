@@ -12,8 +12,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* Navigation, die auf die Anker-Links verweist */}
         <Navigation />
-        <main>{children}</main>
+
+        <main>
+          {/* Hier wird der Inhalt von 'children' für jede Seite eingefügt */}
+          <div id="Home">
+            <section>{children}</section> {/* Hier kannst du den Inhalt für die Seite darstellen */}
+          </div>
+        </main>
+
         <Footer />
       </body>
     </html>
