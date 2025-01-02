@@ -51,7 +51,7 @@ export default function Team() {
               width={300}
               height={350}
               style={{
-                borderRadius: "10px",
+                borderRadius: "25px",
                 height: "350px",
                 padding: "10px",
                 cursor: "pointer",
