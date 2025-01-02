@@ -1,6 +1,7 @@
 "use client";
 
-
+import Footer from "../components/footer";
+import Navigation from "../components/navigation";
 import "../globals.css";
 
 export default function RootLayout({
@@ -11,9 +12,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-       
+        <Navigation />
         <main>{children}</main>
-     
+        <Footer />
       </body>
     </html>
   );

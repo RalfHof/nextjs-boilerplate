@@ -5,20 +5,23 @@ const teamMembers = [
   {
     name: "Akin Kale",
     image: "/img/bild1.jpg", // Pfad zum Bild von Akin Kale
-    objectPosition: "center top", // Verschiebt das Bild nach unten
+    email: "akinkale054@hotmail.com",
+    objectPosition: "center top",
   },
   {
     name: "Marc Ehrlich",
-    image: "/img/bild2.jpg", // Pfad zum Bild von Mark Erlich
+    image: "/img/bild2.jpg", // Pfad zum Bild von Marc Ehrlich
+    email: "marc.ehrlich@example.com",
   },
   {
     name: "Ralf Hofmann",
     image: "/img/bild3.jpg", // Pfad zum Bild von Ralf Hofmann
+    email: "ralf.hofmann@example.com",
   },
   {
     name: "Victor Nicolayev",
     image: "/img/bild4.jpg", // Pfad zum Bild von Victor Nicolayev
-   
+    email: "victor.nicolayev@example.com",
   },
 ];
 
@@ -43,47 +46,6 @@ export default function AboutUs() {
       </section>
 
       <section style={styles.section}>
-        <h2 style={styles.subtitle}>Was wir bieten:</h2>
-        <ul style={styles.list}>
-          <li>
-            <strong>Automatischer Dokumententransfer:</strong> Angebote,
-            Rechnungen, Lieferscheine und andere Dokumente werden automatisch
-            von Lexware Office in Ihr DMS übertragen – kein manuelles Hochladen
-            mehr!
-          </li>
-          <li>
-            <strong>Zeitersparnis:</strong> Konzentrieren Sie sich auf Ihr
-            Kerngeschäft, während unsere App im Hintergrund die lästige
-            Dokumentenverwaltung übernimmt.
-          </li>
-          <li>
-            <strong>Verbesserte Datenqualität:</strong> Vermeiden Sie Fehler
-            durch manuelle Eingaben und profitieren Sie von einer zentralen,
-            konsistenten Datenbasis.
-          </li>
-          <li>
-            <strong>Optimierte Workflows:</strong> Schaffen Sie effiziente
-            Prozesse und beschleunigen Sie Ihre Arbeitsabläufe.
-          </li>
-          <li>
-            <strong>Mehr Transparenz:</strong> Behalten Sie jederzeit den
-            Überblick über Ihre Dokumente und deren Status.
-          </li>
-        </ul>
-      </section>
-
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>Unsere Mission:</h2>
-        <p style={styles.text}>
-          Wir wollen Unternehmen dabei unterstützen, ihre digitale
-          Transformation voranzutreiben und die Vorteile der Automatisierung
-          voll auszuschöpfen. Mit unserer App ermöglichen wir es Ihnen, Ihre
-          Prozesse zu optimieren, Zeit und Kosten zu sparen und sich auf das zu
-          konzentrieren, was wirklich zählt: Ihr Business.
-        </p>
-      </section>
-
-      <section style={styles.section}>
         <h2 style={styles.subtitle}>Unser Team:</h2>
         <p style={styles.text}>
           Hinter dieser App steht ein Team aus erfahrenen Softwareentwicklern
@@ -103,21 +65,21 @@ export default function AboutUs() {
               style={{
                 ...styles.teamImage,
                 objectPosition: member.objectPosition || "center",
-                marginTop: "50px"
               }}
             />
             <p style={styles.teamName}>{member.name}</p>
+
+            {/* E-Mail-Icon */}
+            <a
+              href={`mailto:${member.email}`}
+              style={styles.emailIconContainer}
+              title={`E-Mail an ${member.name}`}
+            >
+              📧
+            </a>
           </div>
         ))}
       </div>
-
-      <section style={styles.section}>
-        <h2 style={styles.subtitle}>Bereit für die Zukunft?</h2>
-        <p style={styles.text}>
-          Sind Sie bereit für die Zukunft der Dokumentenverwaltung? Kontaktieren
-          Sie uns noch heute und erfahren Sie mehr über unsere App!
-        </p>
-      </section>
     </div>
   );
 }
@@ -126,7 +88,6 @@ const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
     paddingBottom: "60px",
-    lineHeight: " 1.2",
     backgroundColor: "#f5f5f5",
     display: "flex",
     alignItems: "center",
@@ -140,14 +101,14 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "20px",
     backgroundColor: "#fff",
     width: "90%",
-    maxWidth: "800px", // Maximale Breite der Abschnitte
+    maxWidth: "800px",
   },
   title: {
     fontSize: "2.5rem",
     color: "#007acc",
     textAlign: "center",
     width: "100%",
-    maxWidth: "800px", // Maximale Breite des Titels
+    maxWidth: "800px",
   },
   subtitle: {
     fontSize: "1.8rem",
@@ -159,11 +120,6 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#475569",
     marginBottom: "10px",
   },
-  list: {
-    listStyleType: "disc",
-    paddingLeft: "40px",
-    color: "#475569",
-  },
   teamGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -173,6 +129,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamMember: {
     textAlign: "center",
+    position: "relative",
   },
   teamImage: {
     borderRadius: "50%",
@@ -182,5 +139,12 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: "10px",
     fontWeight: "bold",
     color: "#1e293b",
+  },
+  emailIconContainer: {
+    marginTop: "10px",
+    fontSize: "1.5rem",
+    cursor: "pointer",
+    color: "#007acc",
+    textDecoration: "none",
   },
 };

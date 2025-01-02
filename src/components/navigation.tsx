@@ -41,11 +41,7 @@ export default function Navigation() {
           </div>
         )}
         <ul className="nav-list">
-          <li>
-            <Link href="/technologie" className="nav-link">
-              Technologie
-            </Link>
-          </li>
+          
           <li className="nav-item login">
             <Link href="https://app.linkify.cloud/login" className="nav-link">
               Login
