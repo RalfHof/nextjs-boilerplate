@@ -85,7 +85,7 @@ const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
     paddingBottom: "60px",
-    backgroundColor: "#1c042e",
+    backgroundColor: "#1d0332",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
