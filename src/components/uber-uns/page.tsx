@@ -6,23 +6,26 @@ const teamMembers = [
     name: "Akin Kale",
     image: "/img/bild1.jpg", // Pfad zum Bild von Akin Kale
     email: "akinkale054@hotmail.com",
+    role: "Frontend",
     objectPosition: "center top",
   },
   {
     name: "Marc Ehrlich",
     image: "/img/bild2.jpg", // Pfad zum Bild von Marc Ehrlich
     email: "marc.ehrlich@example.com",
+    role: "Dokumentation",
   },
   {
     name: "Ralf Hofmann",
     image: "/img/bild3.jpg", // Pfad zum Bild von Ralf Hofmann
-    email: "ralf.hofmann@example.com",
+    email: "Ralf-Hofmann82@outlook.de",
+    role: "Frontend",
   },
-  
   {
     name: "Victor Nicolayev",
     image: "/img/bild4.jpg", // Pfad zum Bild von Victor Nicolayev
     email: "victor.nicolayev@example.com",
+    role: "Backend",
   },
 ];
 
@@ -69,15 +72,19 @@ export default function AboutUs() {
               }}
             />
             <p style={styles.teamName}>{member.name}</p>
+            <p style={styles.teamRole}>{member.role}</p>
 
-            {/* E-Mail-Icon */}
-            <a
-              href={`mailto:${member.email}`}
-              style={styles.emailIconContainer}
-              title={`E-Mail an ${member.name}`}
-            >
-              📧
-            </a>
+            {/* E-Mail-Icon mit Name */}
+            <div style={styles.emailContainer}>
+              <a
+                href={`mailto:${member.email}`}
+                style={styles.emailIcon}
+                title={`E-Mail an ${member.name}`}
+              >
+                📧
+              </a>
+              <span style={styles.emailText}>{member.email}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -141,11 +148,26 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: "bold",
     color: "#1e293b",
   },
-  emailIconContainer: {
+  teamRole: {
+    fontSize: "1rem",
+    fontStyle: "italic",
+    color: "#6b7280",
+    marginBottom: "10px",
+  },
+  emailContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: "10px",
+  },
+  emailIcon: {
     fontSize: "1.5rem",
-    cursor: "pointer",
     color: "#007acc",
     textDecoration: "none",
+    marginRight: "10px",
+  },
+  emailText: {
+    fontSize: "1rem",
+    color: "#475569",
   },
 };
