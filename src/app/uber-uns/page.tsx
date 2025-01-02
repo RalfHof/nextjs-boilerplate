@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     name: "Victor Nicolayev",
-    image: "/img/viktor.jpg", // Pfad zum Bild von Victor Nicolayev
+    image: "/img/bild4.jpg", // Pfad zum Bild von Victor Nicolayev
    
   },
 ];
