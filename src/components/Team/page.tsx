@@ -35,8 +35,10 @@ export default function Team() {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Das Team</h1>
-
+      <div>
+        <h1 style={styles.title}>Team</h1>
+        <p style={styles.paragraph}>Ein starkes Team, das mit Leidenschaft und Engagement zusammenarbeitet, um großartige Ergebnisse zu erzielen.</p>
+      </div>
       <div style={styles.teamGrid}>
         {teamMembers.map((member) => (
           <div
@@ -95,6 +97,19 @@ const styles: Record<string, React.CSSProperties> = {
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",
+    padding: "0",
+    margin: "0",
+    marginBottom:"10px"
+  },
+  paragraph: {
+    fontSize: "1rem",
+    color: "#007acc",
+    textAlign: "center",
+    width: "100%",
+    maxWidth: "800px",
+    padding: "0",
+    margin: "0",
+    marginBottom: "15px"
   },
   teamGrid: {
     display: "grid",
