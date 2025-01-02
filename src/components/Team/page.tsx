@@ -92,13 +92,13 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: "column",
   },
   title: {
-    fontSize: "2.5rem",
+    fontSize: "2rem",
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",
     padding: "0",
     margin: "0",
-    marginBottom:"10px",
+    marginBottom: "10px",
     color: "#f9f871",
   },
   paragraph: {
@@ -115,24 +115,28 @@ const styles: Record<string, React.CSSProperties> = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     width: "100%",
-    gap: "20px",
   },
   teamMember: {
-    textAlign: "center",
-    position: "relative",
     padding: "0",
     margin: "0",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "100%",
   },
   teamName: {
-    marginTop: "10px",
     fontWeight: "bold",
     color: "#f2c76e",
+    padding: "0",
+    margin: "0"
   },
   teamRole: {
     fontSize: "1rem",
     fontStyle: "italic",
     color: "#b9b9b9",
     marginBottom: "10px",
+    padding: "0"
   },
   emailContainer: {
     display: "flex",
