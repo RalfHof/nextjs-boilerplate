@@ -41,7 +41,7 @@ export default function Navigation() {
           </div>
         )}
         <ul className="nav-list">
-          
+
           <li className="nav-item login">
             <Link href="https://app.linkify.cloud/login" className="nav-link">
               Login

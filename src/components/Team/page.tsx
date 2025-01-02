@@ -42,18 +42,19 @@ export default function Team() {
           <div
             key={member.name}
             style={styles.teamMember}
-            onMouseEnter={() => setHovered(member.name)}
-            onMouseLeave={() => setHovered(null)}
-          >
+            >
             <Image
               src={member.image}
               alt={member.name}
+              onMouseEnter={() => setHovered(member.name)}
+              onMouseLeave={() => setHovered(null)}
               width={300}
               height={350}
               style={{
                 borderRadius: "10px",
                 height: "350px",
-                transform: hovered === member.name ? "scale(1.07)" : "scale(1)",
+                padding: "10px",
+                transform: hovered === member.name ? "scale(1.2)" : "scale(1)",
                 transition: "transform 0.3s ease",
               }}
             />
@@ -81,7 +82,7 @@ const styles: Record<string, React.CSSProperties> = {
   container: {
     padding: "20px",
     paddingBottom: "60px",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#1c042e",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -109,7 +110,7 @@ const styles: Record<string, React.CSSProperties> = {
   teamName: {
     marginTop: "10px",
     fontWeight: "bold",
-    color: "#1e293b",
+    color: "#f2c76e",
   },
   teamRole: {
     fontSize: "1rem",
