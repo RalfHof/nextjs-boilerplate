@@ -1,99 +1,90 @@
 "use client";
 
+import { RiNextjsFill, RiVercelFill } from "react-icons/ri";
+import { SiTypescript, SiEslint } from "react-icons/si";
+import { FaPhp, FaReact, FaGithub } from "react-icons/fa";
+import { DiMysql } from "react-icons/di";
+
 export default function TechnologyPage() {
+  const technologies = [
+    { title: "Nextjs", icon: <RiNextjsFill />, description: "Next.js ist ein React-Framework für serverseitiges Rendering und Webseiten." },
+    { title: "Typescript", icon: <SiTypescript />, description: "TypeScript ist eine JavaScript-Erweiterung mit statischer Typisierung." },
+    { title: "PHP", icon: <FaPhp />, description: "PHP ist eine serverseitige Skriptsprache für die Webentwicklung." },
+    { title: "Vercel", icon: <RiVercelFill />, description: "Vercel ist eine Cloud-Plattform für das Hosting von Webseiten und Serverless-Funktionen." },
+    { title: "Github", icon: <FaGithub />, description: "GitHub ist eine Plattform für die Versionskontrolle von Code und die Zusammenarbeit von Entwicklern." },
+    { title: "MySQL", icon: <DiMysql />, description: "MySQL ist ein relationales Datenbankmanagementsystem zur Verwaltung von Daten." },
+    { title: "ESLint", icon: <SiEslint />, description: "ESLint ist ein Linter(Code Analysierer) für JavaScript, der hilft, Code-Qualität zu gewährleisten." },
+    { title: "React", icon: <FaReact />, description: "React ist eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen, insbesondere für Single-Page-Apps." },
+  ];
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Technologien</h1>
-      <section style={styles.section}>
-        <h2 style={styles.sectionTitle}>Unsere Technologien:</h2>
-        <ul style={styles.list}>
-          {["Next.js", "TypeScript", "PHP", "Vercel", "GitHub", "GitHub Actions", "MySQL", "ESLint", "React"].map(
-            (tech, index) => (
-              <li
-                key={tech}
-                style={{
-                  ...styles.listItem,
-                  backgroundColor: colors[index % colors.length],
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = hoverColors[index % hoverColors.length])
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = colors[index % colors.length])
-                }
-              >
-                {tech}
-              </li>
-            )
-          )}
-        </ul>
-      </section>
-
+      <div style={styles.grid}>
+        {technologies.map((tech, index) => (
+          <div key={index} style={styles.card}>
+            <div style={styles.icon}>{tech.icon}</div>
+            <h2 style={styles.cardTitle}>{tech.title}</h2>
+            <p style={styles.cardText}>{tech.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-const colors = ["#f9f871", "#ffadad", "#caffbf", "#9bf6ff", "#ffc6ff", "#fdffb6", "#bdb2ff", "#ffb5a7", "#a0c4ff"];
-const hoverColors = ["#fff3a3", "#ffbfbf", "#dbffda", "#b4f2ff", "#ffd8ff", "#fef3c1", "#d5d0ff", "#ffc7b5", "#b4d6ff"];
-
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    lineHeight: "1.5",
     backgroundColor: "#000",
+    color: "#fff",
+    fontFamily: "'Arial', sans-serif",
+    padding: "20px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    paddingBottom: "120px",
   },
 
   title: {
-    fontSize: "2.5rem",
+    fontSize: "3rem",
     fontWeight: "bold",
-    color: "#007acc",
-    textAlign: "center",
-    transition: "color 0.3s ease",
+    marginBottom: "40px",
+    color: "#f9f871",
   },
 
-  text: {
-    fontSize: "1.2rem",
-    textAlign: "center",
-    color: "#555",
-    transition: "color 0.3s ease",
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "20px",
+    width: "100%",
+    maxWidth: "1200px",
   },
 
-  section: {
-    marginTop: "40px",
-    padding: "30px",
-    backgroundColor: "#ffffff",
-    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)",
-    width: "80%",
-    maxWidth: "800px",
+  card: {
+    backgroundColor: "#212353",
+    borderRadius: "8px",
+    padding: "20px",
+    textAlign: "center",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
   },
 
-  sectionTitle: {
-    fontSize: "2rem",
-    borderBottom: "2px solid #64748b",
-    paddingBottom: "8px",
-    marginBottom: "20px",
-    textAlign: "center",
-    color: "#2d3748",
-    transition: "color 0.3s ease",
+  cardTitle: {
+    fontSize: "1.5rem",
+    fontWeight: "bold",
+    margin: "10px 0",
+    color: "#f9f871",
   },
 
-  list: {
-    listStyleType: "disc",
-    paddingLeft: "20px",
+  cardText: {
+    fontSize: "1rem",
+    color: "#d1d1d1",
   },
 
-  listItem: {
-    fontSize: "1.2rem",
+  icon: {
+    fontSize: "2.5rem",
     marginBottom: "10px",
-    padding: "10px",
-    borderRadius: "8px",
-    borderBottom: "1px solid #e2e8f0",
+    color: "#f9f871",
     cursor: "pointer",
-    transition: "background-color 0.3s ease, color 0.3s ease",
   },
 };

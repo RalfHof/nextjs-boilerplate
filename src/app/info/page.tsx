@@ -7,11 +7,12 @@ export default function Info() {
 
   return (
     <>
+    <div style={{height:"auto", paddingBottom:"100px"}}>
 
 
       <Team />
       <TechnologyPage />
-
+      </div>
     </>
   )
 }

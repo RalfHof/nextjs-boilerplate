@@ -42,7 +42,7 @@ export default function Team() {
           <div
             key={member.name}
             style={styles.teamMember}
-            >
+          >
             <Image
               src={member.image}
               alt={member.name}
@@ -54,6 +54,7 @@ export default function Team() {
                 borderRadius: "10px",
                 height: "350px",
                 padding: "10px",
+                cursor: "pointer",
                 transform: hovered === member.name ? "scale(1.2)" : "scale(1)",
                 transition: "transform 0.3s ease",
               }}
