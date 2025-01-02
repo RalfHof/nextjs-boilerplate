@@ -1,6 +1,7 @@
 
 import TechnologyPage from "@/src/components/technologie/page";
 import Team from "@/src/components/Team/page";
+import KontaktPage from "@/src/components/kontakt/page";
 
 export default function Info() {
 
@@ -12,6 +13,7 @@ export default function Info() {
 
       <Team />
       <TechnologyPage />
+      <KontaktPage/>
       </div>
     </>
   )
