@@ -18,6 +18,7 @@ const teamMembers = [
     image: "/img/bild3.jpg", // Pfad zum Bild von Ralf Hofmann
     email: "ralf.hofmann@example.com",
   },
+  
   {
     name: "Victor Nicolayev",
     image: "/img/bild4.jpg", // Pfad zum Bild von Victor Nicolayev
