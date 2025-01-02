@@ -66,7 +66,7 @@ export default function Navigation() {
         )}
         <ul className="nav-list">
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Home")} className="navbtn">
+            <button onClick={() => scrollToSection("Home")} className="nav-btn">
               HOME
             </button>
           </li>
@@ -88,11 +88,6 @@ export default function Navigation() {
           <li className="nav-item login">
             <Link href="https://app.linkify.cloud/login" className="nav-link">
               LOGIN
-            </Link>
-          </li>
-          <li className="nav-item registrieren">
-            <Link href="https://app.linkify.cloud/registrierung" className="nav-link">
-              REGISTRIEREN
             </Link>
           </li>
         </ul>
