@@ -6,19 +6,35 @@ import Logo from "./logo";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll); // Scroll-Event hinzufügen
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll); // Scroll-Event entfernen
+    };
   }, []);
 
+  // Ändere die Hintergrundfarbe, wenn 10% gescrollt sind
+  const navBackgroundColor = scrollY > window.innerHeight * 0.2 ? "#1d0332" : "inherit";
+
   return (
-    <header className="header">
+    <header className="header" style={{
+      backgroundColor: navBackgroundColor,
+      transition: "background-color 0.7s ease" // Übergang für Hintergrundfarbe
+    }}>
       <div className="logo">
         <Logo />
       </div>
@@ -41,7 +57,6 @@ export default function Navigation() {
           </div>
         )}
         <ul className="nav-list">
-
           <li className="nav-item login">
             <Link href="https://app.linkify.cloud/login" className="nav-link">
               Login
