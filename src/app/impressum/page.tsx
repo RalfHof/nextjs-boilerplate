@@ -11,7 +11,7 @@ export default function ImpressumPage() {
         <section className="section" id="company-details">
           <h2 className="section-title">Angaben gemäß § 5 TMG</h2>
           <address className="company-address">
-            <strong className="company-name">{process.env.NEXT_PUBLIC_COMPANY_NAME || "[Ihr Firmenname]"}</strong><br />
+            <strong className="company-name">{process.env.NEXT_PUBLIC_COMPANY_NAME || "[Linkify]"}</strong><br />
             <span className="address">{process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "[Ihre vollständige Adresse]"}</span><br />
             <span className="postal-code">{process.env.NEXT_PUBLIC_COMPANY_POSTAL_CODE || "[PLZ, Ort]"}</span>
           </address>
@@ -21,7 +21,7 @@ export default function ImpressumPage() {
           </p>
           <p className="contactImpressum">
             <strong>Kontakt:</strong><br />
-            Telefon: <span className="phone-number">{process.env.NEXT_PUBLIC_PHONE_NUMBER || "[Telefonnummer]"}</span><br />
+            Telefon: <span className="phone-number">{process.env.NEXT_PUBLIC_PHONE_NUMBER || "[+123456789]"}</span><br />
             E-Mail: <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}`} className="email-link">{process.env.NEXT_PUBLIC_EMAIL || "[Ihre E-Mail-Adresse]"}</a><br />
             Webseite: <a href={process.env.NEXT_PUBLIC_WEBSITE || "[Ihre Webseite]"} target="_blank" rel="noopener noreferrer" className="website-link">{process.env.NEXT_PUBLIC_WEBSITE || "[Ihre Webseite]"}</a>
           </p>
