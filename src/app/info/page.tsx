@@ -1,17 +1,17 @@
 
 import TechnologyPage from "@/src/components/technologie/page";
-import AboutUs from "@/src/components/uber-uns/page";
+import Team from "@/src/components/Team/page";
 
-export default function Info(){
+export default function Info() {
 
 
-  return(
+  return (
     <>
-    
-  
-    <AboutUs/>
-    <TechnologyPage/>
-  
+
+
+      <Team />
+      <TechnologyPage />
+
     </>
   )
 }

@@ -30,7 +30,7 @@ const teamMembers = [
   },
 ];
 
-export default function AboutUs() {
+export default function Team() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
