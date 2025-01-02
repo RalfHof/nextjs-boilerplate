@@ -93,17 +93,17 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     fontSize: "2.5rem",
-    color: "#007acc",
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",
     padding: "0",
     margin: "0",
-    marginBottom:"10px"
+    marginBottom:"10px",
+    color: "#f9f871",
   },
   paragraph: {
     fontSize: "1rem",
-    color: "#007acc",
+    color: "#b9b9b9",
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",
@@ -131,7 +131,7 @@ const styles: Record<string, React.CSSProperties> = {
   teamRole: {
     fontSize: "1rem",
     fontStyle: "italic",
-    color: "#6b7280",
+    color: "#b9b9b9",
     marginBottom: "10px",
   },
   emailContainer: {
