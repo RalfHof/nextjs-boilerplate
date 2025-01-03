@@ -9,29 +9,32 @@ export default function Navigation() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    // Check only in the browser
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+      handleResize(); // Initial resize
+      window.addEventListener("resize", handleResize);
+      window.addEventListener("scroll", handleScroll);
 
-    handleResize(); // Initiales Setzen
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
-  // Immer die Standardfarbe setzen, bis gescrollt wird
+  // Set default navigation background color for SSR
   const navBackgroundColor =
-    scrollY > window.innerHeight * 0.2 ? "#1d0332" : "rgb(76, 27, 94)";
+    typeof window !== "undefined" && scrollY > (window.innerHeight || 800) * 0.2
+      ? "#1d0332"
+      : "rgb(76, 27, 94)";
 
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
