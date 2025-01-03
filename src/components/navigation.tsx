@@ -9,7 +9,6 @@ export default function Navigation() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    // Überprüfen, ob 'window' verfügbar ist
     if (typeof window === "undefined") return;
 
     const handleResize = () => {
@@ -30,13 +29,10 @@ export default function Navigation() {
     };
   }, []);
 
-  // Berechnung der Navigations-Hintergrundfarbe
+  // Immer die Standardfarbe setzen, bis gescrollt wird
   const navBackgroundColor =
-    typeof window !== "undefined" && scrollY > window.innerHeight * 0.2
-      ? "#1d0332"
-      : "rgb(76, 27, 94)";
+    scrollY > window.innerHeight * 0.2 ? "#1d0332" : "rgb(76, 27, 94)";
 
-  // Scrollen zu einer Sektion ohne URL-Änderung
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
       const element = document.getElementById(id);
