@@ -28,7 +28,7 @@ export default function Navigation() {
   }, []);
 
   // Ändere die Hintergrundfarbe, wenn 10% gescrollt sind
-  const navBackgroundColor = scrollY > window.innerHeight * 0.2 ? "#1d0332" : "inherit";
+  const navBackgroundColor = scrollY > window.innerHeight * 0.2 ? "#1d0332" : "rgb(76, 27, 94)";
 
   // Scrollen ohne URL-Änderung
   const scrollToSection = (id: string) => {
