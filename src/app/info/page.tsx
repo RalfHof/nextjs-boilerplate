@@ -2,6 +2,7 @@ import TechnologyPage from "@/src/components/technologie/page";
 import Team from "@/src/components/Team/page";
 import KontaktPage from "@/src/components/kontakt/page";
 import Home from "@/src/components/home/page";
+import PricingPage from "@/src/components/pricing/page";
 
 export default function Info() {
   return (
@@ -22,6 +23,12 @@ export default function Info() {
         <div id="Technologien">
           <TechnologyPage />
         </div>
+
+        
+        <div id="Pricing">
+          <PricingPage />
+        </div>
+
 
         {/* Abschnitt Kontakt */}
         <div id="Kontakt">
