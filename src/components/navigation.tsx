@@ -9,6 +9,9 @@ export default function Navigation() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
+    // Überprüfen, ob 'window' verfügbar ist
+    if (typeof window === "undefined") return;
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
@@ -17,7 +20,7 @@ export default function Navigation() {
       setScrollY(window.scrollY);
     };
 
-    handleResize();
+    handleResize(); // Initiales Setzen
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
@@ -27,22 +30,30 @@ export default function Navigation() {
     };
   }, []);
 
-  // Ändere die Hintergrundfarbe, wenn 10% gescrollt sind
-  const navBackgroundColor = scrollY > window.innerHeight * 0.2 ? "#1d0332" : "inherit";
+  // Berechnung der Navigations-Hintergrundfarbe
+  const navBackgroundColor =
+    typeof window !== "undefined" && scrollY > window.innerHeight * 0.2
+      ? "#1d0332"
+      : "rgb(76, 27, 94)";
 
-  // Scrollen ohne URL-Änderung
+  // Scrollen zu einer Sektion ohne URL-Änderung
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (typeof document !== "undefined") {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
   return (
-    <header className="header" style={{
-      backgroundColor: navBackgroundColor,
-      transition: "background-color 0.7s ease"
-    }}>
+    <header
+      className="header"
+      style={{
+        backgroundColor: navBackgroundColor,
+        transition: "background-color 0.7s ease",
+      }}
+    >
       <div className="logo">
         <Logo />
       </div>
@@ -61,7 +72,9 @@ export default function Navigation() {
       <nav className={`main-navigation ${isMenuOpen ? "open" : ""}`}>
         {isMenuOpen && isMobile && (
           <div id="CloseMenuDIV">
-            <p id="CloseMenu" onClick={() => setIsMenuOpen(false)}>X</p>
+            <p id="CloseMenu" onClick={() => setIsMenuOpen(false)}>
+              X
+            </p>
           </div>
         )}
         <ul className="nav-list">
@@ -76,12 +89,18 @@ export default function Navigation() {
             </button>
           </li>
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Technologien")} className="nav-btn">
+            <button
+              onClick={() => scrollToSection("Technologien")}
+              className="nav-btn"
+            >
               TECHNOLOGIEN
             </button>
           </li>
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Kontakt")} className="nav-btn">
+            <button
+              onClick={() => scrollToSection("Kontakt")}
+              className="nav-btn"
+            >
               KONTAKT
             </button>
           </li>
