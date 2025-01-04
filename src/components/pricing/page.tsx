@@ -59,6 +59,23 @@ export default function PricingPage() {
                     buttonText="Testen"
                 />
 
+
+                <PricingOption
+                    title="Premium-Paket"
+                    icon={<TbPremiumRights style={{ scale: "4" }} />}
+                    price={Premiumprice}
+                    savings={premiumSavings}
+                    savingsPercent={premiumSavingsPercent}
+                    totalCost={PremiumTotalCost}
+                    content={[
+                        { Content: "Alle Funktionen des Standard-Pakets" },
+                        { Content: "KI-Anbindung für intelligente Analysen" },
+                        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
+                    ]}
+                    buttonText="Upgrade sichern"
+                    displaySavings={isToggleOn} // Neuen Prop hinzufügen
+                />
+
                 <PricingOption
                     title="Standard-Paket"
                     icon={<WorkIcon style={{ scale: "2.5" }} />}
@@ -75,22 +92,6 @@ export default function PricingPage() {
                         { Content: "Ohne KI-Anbindung" }
                     ]}
                     buttonText="Loslegen"
-                    displaySavings={isToggleOn} // Neuen Prop hinzufügen
-                />
-
-                <PricingOption
-                    title="Premium-Paket"
-                    icon={<TbPremiumRights style={{ scale: "4" }} />}
-                    price={Premiumprice}
-                    savings={premiumSavings}
-                    savingsPercent={premiumSavingsPercent}
-                    totalCost={PremiumTotalCost}
-                    content={[
-                        { Content: "Alle Funktionen des Standard-Pakets" },
-                        { Content: "KI-Anbindung für intelligente Analysen" },
-                        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
-                    ]}
-                    buttonText="Upgrade sichern"
                     displaySavings={isToggleOn} // Neuen Prop hinzufügen
                 />
             </div>

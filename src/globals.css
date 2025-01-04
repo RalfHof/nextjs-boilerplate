@@ -792,6 +792,26 @@ a:hover {
 }
 
 
+#ContainerPremium {
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid #f2c76e;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 760px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: scale 0.5s ease;
+}
+
+#ContainerPremium:hover {
+  scale: 1.1;
+}
+
+
 .ContainerPinkDiv {
   background-color: rgba(255, 255, 255, 0.1);
   height: 50%;
@@ -809,6 +829,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 
 
