@@ -73,7 +73,7 @@ export default function PricingPage() {
                         { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
                     ]}
                     buttonText="Upgrade sichern"
-                    displaySavings={isToggleOn} // Neuen Prop hinzufügen
+                    displaySavings={isToggleOn}
                 />
 
                 <PricingOption
