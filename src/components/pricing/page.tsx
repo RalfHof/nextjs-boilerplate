@@ -118,7 +118,7 @@ export default function PricingPage() {
 
                         }}
                     >
-                        <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "50%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
+                        <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "55%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
                         <div style={{ width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
                             <WorkIcon style={{ scale: "2.5" }} />
                         </div>
@@ -172,7 +172,7 @@ export default function PricingPage() {
 
                         }}
                     >
-                        <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "50%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
+                        <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "55%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
                         <div style={{ width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center", marginTop:"40px"}}>
                             <TbPremiumRights style={{ scale: "4", }} />
                         </div>
