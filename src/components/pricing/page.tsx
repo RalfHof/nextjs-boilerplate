@@ -122,10 +122,10 @@ export default function PricingPage() {
                         <div style={{ width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
                             <WorkIcon style={{ scale: "2.5" }} />
                         </div>
-                        <div style={{ width: "100%", textAlign: "center", position: "relative" }}>
+                        <div style={{ width: "100%", textAlign: "center", }}>
                             <h1 style={{ margin: "0" }}>Standard</h1>
                         </div>
-                        <div style={{ textAlign: "center", position: "relative" }}>
+                        <div style={{ textAlign: "center" }}>
                             <h4 style={{ fontSize: "40px", margin: "20px" }}>{Standardprice}</h4>
                             {!isToggleOn && (
                                 <div>
@@ -173,8 +173,8 @@ export default function PricingPage() {
                         }}
                     >
                         <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "50%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
-                        <div style={{ width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-                            <TbPremiumRights style={{ scale: "4" }} />
+                        <div style={{ width: "100%", height: "100px", display: "flex", alignItems: "center", justifyContent: "center", marginTop:"40px"}}>
+                            <TbPremiumRights style={{ scale: "4", }} />
                         </div>
                         <div style={{ width: "100%", textAlign: "center", position: "relative" }}>
                             <h1 style={{ margin: "0" }}>Premium</h1>
