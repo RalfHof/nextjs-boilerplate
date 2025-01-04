@@ -19,7 +19,7 @@ const PricingOption = ({
     title,
     icon,
     content,
-    price = '€0', // Standardwert
+    price = '0€', // Standardwert
     savings = 0, // Standardwert
     savingsPercent = '0%', // Standardwert
     totalCost = '€0', // Standardwert
@@ -37,6 +37,7 @@ const PricingOption = ({
             </div>
             <div style={{ textAlign: "center" }}>
                 <h4 style={{ fontSize: "40px", margin: "10px" }}>{price}</h4>
+
                 {!displaySavings && savings > 0 && (
                     <div>
                         <p style={{ fontSize: "22px", color: "green" }}>
@@ -48,14 +49,19 @@ const PricingOption = ({
                     </div>
                 )}
             </div>
+
             {content.map((item) => (
                 <div className='ContainerContentArrayAll' key={item.Content}>
                     <p className='ParagraphAllSame'>
                         <CheckCircleOutlineIcon className='StylingAroundIcons' />
                         {item.Content}
                     </p>
+
                 </div>
+
             ))}
+
+
             <div className='ContainerAroundAllBtn'>
                 <button className='AllBtnSame'>{buttonText}</button>
             </div>

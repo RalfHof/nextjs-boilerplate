@@ -26,24 +26,24 @@ export default function PricingPage() {
     const standardSavingsPercent = ((standardSavings / StandardPriceMonthly) * 100).toFixed(2);
     const premiumSavingsPercent = ((premiumSavings / PremiumPriceMonthly) * 100).toFixed(2);
 
-    const Standardprice = isToggleOn ? `€${StandardPriceMonthly}` : `€${StandardPriceYearly}`;
-    const Premiumprice = isToggleOn ? `€${PremiumPriceMonthly}` : `€${PremiumPriceYearly}`;
+    const Standardprice = isToggleOn ? `${StandardPriceMonthly.toFixed(2)}€/Mon.` : `${StandardPriceYearly.toFixed(2)}€/Jähr.`;
+    const Premiumprice = isToggleOn ? `${PremiumPriceMonthly.toFixed(2)}€/Mon.` : `${PremiumPriceYearly.toFixed(2)}€/Jähr.`;
 
-    const StandardTotalCost = isToggleOn ? `€${StandardPriceMonthly * 12}` : `€${StandardPriceYearly * 12}`;
-    const PremiumTotalCost = isToggleOn ? `€${PremiumPriceMonthly * 12}` : `€${PremiumPriceYearly * 12}`;
+    const StandardTotalCost = isToggleOn ? `${(StandardPriceMonthly * 12).toFixed(2)}€/Jahr` : `€${(StandardPriceYearly * 12).toFixed(2)}/Jahr`;
+    const PremiumTotalCost = isToggleOn ? `${(PremiumPriceMonthly * 12).toFixed(2)}€/Jahr` : `€${(PremiumPriceYearly * 12).toFixed(2)}/Jahr`;
 
     return (
         <div id='ContainerAroundEverything'>
-            <div style={{ width: "100%", textAlign: "center" }}>
-                <h1 style={{ color: "#f2c76e" }}>
+            <div style={{ width: "100%", textAlign: "center", }}>
+                <h1 style={{ color: "#f2c76e", fontSize: "30px", margin: "0", marginTop: "50px" }}>
                     Preismodelle
-                    <button id='ToggleButtonPricing' onClick={handleToggle}>
-                        {isToggleOn ? <ToggleOffIcon /> : <ToggleOnIcon style={{ color: "blue" }} />}
-                    </button>
-                    <p style={{ margin: "0", display: "inline-block", marginLeft: "10px" }}>
-                        {isToggleOn ? "Monatlich" : "Jährlich"}
-                    </p>
                 </h1>
+                <button id='ToggleButtonPricing' onClick={handleToggle}>
+                    {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all" }} /> : <ToggleOnIcon style={{ color: "blue", pointerEvents: "all" }} />}
+                </button>
+                <p style={{ margin: "0", display: "inline-block", marginLeft: "0px", fontSize: "25px", }}>
+                    {isToggleOn ? "Monatlich" : "Jährlich"}
+                </p>
             </div>
 
             <div id='ContainerAroundAllOptions'>
@@ -53,7 +53,7 @@ export default function PricingPage() {
                     content={[
                         { Content: "Zugriff auf Basisfunktionen" }
                     ]}
-                    buttonText="Buchen"
+                    buttonText="Testen"
                 />
 
                 <PricingOption
@@ -86,11 +86,8 @@ export default function PricingPage() {
                         { Content: "Alle Funktionen des Standard-Pakets" },
                         { Content: "KI-Anbindung für intelligente Analysen" },
                         { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
-
-
                     ]}
-
-                    buttonText="Upgrade sicher"
+                    buttonText="Upgrade sichern"
                     displaySavings={isToggleOn} // Neuen Prop hinzufügen
                 />
             </div>
