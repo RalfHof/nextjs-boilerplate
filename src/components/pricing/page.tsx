@@ -31,7 +31,9 @@ export default function PricingPage() {
         { Content: "Free Email" },
         { Content: "10 Databases" },
         { Content: "Unlimited Email Address" },
-        { Content: "Live Support" }
+        { Content: "Live Support" },
+        { Content: "KI Integration" }
+
     ];
 
     const handleToggle = () => {
@@ -70,14 +72,16 @@ export default function PricingPage() {
                                 border: "none",
                                 color: "#f2c76e",
                                 padding: "0",
-                                scale: "1.2",
-                                paddingTop: "50px",
                                 marginLeft: "10px",
-                                pointerEvents: "none"
+                                marginTop: "20px",
+                                pointerEvents: "none",
+                                scale: "1.2",
+                                position: "relative",
+                                top: "5px"
                             }}
                             onClick={handleToggle}
                         >
-                            {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all", height: "25px" }} /> : <ToggleOnIcon style={{ pointerEvents: "all", color: "green", height: "25px" }} />}
+                            {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all", }} /> : <ToggleOnIcon style={{ pointerEvents: "all", color: "green" }} />}
                         </button>
                         <p style={{ margin: "0", display: "inline-block", marginLeft: "10px" }}>{isToggleOn ? "Monatlich" : "Jährlich"}</p>
                     </h1>
@@ -106,8 +110,12 @@ export default function PricingPage() {
                             marginBottom: "20px",
                             position: "relative",
                             overflow: "hidden",
-                            height: "auto",
-                            paddingBottom: "30px"
+                            height: "760px",
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            alignItems: "center"
+
                         }}
                     >
                         <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "50%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
@@ -138,7 +146,7 @@ export default function PricingPage() {
                             </div>
                         ))}
 
-                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px", position: "relative" }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px", position: "relative", paddingBottom: "30px" }}>
                             <button style={{ cursor: "pointer", fontSize: "18px", borderRadius: "30px", border: "2px solid #f2c76e", color: "#f2c76e", padding: "10px 30px", backgroundColor: "inherit" }}>
                                 Buchen
                             </button>
@@ -156,8 +164,12 @@ export default function PricingPage() {
                             marginBottom: "20px",
                             position: "relative",
                             overflow: "hidden",
-                            height: "auto",
-                            paddingBottom: "30px"
+                            height: "760px",
+                            display: "flex",
+                            justifyContent: "center",
+                            flexDirection: "column",
+                            alignItems: "center"
+
                         }}
                     >
                         <div style={{ backgroundColor: "rgba(255,255,255,0.1)", height: "50%", width: "100%", position: "absolute", bottom: "0", left: "0" }}></div>
@@ -188,7 +200,7 @@ export default function PricingPage() {
                             </div>
                         ))}
 
-                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px", position: "relative" }}>
+                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "10px", position: "relative", paddingBottom: "30px" }}>
                             <button style={{ cursor: "pointer", fontSize: "18px", borderRadius: "30px", border: "2px solid #f2c76e", color: "#f2c76e", padding: "10px 30px", backgroundColor: "inherit" }}>
                                 Buchen
                             </button>
