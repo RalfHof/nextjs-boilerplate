@@ -736,3 +736,24 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+/* -------------------------------- */
+
+
+#ContainerStandard {
+  transition: scale 0.5s ease;
+}
+
+#ContainerStandard:hover {
+  scale: 1.1;
+}
+
+
+#ContainerPremium {
+  transition: scale 0.5s ease;
+
+}
+
+#ContainerPremium:hover {
+  scale: 1.1;
+}
