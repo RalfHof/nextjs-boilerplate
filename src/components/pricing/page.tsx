@@ -71,7 +71,7 @@ export default function PricingPage() {
                         { Content: "Regelmäßige Updates" },
                         { Content: "Ohne KI-Anbindung" }
                     ]}
-                    buttonText="🔗 Jetzt starten"
+                    buttonText="Loslegen"
                     displaySavings={isToggleOn} // Neuen Prop hinzufügen
                 />
 
@@ -85,7 +85,7 @@ export default function PricingPage() {
                     content={[
                         { Content: "Alle Funktionen des Standard-Pakets KI-Anbindung für intelligente Analysen Priorisierter Kundensupport Exklusive Premium-Funktionen" }
                     ]}
-                    buttonText="🔗 Upgrade sicher"
+                    buttonText="Upgrade sicher"
                     displaySavings={isToggleOn} // Neuen Prop hinzufügen
                 />
             </div>

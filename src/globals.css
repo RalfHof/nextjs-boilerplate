@@ -753,14 +753,14 @@ a:hover {
   border: none;
   color: #f2c76e;
   padding: 0;
-  margin-left: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 20px;
   pointer-events: all;
-  transform: scale(1.2);
+  transform: scale(1.8);
   position: relative;
-  top: 5px;
+  top: 6px;
 }
-
 
 #ContainerAroundAllOptions {
   display: flex;
@@ -788,7 +788,6 @@ a:hover {
   flex-direction: column;
   align-items: center;
   transition: scale 0.5s ease;
-  margin-left: 20px;
 }
 
 .ContainerAllOptions:hover {
@@ -847,8 +846,8 @@ a:hover {
   text-align: center;
   position: relative;
   top: -15px;
-  margin: 6px;
-  line-height: 20px;
+  margin: 3px;
+  font-size: 17px;
 }
 
 .StylingAroundIcons {

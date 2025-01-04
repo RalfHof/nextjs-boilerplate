@@ -39,10 +39,10 @@ const PricingOption = ({
                 <h4 style={{ fontSize: "40px", margin: "10px" }}>{price}</h4>
                 {!displaySavings && savings > 0 && (
                     <div>
-                        <p style={{ fontSize: "18px", color: "green" }}>
+                        <p style={{ fontSize: "22px", color: "green" }}>
                             Du sparst {savings}€ ({savingsPercent}%) im Jahr!
                         </p>
-                        <p style={{ fontSize: "16px", color: "#f2c76e" }}>
+                        <p style={{ fontSize: "22px", color: "#f2c76e" }}>
                             Einmalige Zahlung: {totalCost}
                         </p>
                     </div>
