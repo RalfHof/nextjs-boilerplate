@@ -83,8 +83,13 @@ export default function PricingPage() {
                     savingsPercent={premiumSavingsPercent}
                     totalCost={PremiumTotalCost}
                     content={[
-                        { Content: "Alle Funktionen des Standard-Pakets KI-Anbindung für intelligente Analysen Priorisierter Kundensupport Exklusive Premium-Funktionen" }
+                        { Content: "Alle Funktionen des Standard-Pakets" },
+                        { Content: "KI-Anbindung für intelligente Analysen" },
+                        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
+
+
                     ]}
+
                     buttonText="Upgrade sicher"
                     displaySavings={isToggleOn} // Neuen Prop hinzufügen
                 />
