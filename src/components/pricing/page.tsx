@@ -38,12 +38,15 @@ export default function PricingPage() {
                 <h1 style={{ color: "#f2c76e", fontSize: "30px", margin: "0", marginTop: "50px" }}>
                     Preismodelle
                 </h1>
-                <button id='ToggleButtonPricing' onClick={handleToggle}>
-                    {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all" }} /> : <ToggleOnIcon style={{ color: "blue", pointerEvents: "all" }} />}
-                </button>
-                <p style={{ margin: "0", display: "inline-block", marginLeft: "0px", fontSize: "25px", }}>
-                    {isToggleOn ? "Monatlich" : "Jährlich"}
-                </p>
+                <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", fontSize: "25px" }}>
+                    <p >Monatlich</p>
+                    <button id='ToggleButtonPricing' onClick={handleToggle}>
+                        {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all" }} /> : <ToggleOnIcon style={{ color: "blue", pointerEvents: "all" }} />}
+                    </button>
+                    <p >
+                        Jährlich
+                    </p>
+                </div>
             </div>
 
             <div id='ContainerAroundAllOptions'>

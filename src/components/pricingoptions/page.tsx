@@ -40,10 +40,10 @@ const PricingOption = ({
 
                 {!displaySavings && savings > 0 && (
                     <div>
-                        <p style={{ fontSize: "22px", color: "green" }}>
+                        <p style={{ fontSize: "25px", color: "green", margin:"20px" }}>
                             Du sparst {savings}€ ({savingsPercent}%) im Jahr!
                         </p>
-                        <p style={{ fontSize: "22px", color: "#f2c76e" }}>
+                        <p style={{ fontSize: "25px", color: "#f2c76e", margin:"20px"}}>
                             Einmalige Zahlung: {totalCost}
                         </p>
                     </div>
