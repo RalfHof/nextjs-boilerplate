@@ -81,7 +81,7 @@ export default function PricingPage() {
                                 position: "absolute",
                                 bottom: "0",
                                 left: "0",
-                                
+
                             }}
                         ></div>
 
@@ -94,15 +94,15 @@ export default function PricingPage() {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 position: "relative",
-                                 // Inhalt über den Hintergrund legen
+                                // Inhalt über den Hintergrund legen
                             }}
                         >
                             <WorkIcon style={{ scale: "2.5" }} />
                         </div>
-                        <div style={{ width: "100%", textAlign: "center", position: "relative",  }}>
+                        <div style={{ width: "100%", textAlign: "center", position: "relative", }}>
                             <h1 style={{ margin: "0" }}>Standard</h1>
                         </div>
-                        <div style={{ textAlign: "center", position: "relative",  }}>
+                        <div style={{ textAlign: "center", position: "relative", }}>
                             <h4 style={{ fontSize: "40px", margin: "20px" }}>{Standardprice}</h4>
                         </div>
 
@@ -114,7 +114,7 @@ export default function PricingPage() {
                                     justifyContent: "center",
                                     flexDirection: "column",
                                     position: "relative",
-                                    
+
                                 }}
                                 key={ContentStandard.Content}
                             >
@@ -140,7 +140,7 @@ export default function PricingPage() {
                                 alignItems: "center",
                                 marginTop: "10px",
                                 position: "relative",
-                                
+
                             }}
                         >
                             <button
@@ -182,7 +182,7 @@ export default function PricingPage() {
                                 position: "absolute",
                                 bottom: "0",
                                 left: "0",
-                                
+
                             }}
                         ></div>
 
@@ -195,15 +195,15 @@ export default function PricingPage() {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 position: "relative",
-                                 // Inhalt über den Hintergrund legen
+                                // Inhalt über den Hintergrund legen
                             }}
                         >
                             <TbPremiumRights style={{ scale: "4" }} />
                         </div>
-                        <div style={{ width: "100%", textAlign: "center", position: "relative",  }}>
+                        <div style={{ width: "100%", textAlign: "center", position: "relative", }}>
                             <h1 style={{ margin: "0" }}>Premium</h1>
                         </div>
-                        <div style={{ textAlign: "center", position: "relative",  }}>
+                        <div style={{ textAlign: "center", position: "relative", }}>
                             <h4 style={{ fontSize: "40px", margin: "20px" }}>{Premiumprice}</h4>
                         </div>
 
@@ -215,7 +215,7 @@ export default function PricingPage() {
                                     justifyContent: "center",
                                     flexDirection: "column",
                                     position: "relative",
-                                    
+
                                 }}
                                 key={ContentPremium.Content}
                             >
@@ -241,7 +241,7 @@ export default function PricingPage() {
                                 alignItems: "center",
                                 marginTop: "10px",
                                 position: "relative",
-                                
+
                             }}
                         >
                             <button
