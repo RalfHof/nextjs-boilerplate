@@ -41,12 +41,12 @@ export default function PricingPage() {
                             }}
                             onClick={handleToggle}
                         >
-                            {isToggleOn ? <ToggleOffIcon /> : <ToggleOnIcon style={{ color: "green" }} />}
+                            {isToggleOn ? <ToggleOffIcon style={{ width: "fit-content", height: "25px" }} /> : <ToggleOnIcon style={{ color: "green", width: "fit-content", height: "25px" }} />}
                         </button>
-                    </h1>
-                </div>
+                        <p style={{margin:"0", display:"inline-block", marginLeft:"10px"}}>{isToggleOn ? "Monatlich" : "Jährlich"}</p>
 
-                <div
+                    </h1>
+                </div>                <div
                     style={{
                         display: "flex",
                         justifyContent: "center",
