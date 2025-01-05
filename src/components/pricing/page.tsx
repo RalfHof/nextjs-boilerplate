@@ -35,7 +35,7 @@ export default function PricingPage() {
     return (
         <div id='ContainerAroundEverything'>
             <div style={{ width: "100%", textAlign: "center", }}>
-                <h1 style={{ color: "#f2c76e", fontSize: "30px", margin: "0", marginTop: "50px" }}>
+                <h1 style={{ color: "#f2c76e", fontSize: "3rem", margin: "0", marginTop: "50px" }}>
                     Preismodelle
                 </h1>
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", fontSize: "25px" }}>

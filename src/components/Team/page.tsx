@@ -92,7 +92,7 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: "column",
   },
   title: {
-    fontSize: "2rem",
+    fontSize: "3rem",
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",

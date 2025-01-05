@@ -56,22 +56,22 @@ export default function KontaktPage() {
           >
             <div id="ContactInfos"
             >
-              <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
                 Adresse:
               </h3>
-              <p style={{ marginTop: "5px" }}>Beispielstraße</p>
-              <p style={{ marginTop: "-10px" }}>Postleitzahl, Deutschland</p>
+              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>Beispielstraße</p>
+              <p style={{ marginTop: "-10px", fontSize: "1.2rem" }}>Postleitzahl, Deutschland</p>
 
-              <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
                 Email:
               </h3>
-              <p style={{ marginTop: "5px" }}>info@deinefirma.de</p>
+              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>info@deinefirma.de</p>
 
-              <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
+              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
                 Telefon:
               </h3>
-              <p style={{ marginTop: "5px" }}>Du erreichst uns unter:</p>
-              <p style={{ marginTop: "-10px" }}>+49 123 456 789</p>
+              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>Du erreichst uns unter:</p>
+              <p style={{ marginTop: "-10px", fontSize: "1.2rem" }}>+49 123 456 789</p>
             </div>
           </div>
 
@@ -145,16 +145,16 @@ export default function KontaktPage() {
               >
                 Abschicken
               </button>
-          {error &&
-            <div className="MessagesFromBackendContact">
-              <p style={{ color: "red", margin: "0", padding: "0" }}>{error}</p>
-            </div>}
+              {error &&
+                <div className="MessagesFromBackendContact">
+                  <p style={{ color: "red", margin: "0", padding: "0", fontSize: "1.2rem" }}>{error}</p>
+                </div>}
 
-          {success &&
-            <div className="MessagesFromBackendContact">
-              <p style={{ color: "green", margin: "0", padding: "0" }}>{success}</p>
-            </div>
-          }
+              {success &&
+                <div className="MessagesFromBackendContact">
+                  <p style={{ color: "green", margin: "0", padding: "0", fontSize: "1.2rem" }}>{success}</p>
+                </div>
+              }
             </div>
           </form>
 
