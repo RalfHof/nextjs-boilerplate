@@ -75,7 +75,7 @@ const styles: Record<string, React.CSSProperties> = {
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-    gap: "67px",
+    gap: "30px",
     width: "100%",
     maxWidth: "1200px",
   },
@@ -91,7 +91,7 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    height: "400px",
+    height: "350px",
   },
 
   cardTitle: {

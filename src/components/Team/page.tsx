@@ -99,7 +99,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "0",
     margin: "0",
     marginBottom: "10px",
-    color: "#f9f871",
+    color: "#f2c76e",
   },
   paragraph: {
     fontSize: "1rem",
