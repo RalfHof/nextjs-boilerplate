@@ -29,13 +29,20 @@ export default function TechnologyPage() {
             key={index}
             style={{
               ...styles.card,
-              backgroundColor: hoveredIndex === index ? "#6f42c1" : "#212353",
+              backgroundColor: hoveredIndex === index ? "#f2c76e" : "inherit",
             }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div style={styles.icon}>{tech.icon}</div>
-            <h2 style={styles.cardTitle}>{tech.title}</h2>
+            <h2
+              style={{
+                ...styles.cardTitle,
+                color: hoveredIndex === index ? "#fff" : "#f2c76e", // Titel-Farbe ändern
+              }}
+            >
+              {tech.title}
+            </h2>
             <p style={styles.cardText}>{tech.description}</p>
           </div>
         ))}
@@ -46,7 +53,7 @@ export default function TechnologyPage() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    backgroundColor: "#000",
+    backgroundColor: "#1c042e",
     color: "#fff",
     fontFamily: "'Arial', sans-serif",
     padding: "20px",
@@ -62,43 +69,48 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "3rem",
     fontWeight: "bold",
     marginBottom: "40px",
-    color: "#f9f871",
+    color: "#f2c76e",
   },
 
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+    gap: "67px",
     width: "100%",
     maxWidth: "1200px",
   },
 
   card: {
-    backgroundColor: "#212353",
-    borderRadius: "8px",
     padding: "20px",
-    textAlign: "center",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
     cursor: "pointer",
+    border: "1px solid #f2c76e",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    height: "400px",
   },
 
   cardTitle: {
     fontSize: "1.5rem",
     fontWeight: "bold",
     margin: "10px 0",
-    color: "#f9f871",
+    color: "#f2c76e",
   },
 
   cardText: {
-    fontSize: "1rem",
-    color: "#d1d1d1",
+    fontSize: "1.3rem",
+    color: "#fff",
+    textAlign: "center",
   },
 
   icon: {
-    fontSize: "2.5rem",
     marginBottom: "10px",
-    color: "#f9f871",
+    color: "#fff",
     cursor: "pointer",
+    fontSize: "5rem"
   },
 };
