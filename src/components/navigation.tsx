@@ -59,12 +59,15 @@ export default function Navigation() {
 
       {/* Burger-Menü für mobile Ansicht */}
       {isMobile && !isMenuOpen && (
-        <button
-          className="burger-menu"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          ☰
-        </button>
+
+        <div id="ContainerBurgermenu">
+          <button
+            className="burger-menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            ☰
+          </button>
+        </div>
       )}
 
       {/* Navigation */}
