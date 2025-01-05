@@ -49,83 +49,43 @@ export default function KontaktPage() {
 
   return (
     <>
-      <div style={{ backgroundColor: "#f9f9f9", height: "auto", width: "100%" }}>
+      <div id="ContainerContact">
         <div className="SectionContact">
           <h2>Kontakt</h2>
-          <div
-            style={{
-              border: "1px solid #f2c76e",
-              padding: "25px 20px",
-              borderRadius: "8px",
-              width: "83%",
-              maxWidth: "900px",
-            }}
+          <div id="ContainerAroundContactInfos"
           >
-            <div
-              style={{
-                marginLeft: "40px",
-                lineHeight: "20px",
-                display: "flex",
-                justifyContent: "left",
-                alignItems: "flex-start",
-                flexDirection: "column",
-              }}
+            <div id="ContactInfos"
             >
               <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
                 Adresse:
               </h3>
-              <p>Beispielstraße</p>
-              <p>Postleitzahl, Deutschland</p>
+              <p style={{ marginTop: "5px" }}>Beispielstraße</p>
+              <p style={{ marginTop: "-10px" }}>Postleitzahl, Deutschland</p>
 
               <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
                 Email:
               </h3>
-              <p>info@deinefirma.de</p>
+              <p style={{ marginTop: "5px" }}>info@deinefirma.de</p>
 
               <h3 style={{ fontSize: "30px", marginBottom: "10px" }}>
                 Telefon:
               </h3>
-              <p>Du erreichst uns unter:</p>
-              <p>+49 123 456 789</p>
+              <p style={{ marginTop: "5px" }}>Du erreichst uns unter:</p>
+              <p style={{ marginTop: "-10px" }}>+49 123 456 789</p>
             </div>
           </div>
 
 
 
-          <form onSubmit={handleSubmit} style={{
-            width: "90%",
-            maxWidth: "940px",
-            margin: "0",
-            padding: "0",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-
-
-          }}>
+          <form onSubmit={handleSubmit} id="FormAroundInputFieldsContact"
+          >
             <div
-              style={{
-                marginBottom: "40px",
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-evenly",
-                marginTop: "40px",
-                gap: "20px"
-              }}
+              id="ContainerAroundInputFieldsContact"
             >
               <input
                 type="text"
                 name="name"
-                style={{
-                  border: "1px solid #f2c76e",
-                  borderRadius: "8px",
-                  width: "50%",
-                  fontSize: "20px",
-                  backgroundColor: "inherit",
-                  padding: "20px",
-                  color: "#fff",
-                }}
+                id="InputFieldNameContact"
                 placeholder="Name*"
                 required
                 value={formData.name}
@@ -135,15 +95,7 @@ export default function KontaktPage() {
               <input
                 type="email"
                 name="email"
-                style={{
-                  border: "1px solid #f2c76e",
-                  borderRadius: "8px",
-                  padding: "20px",
-                  fontSize: "20px",
-                  width: "50%",
-                  backgroundColor: "inherit",
-                  color: "#fff",
-                }}
+                id="InputFieldEmailContact"
                 placeholder="Email*"
                 required
                 value={formData.email}
@@ -152,26 +104,12 @@ export default function KontaktPage() {
             </div>
 
             <div
-              style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "center",
-                alignItems: "center",
-                marginBottom: "40px"
-              }}
+              id="ContainerAroundSubjectContact"
             >
               <input
                 type="text"
                 name="subject"
-                style={{
-                  border: "1px solid #f2c76e",
-                  borderRadius: "8px",
-                  padding: "20px",
-                  fontSize: "20px",
-                  width: "100%",
-                  backgroundColor: "inherit",
-                  color: "#fff",
-                }}
+                id="InputFieldSubjectContact"
                 required
                 placeholder="Betreff*"
                 value={formData.subject}
@@ -181,24 +119,11 @@ export default function KontaktPage() {
             </div>
 
 
-            <div style={{
-              display: "flex",
-              width: "100%",
-              marginBottom: "40px"
-
-            }}>
+            <div id="ContainerAroundTextareaContact"
+            >
               <textarea
                 name="message"
-                style={{
-                  backgroundColor: "inherit",
-                  height: "200px",
-                  border: "1px solid #f2c76e",
-                  borderRadius: "8px",
-                  padding: "20px",
-                  width: "100%",
-                  fontSize: "20px",
-                  color: "#fff",
-                }}
+                id="TextareaFieldContact"
                 placeholder="Schreibe eine Nachricht*"
                 required
                 value={formData.message}
@@ -212,23 +137,10 @@ export default function KontaktPage() {
             {/* ------------------------- */}
 
             <div
-              style={{
-                marginBottom: "50px",
-                width: "100%",
-                display: "flex",
-                alignItems: "flex-start",
-              }}
+              id="ContainerAroundBtnContact"
             >
               <button
-                style={{
-                  backgroundColor: "inherit",
-                  color: "#f2c76e",
-                  border: "1px solid #f2c76e",
-                  borderRadius: "50px",
-                  padding: "20px 80px",
-                  fontSize: "20px",
-                  cursor: "pointer",
-                }}
+                id="BtnContact"
                 type="submit"
               >
                 Abschicken

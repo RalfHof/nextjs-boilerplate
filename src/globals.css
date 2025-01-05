@@ -487,30 +487,6 @@ a:hover {
   background-color: #444;
 }
 
-
-
-
-/* -------------------------------------- */
-
-.SectionContact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  background: #1c042e;
-  color: #fff;
-}
-
-.SectionContact h2 {
-  color: #f2c76e;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 3rem;
-}
-
-
 /* ---------------------------------- */
 
 #ContainerNotFound {
@@ -870,3 +846,127 @@ a:hover {
 /* KontaktPage */
 
 
+#ContainerContact {
+  background-color: #f9f9f9;
+  height: auto;
+  width: 100%;
+}
+
+.SectionContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #1c042e;
+  color: #fff;
+}
+
+.SectionContact h2 {
+  color: #f2c76e;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+
+#ContainerAroundContactInfos {
+  border: 1px solid #f2c76e;
+  padding: 25px 20px;
+  border-radius: 8px;
+  width: 83%;
+  max-width: 900px;
+}
+
+#ContactInfos {
+  margin-left: 40px;
+  line-height: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#FormAroundInputFieldsContact {
+  width: 90%;
+  max-width: 940px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#ContainerAroundInputFieldsContact {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+#InputFieldNameContact,
+#InputFieldEmailContact {
+  border: 1px solid #f2c76e;
+  border-radius: 8px;
+  width: 50%;
+  font-size: 20px;
+  background-color: inherit;
+  padding: 20px;
+  color: #fff;
+}
+
+#ContainerAroundSubjectContact {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#InputFieldSubjectContact {
+  border: 1px solid #f2c76e;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 20px;
+  width: 100%;
+  background-color: inherit;
+  color: #fff;
+}
+
+#ContainerAroundTextareaContact {
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#TextareaFieldContact {
+  background-color: inherit;
+  height: 200px;
+  border: 1px solid #f2c76e;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+}
+
+#ContainerAroundBtnContact {
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+#BtnContact {
+  background-color: inherit;
+  color: #f2c76e;
+  border: 1px solid #f2c76e;
+  border-radius: 50px;
+  padding: 20px 80px;
+  font-size: 20px;
+  cursor: pointer;
+}
