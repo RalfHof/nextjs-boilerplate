@@ -41,7 +41,7 @@ export default function PricingPage() {
                 <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", fontSize: "25px" }}>
                     <p >Monatlich</p>
                     <button id='ToggleButtonPricing' onClick={handleToggle}>
-                        {isToggleOn ? <ToggleOffIcon style={{ pointerEvents: "all" }} /> : <ToggleOnIcon style={{ color: "blue", pointerEvents: "all" }} />}
+                        {isToggleOn ? <ToggleOffIcon style={{ cursor: "pointer" }} /> : <ToggleOnIcon style={{ color: "#17c0a5", cursor: "pointer" }} />}
                     </button>
                     <p >
                         Jährlich
@@ -74,6 +74,7 @@ export default function PricingPage() {
                     ]}
                     buttonText="Upgrade sichern"
                     displaySavings={isToggleOn}
+                    isPremium={true} // Neue Prop hinzufügen
                 />
 
                 <PricingOption

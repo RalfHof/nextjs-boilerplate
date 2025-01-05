@@ -717,14 +717,14 @@ a:hover {
 }
 
 #ToggleButtonPricing {
-  cursor: pointer;
   background-color: inherit;
   border: none;
-  color: #f2c76e;
+  color: #ff9f86;
   padding: 0;
+  margin: 0;
   margin-left: 20px;
   margin-right: 20px;
-  pointer-events: none;
+  margin-top: 3px;
   transform: scale(1.8);
 }
 
