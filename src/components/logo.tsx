@@ -9,8 +9,8 @@ export default function Navigation() {
             <Image 
               src="/img/logo.png" 
               alt="Logo" 
-              width={175} 
-              height={57} 
+              width={250} 
+              height={100} 
             />
           </div>
         

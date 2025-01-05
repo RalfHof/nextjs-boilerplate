@@ -5,13 +5,12 @@ export default function Home() {
                 width: "100%",
                 height: "500px",
                 display: "flex",
-                justifyContent: "center", // Zentriert den Inhalt horizontal
-                alignItems: "center", // Zentriert den Inhalt vertikal
+                justifyContent: "center",
+                alignItems: "center",
                 backgroundColor: "#4c1b5e",
-                paddingTop: "0",
                 flexDirection: "column",
                 fontFamily: "Arial, Helvetica, sans-serif",
-                textAlign: "center" // Zentriert den Text innerhalb des Containers
+                textAlign: "center"
             }}>
                 <h1 style={{ color: "#fff", width: "95%" }}>
                     <span style={{ color: "#f2c76e" }}>Linkify</span> – Effiziente Lösung für die Datenübergabe zwischen <span style={{ color: "#f2c76e" }}>ecoDMS</span> und <span style={{ color: "#f2c76e" }}>Buchungssoftware</span>
