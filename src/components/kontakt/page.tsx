@@ -25,35 +25,35 @@ export default function KontaktPage() {
     event.preventDefault();
 
     try {
-        setError(null);
-        setSuccess(null);
+      setError(null);
+      setSuccess(null);
 
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}service/contact`, formData);
+      const response = await axios.post("https://api.linkify.cloud/service/contact", formData);
 
-        if (response.status === 200) {
-            setSuccess("Ihr Formular wurde erfolgreich abgeschickt!");
-            // Felder leeren
-            setFormData({
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
-            });
-        } else {
-            setError(`Unerwartete Antwort: ${response.statusText}`);
-        }
+      if (response.status === 200) {
+        setSuccess("Ihr Formular wurde erfolgreich abgeschickt!");
+        // Felder leeren
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setError(`Unerwartete Antwort: ${response.statusText}`);
+      }
     } catch (err) {
-        if (axios.isAxiosError(err)) {
-            setError(
-                typeof err.response?.data?.message === "string"
-                    ? err.response.data.message
-                    : "Ein Fehler ist aufgetreten. Versuche es später erneut."
-            );
-        } else {
-            setError("Ein unbekannter Fehler ist aufgetreten.");
-        }
+      if (axios.isAxiosError(err)) {
+        setError(
+          typeof err.response?.data?.message === "string"
+            ? err.response.data.message
+            : "Ein Fehler ist aufgetreten. Versuche es später erneut."
+        );
+      } else {
+        setError("Ein unbekannter Fehler ist aufgetreten.");
+      }
     }
-};
+  };
 
   return (
     <>
@@ -127,7 +127,7 @@ export default function KontaktPage() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
-* Pflichtfelder
+              * Pflichtfelder
 
 
             </div>
