@@ -145,19 +145,20 @@ export default function KontaktPage() {
               >
                 Abschicken
               </button>
-            </div>
-          </form>
-
           {error &&
-            <div style={{ position: "relative", top: "-100px", left: "20px" }}>
-              <p style={{ color: "red" }}>{error}</p>
+            <div className="MessagesFromBackendContact">
+              <p style={{ color: "red", margin: "0", padding: "0" }}>{error}</p>
             </div>}
 
           {success &&
-            <div style={{ position: "relative", top: "-100px", left: "20px" }}>
-              <p style={{ color: "green" }}>{success}</p>
+            <div className="MessagesFromBackendContact">
+              <p style={{ color: "green", margin: "0", padding: "0" }}>{success}</p>
             </div>
           }
+            </div>
+          </form>
+
+
         </div>
       </div>
     </>
