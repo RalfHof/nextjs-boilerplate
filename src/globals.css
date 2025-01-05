@@ -487,6 +487,9 @@ a:hover {
   background-color: #444;
 }
 
+
+
+
 /* -------------------------------------- */
 
 .SectionContact {
@@ -496,20 +499,15 @@ a:hover {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin: 0;
-  gap: 10px;
-  overflow: hidden;
   background: #1c042e;
   color: #fff;
 }
 
 .SectionContact h2 {
-  padding: 0;
-  margin: 0;
-  font-size: 3rem;
   color: #f2c76e;
   margin-top: 50px;
   margin-bottom: 30px;
+  font-size: 3rem;
 }
 
 
@@ -864,3 +862,11 @@ a:hover {
     margin-left: 0px;
   }
 }
+
+
+
+/* ---------------------------------- */
+
+/* KontaktPage */
+
+
