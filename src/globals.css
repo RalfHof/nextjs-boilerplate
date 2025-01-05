@@ -1,3 +1,10 @@
+:root {
+  --premium-color: #d4a017;
+  --standard-color: #fff;
+
+  --gold-color: #d4a017;
+}
+
 body,
 html,
 #root {
@@ -734,7 +741,7 @@ a:hover {
 }
 
 .ContainerAllOptions {
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   border: 1px solid #f2c76e;
   border-radius: 8px;
@@ -755,7 +762,7 @@ a:hover {
   align-items: center;
   width: 100%;
   height: 100%;
-  gap: 10%;
+  gap: 2px;
   flex-wrap: wrap;
 }
 
@@ -785,16 +792,6 @@ a:hover {
   scale: 1.1;
 }
 
-
-.ContainerPinkDiv {
-  background-color: rgba(255, 255, 255, 0.1);
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 .DivAroundIcon {
   position: relative;
   top: -30px;
@@ -806,24 +803,33 @@ a:hover {
   margin-top: 50px;
 }
 
-
 .ContainerAroundAllBtn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  position: relative;
+  position: absolute;
+  bottom: 15px;
 }
 
 .AllBtnSame {
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 30px;
-  border: 2px solid #f2c76e;
-  color: #f2c76e;
-  padding: 10px 30px;
-  background-color: inherit;
+  padding: 10px 100px;
   margin-top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.standard .AllBtnSame {
+  border: 2px solid #f2c76e;
+  background-color: inherit;
+  color: var(--standard-color);
+}
+
+.premium .AllBtnSame {
+  border: 2px solid #f2c76e;
+  background-color: var(--gold-color);
+  color: var(--standard-color);
 }
 
 .ContainerContentArrayAll {
@@ -894,17 +900,21 @@ a:hover {
   border: 1px solid #f2c76e;
   padding: 25px 20px;
   border-radius: 8px;
-  width: 83%;
+  width: 85%;
   max-width: 900px;
 }
 
 #ContactInfos {
   margin-left: 40px;
-  line-height: 20px;
   display: flex;
   justify-content: left;
   align-items: flex-start;
   flex-direction: column;
+  font-size: 25px;
+}
+
+#ContactInfos span {
+  line-height: 35px;
 }
 
 #FormAroundInputFieldsContact {
@@ -1012,4 +1022,135 @@ a:hover {
     margin-top: 30px;
     font-size: 25px;
   }
+}
+
+
+/* --------------------------- */
+
+
+.ContainerAllOptions {
+  border: 2px solid var(--gold-color);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.premium .ContainerAllOptions {
+  background-color: #fdf4e3;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+
+.standard .ContainerAllOptions {
+  border: 1px solid var(--gold-color);
+  background-color: #1d0332;
+  box-shadow: none;
+}
+
+.Badge {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+
+}
+
+.premium .Badge {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--gold-color);
+  color: #fff;
+}
+
+.standard .Badge {
+  background-color: var(--gold-color);
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.premium .DivAroundIcon {
+  color: var(--gold-color);
+}
+
+.standard .DivAroundIcon {
+  color: #fff
+}
+
+
+.ContainerPackageName {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.premium .PackageName {
+  color: var(--gold-color)
+}
+
+.standard .PackageName {
+  color: #fff
+}
+
+.Price {
+  font-size: 3rem;
+  margin: 10px;
+  color: var(--gold-color);
+}
+
+
+
+.PreisInfo {
+  padding-top: 20px;
+  background-color: #000000;
+  opacity: 0.9;
+  padding-bottom: 60px;
+  background-image: url("/img/hero-bg.png");
+  background-repeat: no-repeat;
+}
+
+.PriceCardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+.standard .ContentItems {
+  color: #fff;
+}
+
+/* ---------------------------------- */
+
+/* Canvas */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  background-repeat: no-repeat;
+}
+
+.ContainerHome {
+  height: 500px;
+}
+
+.HeaderContent {
+  z-index: 2;
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

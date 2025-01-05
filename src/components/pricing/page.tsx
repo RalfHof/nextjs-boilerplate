@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
-import { TbPremiumRights } from "react-icons/tb";
-import WorkIcon from '@mui/icons-material/Work';
 import PricingOption from '../pricingoptions/page';
 import { FaLightbulb } from "react-icons/fa";
+import { TbPremiumRights } from "react-icons/tb";
+import WorkIcon from '@mui/icons-material/Work';
 
 export default function PricingPage() {
     const [isToggleOn, setIsToggleOn] = useState(true);
@@ -44,7 +44,7 @@ export default function PricingPage() {
                         {isToggleOn ? <ToggleOffIcon style={{ cursor: "pointer" }} /> : <ToggleOnIcon style={{ color: "#17c0a5", cursor: "pointer" }} />}
                     </button>
                     <p >
-                        Jährlich
+                        Jährlich (spare über 33%)
                     </p>
                 </div>
             </div>
@@ -54,7 +54,9 @@ export default function PricingPage() {
                     title="14 Tage kostenlose Testversion"
                     icon={<FaLightbulb style={{ scale: "2.5" }} />}
                     content={[
-                        { Content: "Zugriff auf Basisfunktionen" }
+                        { Content: "Alle Funktionen des Standard-Pakets" },
+                        { Content: "KI-Anbindung für intelligente Analysen" },
+                        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
                     ]}
                     buttonText="Testen"
                 />

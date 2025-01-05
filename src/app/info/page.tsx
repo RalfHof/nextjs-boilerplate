@@ -2,7 +2,8 @@ import TechnologyPage from "@/src/components/technologie/page";
 import Team from "@/src/components/Team/page";
 import KontaktPage from "@/src/components/kontakt/page";
 import Home from "@/src/components/home/page";
-import PricingPage from "@/src/components/pricing/page";
+import FAQ from "@/src/components/faq/page";
+import PriceInfoModul from "@/src/components/PriceInfo/page";
 
 export default function Info() {
   return (
@@ -24,15 +25,20 @@ export default function Info() {
           <TechnologyPage />
         </div>
 
-        
+
         <div id="Pricing">
-          <PricingPage />
+          <PriceInfoModul />
         </div>
 
 
         {/* Abschnitt Kontakt */}
         <div id="Kontakt">
           <KontaktPage />
+        </div>
+
+
+        <div id="FAQ">
+          <FAQ />
         </div>
 
       </div>

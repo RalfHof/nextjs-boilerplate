@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Akin Kale",
     image: "/img/bild1.jpg",
     email: "akinkale054@hotmail.com",
-    role: "Frontend",
+    role: "Frontend-App, -Demo",
   },
   {
     name: "Marc Ehrlich",
@@ -20,13 +20,13 @@ const teamMembers = [
     name: "Ralf Hofmann",
     image: "/img/bild3.jpg",
     email: "Ralf-Hofmann82@outlook.de",
-    role: "Frontend",
+    role: "Frontend-Demo",
   },
   {
-    name: "Victor Nicolayev",
+    name: "Viktor Nikolayev",
     image: "/img/bild4.jpg",
-    email: "victor.nicolayev@example.com",
-    role: "Backend",
+    email: "viktor.nikolayev@gmail.com",
+    role: "Backend-Api, -Frontend-App, DevOps",
   },
 ];
 

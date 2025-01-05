@@ -53,6 +53,8 @@ export default function Navigation() {
         transition: "background-color 0.7s ease",
       }}
     >
+
+
       <div className="logo">
         <Logo />
       </div>

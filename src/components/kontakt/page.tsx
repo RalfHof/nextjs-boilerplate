@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 export default function KontaktPage() {
   const [formData, setFormData] = useState({
@@ -24,28 +25,35 @@ export default function KontaktPage() {
     event.preventDefault();
 
     try {
-      setError(null);
-      setSuccess(null);
+        setError(null);
+        setSuccess(null);
 
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/kontakt`, formData);
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}service/contact`, formData);
 
-      if (response.status === 200) {
-        setSuccess("Formular erfolgreich abgeschickt!");
-      } else {
-        setError(`Unerwartete Antwort: ${response.statusText}`);
-      }
+        if (response.status === 200) {
+            setSuccess("Ihr Formular wurde erfolgreich abgeschickt!");
+            // Felder leeren
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            });
+        } else {
+            setError(`Unerwartete Antwort: ${response.statusText}`);
+        }
     } catch (err) {
-      if (axios.isAxiosError(err)) {
-        setError(
-          typeof err.response?.data?.message === "string"
-            ? err.response.data.message
-            : "Ein Fehler ist aufgetreten. Versuche es später erneut."
-        );
-      } else {
-        setError("Ein unbekannter Fehler ist aufgetreten.");
-      }
+        if (axios.isAxiosError(err)) {
+            setError(
+                typeof err.response?.data?.message === "string"
+                    ? err.response.data.message
+                    : "Ein Fehler ist aufgetreten. Versuche es später erneut."
+            );
+        } else {
+            setError("Ein unbekannter Fehler ist aufgetreten.");
+        }
     }
-  };
+};
 
   return (
     <>
@@ -54,24 +62,14 @@ export default function KontaktPage() {
           <h2>Kontakt</h2>
           <div id="ContainerAroundContactInfos"
           >
-            <div id="ContactInfos"
-            >
-              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
-                Adresse:
-              </h3>
-              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>Beispielstraße</p>
-              <p style={{ marginTop: "-10px", fontSize: "1.2rem" }}>Postleitzahl, Deutschland</p>
+            <div id="ContactInfos">
 
-              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
-                Email:
-              </h3>
-              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>info@deinefirma.de</p>
-
-              <h3 style={{ fontSize: "2rem", marginBottom: "10px" }}>
-                Telefon:
-              </h3>
-              <p style={{ marginTop: "5px", fontSize: "1.2rem" }}>Du erreichst uns unter:</p>
-              <p style={{ marginTop: "-10px", fontSize: "1.2rem" }}>+49 123 456 789</p>
+              <p> <span> Adresse: </span><br />
+                <span> Techstarter GmbH</span><br />
+                <span>Stadtdeich 2-4</span><br />
+                <span>20097 Hamburg, Deutschland</span> <br />
+                <span>Email: info@linkify.cloud</span>
+              </p>
             </div>
           </div>
 
@@ -111,7 +109,7 @@ export default function KontaktPage() {
                 name="subject"
                 id="InputFieldSubjectContact"
                 required
-                placeholder="Betreff*"
+                placeholder="Firmenname"
                 value={formData.subject}
                 onChange={handleChange}
               />
@@ -129,10 +127,16 @@ export default function KontaktPage() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
+* Pflichtfelder
+
 
             </div>
 
 
+            <div style={{ width: "100%", fontSize: "25px" }}>
+              <input type="checkbox" required style={{ padding: "200px" }} />
+              <span>Ich bin mit den <Link href={"/datenschutz"} target="_blank">Datenschutzerklärungen</Link> einverstanden</span>
+            </div>
 
             {/* ------------------------- */}
 

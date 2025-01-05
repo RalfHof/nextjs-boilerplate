@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode } from 'react';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 type PricingOptionProps = {
     title: string;
@@ -18,7 +17,6 @@ type PricingOptionProps = {
 const PricingOption = ({
     title,
     icon,
-    content,
     price = '0€',
     savings = 0,
     savingsPercent = '0%',
@@ -97,7 +95,7 @@ const PricingOption = ({
 
             </div>
 
-            {content.map((item) => (
+            {/* {content.map((item) => (
                 <div className='ContainerContentArrayAll' key={item.Content}>
                     <p
                         className='ParagraphAllSame'
@@ -122,7 +120,7 @@ const PricingOption = ({
                         {item.Content}
                     </p>
                 </div>
-            ))}
+            ))} */}
 
 
             <div className='ContainerAroundAllBtn'>
