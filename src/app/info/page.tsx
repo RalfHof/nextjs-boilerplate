@@ -8,39 +8,31 @@ import PriceInfoModul from "@/src/components/PriceInfo/page";
 export default function Info() {
   return (
     <>
-      <div style={{ height: "auto", paddingBottom: "100px", backgroundColor: "#1d0332" }}>
+      <div id="Home">
+        <Home />
+      </div>
 
-        {/* Abschnitt Home */}
-        <div id="Home">
-          <Home />
-        </div>
+      <div id="Team">
+        <Team />
+      </div>
 
-        {/* Abschnitt Team */}
-        <div id="Team">
-          <Team />
-        </div>
-
-        {/* Abschnitt Technologien */}
-        <div id="Technologien">
-          <TechnologyPage />
-        </div>
+      <div id="Technologien">
+        <TechnologyPage />
+      </div>
 
 
-        <div id="Pricing">
-          <PriceInfoModul />
-        </div>
+      <div id="Pricing">
+        <PriceInfoModul />
+      </div>
 
 
-        {/* Abschnitt Kontakt */}
-        <div id="Kontakt">
-          <KontaktPage />
-        </div>
+      <div id="Kontakt">
+        <KontaktPage />
+      </div>
 
 
-        <div id="FAQ">
-          <FAQ />
-        </div>
-
+      <div id="FAQ">
+        <FAQ />
       </div>
     </>
   );

@@ -27,6 +27,7 @@ html,
   z-index: 9;
 }
 
+
 /* Logo */
 .logo-text {
   text-decoration: none;
@@ -1230,7 +1231,7 @@ a:hover {
   color: var(--gold-color);
 }
 
-.PreisInfo {
+.PriceInfoDIV {
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -1239,7 +1240,7 @@ a:hover {
   background-color: #000;
 }
 
-.PreisInfo::before {
+.PriceInfoDIV::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1251,6 +1252,45 @@ a:hover {
   background-size: 100% 100%;
   z-index: 0;
   opacity: 0.2;
+}
+
+.PriceDiv {
+  width: 100%;
+  text-align: center
+}
+
+
+#PriceHeadline {
+  color: #f2c76e;
+  font-size: 3rem;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.DateDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 900;
+}
+
+
+.standard .ToggleIcon {
+  cursor: pointer;
+  color: #17c0a5
+}
+
+.premium .ToggleIcon {
+  cursor: pointer;
+  color: #17c0a5
+}
+
+
+#SaveMoney {
+  color: "#f2c76e"
 }
 
 .PriceCardContainer {
@@ -1267,6 +1307,11 @@ a:hover {
 }
 
 /* ---------------------------------- */
+
+
+#Home {
+  background-color: inherit;
+}
 
 /* Canvas */
 .ContainerHome {

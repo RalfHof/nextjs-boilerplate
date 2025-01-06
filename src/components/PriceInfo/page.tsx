@@ -63,19 +63,19 @@ export default function PriceInfoModul() {
 
 
 
-            <div className="PreisInfo">
+            <div className="PriceInfoDIV">
 
 
-                <div style={{ width: "100%", textAlign: "center" }}>
-                    <h1 style={{ color: "#f2c76e", fontSize: "3rem", margin: "0", marginTop: "50px" }}>
+                <div className="PriceDiv">
+                    <h1 id="PriceHeadline">
                         Preismodelle
                     </h1>
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", fontSize: "25px", color: "#fff", fontWeight: "900" }}>
+                    <div className="DateDiv">
                         <p>Monatlich</p>
                         <button id='ToggleButtonPricing' onClick={handleToggle}>
-                            {isToggleOn ? <ToggleOffIcon style={{ cursor: "pointer" }} /> : <ToggleOnIcon style={{ color: "#17c0a5", cursor: "pointer" }} />}
+                            {isToggleOn ? <ToggleOffIcon className="ToggleIcon" /> : <ToggleOnIcon className="ToggleIcon" />}
                         </button>
-                        <p>Jährlich <span style={{ color: "#f2c76e" }}>(spare über 33%)</span></p>
+                        <p>Jährlich <span id="SaveMoney">(spare über 33%)</span></p>
                     </div>
                 </div>
 
