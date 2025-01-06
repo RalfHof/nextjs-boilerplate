@@ -49,6 +49,11 @@ html,
   margin-right: 20px;
 }
 
+.main-navigation.open {
+  z-index: 1000;  /* Sicherstellen, dass das Menü über dem Overlay liegt */
+}
+
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -98,6 +103,17 @@ html,
   color: white;
   cursor: pointer;
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparentes Schwarz */
+  z-index: 999;  /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
+  pointer-events: auto;  /* Erlaubt das Klicken auf das Overlay */
 }
 
 

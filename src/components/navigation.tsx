@@ -42,6 +42,21 @@ export default function Navigation() {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+      // Menü nach dem Klick schließen
+      setIsMenuOpen(false);
+    }
+  };
+
+
+
+  const handleHomeClick = () => {
+    const currentUrl = window.location.href;
+    if (!currentUrl.endsWith("/info")) {
+      // Wenn die URL nicht auf /info endet, leite weiter
+      window.location.href = "https://linkify.cloud/info";
+    } else {
+      // Andernfalls scrolle zur Sektion "Home"
+      scrollToSection("Home");
     }
   };
 
@@ -53,15 +68,12 @@ export default function Navigation() {
         transition: "background-color 0.7s ease",
       }}
     >
-
-
       <div className="logo">
         <Logo />
       </div>
 
       {/* Burger-Menü für mobile Ansicht */}
       {isMobile && !isMenuOpen && (
-
         <div id="ContainerBurgermenu">
           <button
             className="burger-menu"
@@ -70,6 +82,11 @@ export default function Navigation() {
             ☰
           </button>
         </div>
+      )}
+
+      {/* Overlay, das den Rest der Seite blockiert, wenn das Burger-Menü geöffnet ist */}
+      {isMenuOpen && (
+        <div className="overlay" onClick={() => setIsMenuOpen(false)} />
       )}
 
       {/* Navigation */}
@@ -83,9 +100,10 @@ export default function Navigation() {
         )}
         <ul className="nav-list">
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Home")} className="nav-btn">
+            <button onClick={handleHomeClick} className="nav-btn">
               HOME
             </button>
+
           </li>
           <li className="nav-item">
             <button onClick={() => scrollToSection("Team")} className="nav-btn">
@@ -93,23 +111,17 @@ export default function Navigation() {
             </button>
           </li>
           <li className="nav-item">
-            <button
-              onClick={() => scrollToSection("Technologien")}
-              className="nav-btn"
-            >
+            <button onClick={() => scrollToSection("Technologien")} className="nav-btn">
               TECHNOLOGIEN
             </button>
           </li>
           <li className="nav-item">
-            <button
-              onClick={() => scrollToSection("Kontakt")}
-              className="nav-btn"
-            >
+            <button onClick={() => scrollToSection("Kontakt")} className="nav-btn">
               KONTAKT
             </button>
           </li>
           <li className="nav-item login">
-            <Link href="https://app.linkify.cloud/login" className="nav-link">
+            <Link href="https://app.linkify.cloud/login" className="nav-link" onClick={() => setIsMenuOpen(false)}>
               LOGIN
             </Link>
           </li>
