@@ -116,7 +116,6 @@ export default function KontaktPage() {
 
             </div>
 
-
             <div id="ContainerAroundTextareaContact"
             >
               <textarea
@@ -128,8 +127,6 @@ export default function KontaktPage() {
                 onChange={handleChange}
               ></textarea>
               * Pflichtfelder
-
-
             </div>
 
 
