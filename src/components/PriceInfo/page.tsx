@@ -59,7 +59,12 @@ export default function PriceInfoModul() {
 
     return (
         <>
+
+
+
+
             <div className="PreisInfo">
+
 
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <h1 style={{ color: "#f2c76e", fontSize: "3rem", margin: "0", marginTop: "50px" }}>
@@ -90,6 +95,7 @@ export default function PriceInfoModul() {
                     )}
                 </div>
             </div>
+
         </>
     );
 }
