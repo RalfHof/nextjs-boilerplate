@@ -88,10 +88,7 @@ export default function PriceInfoModul() {
                             <PriceCard Item={PriceItemPremiumJahr} />
                         </>
                     )}
-
                 </div>
-
-
             </div>
         </>
     );
