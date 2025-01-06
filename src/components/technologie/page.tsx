@@ -53,7 +53,7 @@ export default function TechnologyPage() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    backgroundColor: "#1c042e",
+    backgroundColor: "#37075d",
     color: "#fff",
     fontFamily: "'Arial', sans-serif",
     padding: "20px",
