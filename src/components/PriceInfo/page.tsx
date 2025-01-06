@@ -17,39 +17,39 @@ export default function PriceInfoModul() {
     };
 
     const PriceItemListStandard = [
-        { Content: "Keine langfristige Verpflichtung Flexibel" },
-        { Content: "Jederzeit kündbar Ideal zum Ausprobieren" },
+        { Content: "Regelmäßige Updates" },
         { Content: "Zugriff auf Basisfunktionen" },
         { Content: "Benutzerfreundliches Interface" },
-        { Content: "Regelmäßige Updates" },
+        { Content: "Jederzeit kündbar Ideal zum Ausprobieren" },
+        { Content: "Keine langfristige Verpflichtung Flexibel" },
     ]
 
     const PriceItemListFree = [
-        { Content: "Keine Bank- oder Kreditkartendaten notwendig" },
-        { Content: "Alle Funktionen aus dem Standard" },
         { Content: "Keine Kündigung notwendig" },
-        { Content: "Vetrag läuft automatisch aus" },
+        { Content: "Vertrag läuft automatisch aus" },
+        { Content: "Alle Funktionen aus dem Standard" },
+        { Content: "Keine Bank- oder Kreditkartendaten notwendig" },
     ]
 
     const PriceItemListPremium = [
-        { Content: "Alle Funktionen aus dem Standard" },
-        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
         { Content: "KI-Anbindung" },
         { Content: "intelligente Analysen" },
+        { Content: "Alle Funktionen aus dem Standard" },
         { Content: "Bessere Verschlagwortung (Klassifizierung)" },
+        { Content: "Priorisierter Kundensupport Exklusive Premium-Funktionen" },
     ]
 
     const combinedPriceItemListPremium = [...PriceItemListPremium];
 
     const PriceItemFree = { Price: "0", Currency: "€", Icon: <FaLightbulb style={{ scale: "4" }} />, PackageName: "14 Tage testen", Items: PriceItemListFree, Button: "Testen", BadgetText: "Kostenlos" }
 
-    const PriceItemStandard = { Price: "7.99", Currency: "€/Mon.", Icon: <WorkIcon style={{ scale: "4" }} />, PackageName: "Standard", Items: PriceItemListStandard, Button: "Testen", BadgetText: "Empfohlen", isFavorite: true }
+    const PriceItemStandard = { Price: "7.99", Currency: "€/Mon.", Icon: <WorkIcon style={{ scale: "4" }} />, PackageName: "Standard", Items: PriceItemListStandard, Button: "Loslegen", BadgetText: "Empfohlen", isFavorite: true }
 
-    const PriceItemPremium = { Price: "11.99", Currency: "€/Mon.", Icon: <TbPremiumRights style={{ scale: "6" }} />, PackageName: "Premium", Items: combinedPriceItemListPremium, Button: "Testen", isFavorite: false, BadgetText: "Top" }
+    const PriceItemPremium = { Price: "11.99", Currency: "€/Mon.", Icon: <TbPremiumRights style={{ scale: "6" }} />, PackageName: "Premium", Items: combinedPriceItemListPremium, Button: "Upgrade Sichern", isFavorite: false, BadgetText: "Top" }
 
-    const PriceItemStandardJahr = { Price: "4.99", Currency: "€/Mon.", Icon: <WorkIcon style={{ scale: "4" }} />, PackageName: "Standard", Items: PriceItemListStandard, Button: "Testen", BadgetText: "Empfohlen", isFavorite: true }
+    const PriceItemStandardJahr = { Price: "4.99", Currency: "€/Mon.", Icon: <WorkIcon style={{ scale: "4" }} />, PackageName: "Standard", Items: PriceItemListStandard, Button: "Loslegen", BadgetText: "Empfohlen", isFavorite: true }
 
-    const PriceItemPremiumJahr = { Price: "8.99", Currency: "€/Mon.", Icon: <TbPremiumRights style={{ scale: "6" }} />, PackageName: "Premium", Items: combinedPriceItemListPremium, Button: "Testen", isFavorite: false, BadgetText: "Top" }
+    const PriceItemPremiumJahr = { Price: "8.99", Currency: "€/Mon.", Icon: <TbPremiumRights style={{ scale: "6" }} />, PackageName: "Premium", Items: combinedPriceItemListPremium, Button: "Upgrade Sichern", isFavorite: false, BadgetText: "Top" }
 
     return (
         <>

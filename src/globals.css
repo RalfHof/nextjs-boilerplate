@@ -1315,29 +1315,63 @@ a:hover {
 
 .premium .ContentItems {
   position: relative;
-  top: -8px;
 }
 
 .ContentItemsParagraph {
   position: relative;
-  top: 110px;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  width: 100%;
-  font-size: 1.1rem;
+  top: 100px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .PremiumContent {
   position: relative;
-  width: 100%;
-  top: 8%;
-  left: 55%;
-  transform: translate(-50%, -50%);
+  line-height: 50px;
+  top: -10px;
 }
 
-@media (max-width:600px) {
+.StandardContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  top: 10px;
+  left: 30px;
+}
 
+.CheckCircleIcon {
+
+  position: relative;
+  top: 5px;
+}
+
+.premium .CheckCircleIcon {
+  color: green;
+
+}
+
+
+/* ------------------------------------------------------ */
+
+/* CSS-Stile für das Modal */
+
+
+.MuiBackdrop-root {
+  z-index: 1300;
+}
+
+.PremiumNotice {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}
+
+
+/* ---------------------------------- */
+
+
+@media (max-width:600px) {
 
   #PriceHeadline {
     font-size: 2rem;
@@ -1359,7 +1393,7 @@ a:hover {
 }
 
 
-@media(max-width:768px) {
+@media(max-width:1012px) {
   .PriceCardContainer {
     flex-wrap: wrap;
   }
