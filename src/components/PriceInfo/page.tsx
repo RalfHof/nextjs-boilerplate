@@ -8,9 +8,6 @@ import { useState } from "react";
 import WorkIcon from '@mui/icons-material/Work';
 import { TbPremiumRights } from "react-icons/tb";
 
-// Preis-Element-Props
-
-
 export default function PriceInfoModul() {
 
     const [isToggleOn, setIsToggleOn] = useState(true);
@@ -18,7 +15,6 @@ export default function PriceInfoModul() {
     const handleToggle = () => {
         setIsToggleOn(!isToggleOn);
     };
-
 
     const PriceItemListStandard = [
         { Content: "Keine langfristige Verpflichtung Flexibel" },
@@ -29,7 +25,6 @@ export default function PriceInfoModul() {
     ]
 
     const PriceItemListFree = [
-
         { Content: "Keine Bank- oder Kreditkartendaten notwendig" },
         { Content: "Alle Funktionen aus dem Standard" },
         { Content: "Keine Kündigung notwendig" },
@@ -42,7 +37,6 @@ export default function PriceInfoModul() {
         { Content: "KI-Anbindung" },
         { Content: "intelligente Analysen" },
         { Content: "Bessere Verschlagwortung (Klassifizierung)" },
-
     ]
 
     const combinedPriceItemListPremium = [...PriceItemListPremium];
@@ -59,23 +53,18 @@ export default function PriceInfoModul() {
 
     return (
         <>
-
-
-
-
             <div className="PriceInfoDIV">
-
 
                 <div className="PriceDiv">
                     <h1 id="PriceHeadline">
                         Preismodelle
                     </h1>
                     <div className="DateDiv">
-                        <p>Monatlich</p>
+                        <p id="MonthyPrice">Monatlich</p>
                         <button id='ToggleButtonPricing' onClick={handleToggle}>
-                            {isToggleOn ? <ToggleOffIcon className="ToggleIcon" /> : <ToggleOnIcon className="ToggleIcon" />}
+                            {isToggleOn ? <ToggleOffIcon className="ToggleIcon" /> : <ToggleOnIcon className="ToggleIcon ToggleOnnIcon" />}
                         </button>
-                        <p>Jährlich <span id="SaveMoney">(spare über 33%)</span></p>
+                        <p id="YearlyPrice">Jährlich <span id="SaveMoney">(spare über 33%)</span></p>
                     </div>
                 </div>
 
@@ -95,7 +84,6 @@ export default function PriceInfoModul() {
                     )}
                 </div>
             </div>
-
         </>
     );
 }

@@ -1,6 +1,7 @@
 "use client"
 
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+import { FaLightbulb } from "react-icons/fa";
 
 // Preis-Element-Props
 type PriceItemProps = {
@@ -17,8 +18,6 @@ type PriceItemProps = {
 };
 
 export default function PriceCard({ Item }: PriceItemProps) {
-
-
 
     const isPremium = (Item.isFavorite === null || Item.isFavorite === undefined) ? false : Item.isFavorite
 
@@ -37,33 +36,44 @@ export default function PriceCard({ Item }: PriceItemProps) {
                     <div
                         className="ContainerAllOptions"
                     >
-
                         {/* Empfohlen-Badge */}
-                        {Item.BadgetText !== null &&(
+                        {Item.BadgetText !== null && (
 
-                        <div className="Badge">{Item.BadgetText}</div>
+                            <div className="Badge">{Item.BadgetText}</div>
                         )}
 
-
-                        <div className="DivAroundIcon" >
-                            {Item.Icon}
+                        <div className="DivAroundIcon">
+                            {React.isValidElement(Item.Icon) && Item.Icon.type === FaLightbulb ? (
+                                <div className="LightbulbIconWrapper">
+                                    {Item.Icon}
+                                </div>
+                            ) : (
+                                <div>
+                                    {Item.Icon}
+                                </div>
+                            )}
                         </div>
+
+
                         <div className="ContainerPackageName"
                         >
                             <h1 className="PackageName">{Item.PackageName}</h1>
                         </div>
-                        <div style={{ textAlign: "center" }}>
-                            <div className="Price">
-
+                        <div id="ContainerPrice" style={{ textAlign: "center" }}>
+                            <div
+                                className="Price"
+                            >
                                 {Item.Price} {Item.Currency}
                             </div>
 
                         </div>
 
                         {/* Items anzeigen */}
-                        <div className="ContentItems">
+                        <div className={`ContentItems ${Item.Items.some(item => item.Content === "Vetrag läuft automatisch aus") ? 'PremiumContent' : ''}`}>
                             {Item.Items.map((item, index) => (
-                                <p key={index}>{item.Content}</p>
+                                <p className="ContentItemsParagraph" key={index}>
+                                    {item.Content}
+                                </p>
                             ))}
                         </div>
 
