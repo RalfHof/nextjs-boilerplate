@@ -126,12 +126,15 @@ export default function KontaktPage() {
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
-              * Pflichtfelder
+
+              <div id="RequiredField">
+                * Pflichtfelder
+              </div>
             </div>
 
 
-            <div style={{ width: "100%", fontSize: "25px" }}>
-              <input type="checkbox" required style={{ padding: "200px" }} />
+            <div className="DataProtectionContainer">
+              <input id="RequiredCheckbox" type="checkbox" required />
               <span>Ich bin mit den <Link href={"/datenschutz"} target="_blank">Datenschutzerklärungen</Link> einverstanden</span>
             </div>
 
@@ -148,18 +151,16 @@ export default function KontaktPage() {
               </button>
               {error &&
                 <div className="MessagesFromBackendContact">
-                  <p style={{ color: "red", margin: "0", padding: "0", fontSize: "1.2rem" }}>{error}</p>
+                  <p className="BackendMessage">{error}</p>
                 </div>}
 
               {success &&
                 <div className="MessagesFromBackendContact">
-                  <p style={{ color: "green", margin: "0", padding: "0", fontSize: "1.2rem" }}>{success}</p>
+                  <p className="BackendMessage" id="SuccesMessage">{success}</p>
                 </div>
               }
             </div>
           </form>
-
-
         </div>
       </div>
     </>

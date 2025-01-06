@@ -5,15 +5,15 @@ export default function Footer() {
   return (
     <footer className="footer">
 
-      <div style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "100px", flexDirection: "column" }}>
+      <div className="FooterContainer" >
 
-        <div style={{ marginBottom: "30px", color: "#f2c76e", }}>
-          <p style={{ fontSize: "30px", margin: "0" }}>Application</p>
-          <hr style={{ border: "1px solid #f2c76e", width: "120px", position: "relative", left: "-10px", top: "10px" }} />
+        <div className="HeadlineContainer">
+          <p className="HeadlineContent">Application</p>
+          <hr className="FooterHorizontalLine" />
 
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative", left: "25px", top: "-5px" }}>
+        <div className="ContainerAroundLinks" >
           <ul className="footer-links">
             <li>
               <Link href="https://app.linkify.cloud/login">Login</Link>
@@ -30,15 +30,15 @@ export default function Footer() {
 
 
 
-      <div style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "100px", flexDirection: "column" }}>
+      <div className="FooterContainer">
 
-        <div style={{ marginBottom: "30px", color: "#f2c76e", }}>
-          <p style={{ fontSize: "30px", margin: "0" }}>Information</p>
-          <hr style={{ border: "1px solid #f2c76e", width: "120px", position: "relative", left: "-10px", top: "10px" }} />
+        <div className="HeadlineContainer">
+          <p className="HeadlineContent">Information</p>
+          <hr className="FooterHorizontalLine" />
 
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative", left: "25px", top: "-5px" }}>
+        <div className="ContainerAroundLinks">
           <ul className="footer-links">
             <li>
               <Link href="/FAQ">FAQ</Link>
@@ -55,15 +55,15 @@ export default function Footer() {
 
 
 
-      <div style={{ display: "flex", height: "100%", width: "100%", justifyContent: "center", alignItems: "center", marginTop: "100px", flexDirection: "column" }}>
+      <div className="FooterContainer">
 
-        <div style={{ marginBottom: "30px", color: "#f2c76e", }}>
-          <p style={{ fontSize: "30px", margin: "0" }}>Kontakt</p>
-          <hr style={{ border: "1px solid #f2c76e", width: "120px", position: "relative", left: "-10px", top: "10px" }} />
+        <div className="HeadlineContainer">
+          <p className="HeadlineContent">Kontakt</p>
+          <hr className="FooterHorizontalLine" />
 
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative", left: "25px", top: "-5px" }}>
+        <div className="ContainerAroundLinks">
           <ul className="footer-links">
             <li>
               <Link href="/TEAM">Team</Link>
@@ -80,11 +80,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
-
-
-
-
     </footer>
   );
 }
