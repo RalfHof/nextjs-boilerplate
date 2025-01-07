@@ -31,14 +31,19 @@ export default function ProjektPage() {
   ];
 
   const TargetElementItems = [
-    { Element: "Welches Problem löst Linkify ? " }
+    {
+      Element: "Unternehmen verlieren wertvolle Zeit mit manuellen Prozessen. Linkify verbindet Ihre ecoDMS und Buchungssoftware.",
+    },
+    {
+      Element: "Erleichtert den Datenaustausch und sorgt für effizientere Abläufe. Einfach, schnell und zuverlässig.",
+    },
   ];
 
-  const TargetItem = { Titel: "Problemlösung", Text: "Beispieltext2", Liste: TargetElementItems.map(item => item.Element) };
-  const TimeItem = { Titel: "Planung", Text: "Beispieltext2", Liste: TimeElementItems.map(item => item.Element) };
+  const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify?", Liste: TargetElementItems.map(item => item.Element) };
+  const TimeItem = { Titel: "Planung", Text: "Wie war unsere Planung?", Liste: TimeElementItems.map(item => item.Element) };
 
-  const GoodItem = { Titel: "Was lief gut", Text: "Beispieltext1", Liste: GoodElementItems.map(item => item.Element) };
-  const BadItem = { Titel: "Was lief nicht gut", Text: "Beispieltext2", Liste: BadElementItems.map(item => item.Element) };
+  const GoodItem = { Titel: "Erfolge des Projekts", Text: "Was gut funktioniert hat?", Liste: GoodElementItems.map(item => item.Element) };
+  const BadItem = { Titel: "Schwierigkeiten im Projekt", Text: "Welche Probleme gab es?", Liste: BadElementItems.map(item => item.Element) };
 
   return (
     <div className='project-item'>
