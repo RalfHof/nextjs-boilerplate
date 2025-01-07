@@ -55,7 +55,7 @@ export default function Navigation() {
     const currentUrl = window.location.href;
     if (!currentUrl.endsWith("/info")) {
       // Wenn die URL nicht auf /info endet, leite weiter
-      window.location.href = "https://linkify.cloud/info";
+      window.location.href = "/info";
     } else {
       // Andernfalls scrolle zur Sektion "Home"
       scrollToSection("Home");
@@ -67,6 +67,13 @@ export default function Navigation() {
     router.push("https://app.linkify.cloud/login")
 
   }
+
+
+  const handleProjektClick = () => {
+    router.push("https://linkify.cloud/projekt")
+
+  }
+
 
   return (
     <header
@@ -111,8 +118,14 @@ export default function Navigation() {
             <button onClick={handleHomeClick} className="nav-btn">
               HOME
             </button>
-
           </li>
+
+          <li className="nav-item">
+            <button onClick={handleProjektClick} className="nav-btn">
+              PROJEKT
+            </button>
+          </li>
+
           <li className="nav-item">
             <button onClick={() => scrollToSection("Team")} className="nav-btn">
               TEAM
