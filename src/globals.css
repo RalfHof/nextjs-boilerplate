@@ -391,7 +391,7 @@ a:hover {
 
 .project-item-list {
   border: 5px solid #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   background: #fff;
   width: 75%;
   padding: 30px;

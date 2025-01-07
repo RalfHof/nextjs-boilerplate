@@ -53,12 +53,9 @@ export default function ProjektPage() {
     { Element: "Benutzeroberfläche zur Datenflusskontrolle: Eine benutzerfreundliche Oberfläche zur Steuerung und Überwachung der Datenflüsse" },
   ];
 
-
-
-
   const TargetElementItems = [
     {
-      Element: "Linkify ermöglicht Ihnen eine einfache und schnelle Möglichkeit, Daten von Ihrer Buchungssoftware zu ecoDMS zu übertragen.",
+      Element: "Linkify ermöglicht es eine einfache und schnelle Möglichkeit, Daten von einer Buchungssoftware zu ecoDMS zu übertragen.",
     },
     {
       Element: "Linkify minimiert das Risiko von Fehlern, indem es den manuellen Aufwand verringert und den Datenaustausch einfacher und präziser macht.",
