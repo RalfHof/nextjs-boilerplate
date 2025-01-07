@@ -1113,9 +1113,10 @@ a:hover {
   margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: fit-content;
   position: relative;
-  top: -50px;
+  top: -42px;
+  right: -330px;
 }
 
 #BtnContact {
@@ -1144,20 +1145,28 @@ a:hover {
 }
 
 
-@media (max-width:1000px) {
+@media (max-width:1005px) {
+
+  #ContainerAroundBtnContact {
+    right: 0;
+    top: 60px;
+    width: 100%;
+  }
 
   #BtnContact {
-    margin-top: 90px;
     width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .DataProtectionContainer {
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width:850px) {
-
-  .DataProtectionContainer {
-    justify-content: center;
-    align-items: center;
-  }
 
   .MessagesFromBackendContact {
     display: flex;
