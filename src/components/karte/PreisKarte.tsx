@@ -5,7 +5,6 @@ import { FaLightbulb } from "react-icons/fa";
 import { Modal, Button, TextField, Box, Typography, Backdrop, Fade } from "@mui/material";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-// Preis-Element-Props
 type PriceItemProps = {
     Item: {
         Price: string;
@@ -26,22 +25,30 @@ export default function PriceCard({ Item }: PriceItemProps) {
         lastName: '',
         company: '',
         email: '',
-        badge: '', // Hinzufügen eines Badge-Feldes
+        badge: '',
     });
+    const [errors, setErrors] = useState({
+        email: '',
+        firstName: '',
+        lastName: '',
+    });
+    const [statusMessage, setStatusMessage] = useState<string | null>(null);
+    const [statusType, setStatusType] = useState<'success' | 'error' | null>(null);
 
     const isPremium = Item.isFavorite ?? false;
 
     const handleOpenModal = () => {
         setFormData({
             ...formData,
-            badge: Item.PackageName || 'Standard', // Badge-Wert dynamisch vom Item holen
+            badge: Item.PackageName || 'Standard',
         });
         setIsModalOpen(true);
     };
 
-
     const handleCloseModal = () => {
         setIsModalOpen(false);
+        setStatusMessage(null);
+        setStatusType(null);
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,10 +59,58 @@ export default function PriceCard({ Item }: PriceItemProps) {
         });
     };
 
+    const validateEmail = (email: string) => {
+        const popularEmailDomains = [
+            'gmail.com',
+            'outlook.com',
+            'hotmail.com',
+            'yahoo.com',
+            'icloud.com',
+            'gmail.de',
+            'outlook.de',
+            'hotmail.de',
+            'yahoo.de',
+            'icloud.de',
+        ];
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (!emailPattern.test(email)) {
+            return false;
+        }
+
+        const domain = email.split('@')[1];
+
+        return popularEmailDomains.includes(domain);
+    };
+
+    const validateName = (name: string) => {
+        const namePattern = /^[A-Za-z]+$/;
+        return namePattern.test(name);
+    };
+
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        let newError = '';
+        if (name === 'email' && !validateEmail(value)) {
+            newError = 'Bitte geben Sie eine gültige E-Mail-Adresse mit einer der gängigen Domains ein (z.B. gmail.com, outlook.com).';
+        }
+        if ((name === 'firstName' || name === 'lastName') && !validateName(value)) {
+            newError = `${name === 'firstName' ? 'Vorname' : 'Nachname'} darf nur Buchstaben enthalten.`;
+        }
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: newError,
+        }));
+    };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // API-Aufruf zur Registrierung
+        if (errors.email || errors.firstName || errors.lastName) {
+            return;
+        }
+
         fetch('https://api.linkify.cloud/service/register', {
             method: 'POST',
             headers: {
@@ -65,12 +120,16 @@ export default function PriceCard({ Item }: PriceItemProps) {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log("Erfolgreich registriert:", data);
-                setIsModalOpen(false);
+                console.log(data)
+                setStatusMessage('Erfolgreich registriert!' + data.message);
+                setStatusType('success');
             })
-            .catch((error) => {
-                console.error("Fehler bei der Registrierung:", error);
+            .catch((error: Error) => {
+                console.log(error)
+                setStatusMessage(`Fehler bei der Registrierung. Fehler: ${error.message}`);
+                setStatusType('error');
             });
+
     };
 
     return (
@@ -121,7 +180,6 @@ export default function PriceCard({ Item }: PriceItemProps) {
             <Modal
                 open={isModalOpen}
                 onClose={(event, reason) => {
-                    // Verhindert das Schließen, wenn der Hintergrund angeklickt wird
                     if (reason === 'backdropClick') {
                         return;
                     }
@@ -158,18 +216,24 @@ export default function PriceCard({ Item }: PriceItemProps) {
                                 name="firstName"
                                 value={formData.firstName}
                                 onChange={handleInputChange}
+                                onBlur={handleBlur}
                                 fullWidth
                                 margin="normal"
                                 required
+                                error={!!errors.firstName}
+                                helperText={errors.firstName}
                             />
                             <TextField
                                 label="Nachname"
                                 name="lastName"
                                 value={formData.lastName}
                                 onChange={handleInputChange}
+                                onBlur={handleBlur}
                                 fullWidth
                                 margin="normal"
                                 required
+                                error={!!errors.lastName}
+                                helperText={errors.lastName}
                             />
                             <TextField
                                 label="Firma"
@@ -185,9 +249,12 @@ export default function PriceCard({ Item }: PriceItemProps) {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleInputChange}
+                                onBlur={handleBlur}
                                 fullWidth
                                 margin="normal"
                                 required
+                                error={!!errors.email}
+                                helperText={errors.email}
                             />
                             <TextField
                                 name="badge"
@@ -208,17 +275,30 @@ export default function PriceCard({ Item }: PriceItemProps) {
                                 variant="contained"
                                 color="primary"
                                 sx={{ mt: 2 }}
+                                disabled={!!errors.firstName || !!errors.lastName || !!errors.email || !formData.firstName || !formData.lastName || !formData.email}
                             >
                                 Registrieren
                             </Button>
                         </form>
+
+                        {statusMessage && (
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    mt: 2,
+                                    color: statusType === 'success' ? 'green' : 'red',
+                                }}
+                            >
+                                {statusMessage}
+                            </Typography>
+                        )}
+
                         <Button onClick={handleCloseModal} sx={{ mt: 2 }}>
                             Schließen
                         </Button>
                     </Box>
                 </Fade>
             </Modal>
-
         </>
     );
 }
