@@ -14,7 +14,7 @@ export default function Navigation() {
     // Check only in the browser
     if (typeof window !== "undefined") {
       const handleResize = () => {
-        setIsMobile(window.innerWidth <= 920);
+        setIsMobile(window.innerWidth <= 1150);
       };
 
       const handleScroll = () => {
