@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Footer() {
+
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
       const element = document.getElementById(id);
@@ -10,6 +12,27 @@ export default function Footer() {
       }
     }
   };
+
+  const navigateToInfoAndScroll = (sectionId: string) => {
+    const currentUrl = window.location.href;
+    if (!currentUrl.endsWith("/info")) {
+      // Wenn nicht auf /info, leite zur /info weiter und scrolle dann
+      window.location.href = `/info#${sectionId}`;
+
+    } else {
+      // Wenn bereits auf /info, scrolle direkt
+      scrollToSection(sectionId);
+    }
+  };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.replace("#", "");
+      scrollToSection(targetId);
+      window.history.replaceState(null, "", "/info"); // Entferne Hash aus URL
+    }
+  }, []);
 
   return (
     <footer className="footer">
@@ -45,13 +68,13 @@ export default function Footer() {
         <div className="ContainerAroundLinks">
           <ul className="footer-links">
             <li>
-              <button onClick={() => scrollToSection("FAQ")} className="footer-link-btn footer-links">FAQ</button>
+              <button onClick={() => navigateToInfoAndScroll("FAQ")} className="footer-link-btn footer-links">FAQ</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("Technologien")} className="footer-link-btn footer-links">Technologie</button>
+              <button onClick={() => navigateToInfoAndScroll("Technologien")} className="footer-link-btn footer-links">Technologie</button>
             </li>
             <li>
-              <Link href="/impressum">Produkt Beschreibung</Link>
+              <Link href="/product">Produkt Beschreibung</Link>
             </li>
           </ul>
         </div>
@@ -66,11 +89,10 @@ export default function Footer() {
         <div className="ContainerAroundLinks">
           <ul className="footer-links">
             <li>
-              <button onClick={() => scrollToSection("Team")} className="footer-link-btn footer-links">Team</button>
-
+              <button onClick={() => navigateToInfoAndScroll("Team")} className="footer-link-btn footer-links">Team</button>
             </li>
             <li>
-              <button onClick={() => scrollToSection("Kontakt")} className="footer-link-btn footer-links">Kontakt</button>
+              <button onClick={() => navigateToInfoAndScroll("Kontakt")} className="footer-link-btn footer-links">Kontakt</button>
             </li>
             <li>
               <Link href="/impressum">Impressum</Link>

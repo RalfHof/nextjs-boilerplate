@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Logo from "./logo";
 import { useRouter } from "next/navigation";
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -56,6 +57,7 @@ export default function Navigation() {
       window.history.replaceState(null, "", "/info"); // Entferne Hash aus URL
     }
   }, []);
+
   const handleLoginClick = () => {
     router.push("https://app.linkify.cloud/login");
   };
