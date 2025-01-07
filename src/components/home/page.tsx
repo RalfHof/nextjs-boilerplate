@@ -8,7 +8,7 @@ export default function Home() {
 
                 <div className='HeaderContent'>
                     <h1 id='HeaderText'>
-                        <span>Linkify </span> - Effiziente Lösung für die Datenübergabe zwischen <span> ecoDMS </span> und <span> Buchungssoftware</span>
+                        <span>Linkify </span> - Effiziente Lösung für die Datenübergabe zwischen Ihrer<span> ecoDMS </span> und <span> Buchungssoftware</span>
                     </h1>
 
                     <p style={{ color: "#a2a2a2", width: "90%" }}>

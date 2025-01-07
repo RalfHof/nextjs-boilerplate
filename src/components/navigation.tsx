@@ -49,7 +49,9 @@ export default function Navigation() {
     }
   };
 
-
+  const handleLoginClick = () => {
+    router.push("https://app.linkify.cloud/login")
+  }
 
   const handleHomeClick = () => {
     const currentUrl = window.location.href;
@@ -62,18 +64,13 @@ export default function Navigation() {
     }
   };
 
-
-  const handleLoginClick = () => {
-    router.push("https://app.linkify.cloud/login")
-
-  }
-
-
   const handleProjektClick = () => {
-    router.push("https://linkify.cloud/projekt")
-
+    router.push("/projekt")
   }
 
+  const handleProductClick = () => {
+    router.push("/product")
+  }
 
   return (
     <header
@@ -125,6 +122,14 @@ export default function Navigation() {
               PROJEKT
             </button>
           </li>
+
+          <li className="nav-item">
+            <button onClick={handleProductClick} className="nav-btn">
+              PRODUKT
+            </button>
+          </li>
+
+
 
           <li className="nav-item">
             <button onClick={() => scrollToSection("Team")} className="nav-btn">

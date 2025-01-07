@@ -3,7 +3,7 @@
 import ProjektItem from '@/src/components/projekt/page';
 import React from 'react';
 
-export default function ProjektPage() {
+export default function ProductPage() {
 
   const GoodElementItems = [
     { Element: "Teamwork und Zusammenarbeit: Aufgaben werden verteilt, damit mehrere gleichzeitig arbeiten können, was Zeit spart und die Effizienz steigert." },
@@ -34,15 +34,16 @@ export default function ProjektPage() {
     { Element: "Login seite fertig designen " }
   ];
 
-  const TargetItem = { Titel: "Problemlösung", Text: "Beispieltext2", Liste: TargetElementItems.map(item => item.Element) };
-  const TimeItem = { Titel: "Planung", Text: "Beispieltext2", Liste: TimeElementItems.map(item => item.Element) };
+
+  const TargetItem = { Titel: "Ablaufplanung", Text: "Beispieltext2", Liste: TargetElementItems.map(item => item.Element) };
+  const TimeItem = { Titel: "Ablaufplanung", Text: "Beispieltext2", Liste: TimeElementItems.map(item => item.Element) };
 
   const GoodItem = { Titel: "Was lief gut", Text: "Beispieltext1", Liste: GoodElementItems.map(item => item.Element) };
   const BadItem = { Titel: "Was lief nicht gut", Text: "Beispieltext2", Liste: BadElementItems.map(item => item.Element) };
 
   return (
     <div className="impressum-page" id="impressum-page">
-      <h1 className="page-title">Projektseite</h1>
+      <h1 className="page-title">Produktseite</h1>
 
 
       <ProjektItem Item={TargetItem} />

@@ -21,16 +21,22 @@ type PriceItemProps = {
 export default function PriceCard({ Item }: PriceItemProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        company: '',
+        first_name: '',
+        last_name: '',
+        company_name: '',
         email: '',
-        badge: '',
+        password: '',
+        password_confirmation: '',
+        language: 'de',
+        address: '',
+        tarif: 'free',
     });
     const [errors, setErrors] = useState({
         email: '',
-        firstName: '',
-        lastName: '',
+        first_name: '',
+        last_name: '',
+        password: '',
+        password_confirmation: '',
     });
     const [statusMessage, setStatusMessage] = useState<string | null>(null);
     const [statusType, setStatusType] = useState<'success' | 'error' | null>(null);
@@ -40,7 +46,7 @@ export default function PriceCard({ Item }: PriceItemProps) {
     const handleOpenModal = () => {
         setFormData({
             ...formData,
-            badge: Item.PackageName || 'Standard',
+            tarif: Item.PackageName || 'free',
         });
         setIsModalOpen(true);
     };
@@ -95,8 +101,14 @@ export default function PriceCard({ Item }: PriceItemProps) {
         if (name === 'email' && !validateEmail(value)) {
             newError = 'Bitte geben Sie eine gültige E-Mail-Adresse mit einer der gängigen Domains ein (z.B. gmail.com, outlook.com).';
         }
-        if ((name === 'firstName' || name === 'lastName') && !validateName(value)) {
-            newError = `${name === 'firstName' ? 'Vorname' : 'Nachname'} darf nur Buchstaben enthalten.`;
+        if ((name === 'first_name' || name === 'last_name') && !validateName(value)) {
+            newError = `${name === 'first_name' ? 'Vorname' : 'Nachname'} darf nur Buchstaben enthalten.`;
+        }
+        if (name === 'password' && value.length < 6) {
+            newError = 'Das Passwort muss mindestens 6 Zeichen lang sein.';
+        }
+        if (name === 'password_confirmation' && value !== formData.password) {
+            newError = 'Die Passwörter stimmen nicht überein.';
         }
         setErrors((prevErrors) => ({
             ...prevErrors,
@@ -107,7 +119,7 @@ export default function PriceCard({ Item }: PriceItemProps) {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (errors.email || errors.firstName || errors.lastName) {
+        if (errors.email || errors.first_name || errors.last_name || errors.password || errors.password_confirmation) {
             return;
         }
 
@@ -120,16 +132,28 @@ export default function PriceCard({ Item }: PriceItemProps) {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
-                setStatusMessage('Erfolgreich registriert!' + data.message);
+                console.log(data);
+                setStatusMessage("Erfolgreich registriert!");
                 setStatusType('success');
+
+                // Nach der Registrierung Formular zurücksetzen
+                setFormData({
+                    first_name: '',
+                    last_name: '',
+                    company_name: '',
+                    email: '',
+                    password: '',
+                    password_confirmation: '',
+                    language: 'de', // Defaultwert
+                    address: '',
+                    tarif: 'free', // Defaultwert
+                });
             })
             .catch((error: Error) => {
-                console.log(error)
-                setStatusMessage(`Fehler bei der Registrierung. Fehler: ${error.message}`);
+                console.log(error);
+                setStatusMessage("Fehler bei der Registrierung.");
                 setStatusType('error');
             });
-
     };
 
     return (
@@ -213,32 +237,32 @@ export default function PriceCard({ Item }: PriceItemProps) {
                         <form onSubmit={handleSubmit}>
                             <TextField
                                 label="Vorname"
-                                name="firstName"
-                                value={formData.firstName}
+                                name="first_name"
+                                value={formData.first_name}
                                 onChange={handleInputChange}
                                 onBlur={handleBlur}
                                 fullWidth
                                 margin="normal"
                                 required
-                                error={!!errors.firstName}
-                                helperText={errors.firstName}
+                                error={!!errors.first_name}
+                                helperText={errors.first_name}
                             />
                             <TextField
                                 label="Nachname"
-                                name="lastName"
-                                value={formData.lastName}
+                                name="last_name"
+                                value={formData.last_name}
                                 onChange={handleInputChange}
                                 onBlur={handleBlur}
                                 fullWidth
                                 margin="normal"
                                 required
-                                error={!!errors.lastName}
-                                helperText={errors.lastName}
+                                error={!!errors.last_name}
+                                helperText={errors.last_name}
                             />
                             <TextField
                                 label="Firma"
-                                name="company"
-                                value={formData.company}
+                                name="company_name"
+                                value={formData.company_name}
                                 onChange={handleInputChange}
                                 fullWidth
                                 margin="normal"
@@ -257,14 +281,64 @@ export default function PriceCard({ Item }: PriceItemProps) {
                                 helperText={errors.email}
                             />
                             <TextField
-                                name="badge"
-                                value={formData.badge}
+                                label="Passwort"
+                                name="password"
+                                type="password"
+                                value={formData.password}
+                                onChange={handleInputChange}
+                                onBlur={handleBlur}
+                                fullWidth
+                                margin="normal"
+                                required
+                                error={!!errors.password}
+                                helperText={errors.password}
+                            />
+                            <TextField
+                                label="Passwort Bestätigung"
+                                name="password_confirmation"
+                                type="password"
+                                value={formData.password_confirmation}
+                                onChange={handleInputChange}
+                                onBlur={handleBlur}
+                                fullWidth
+                                margin="normal"
+                                required
+                                error={!!errors.password_confirmation}
+                                helperText={errors.password_confirmation}
+                            />
+                            <TextField
+                                label="Sprache"
+                                name="language"
+                                value={formData.language}
                                 onChange={handleInputChange}
                                 fullWidth
                                 required
                                 disabled
                                 margin="normal"
+                                sx={{ display: 'none' }}  // Macht das Language-Feld unsichtbar
                             />
+                            <TextField
+                                label="Adresse"
+                                name="address"
+                                value={formData.address}
+                                onChange={handleInputChange}
+                                fullWidth
+                                margin="normal"
+                                required
+                            />
+
+                            <TextField
+                                label="Tarif"
+                                name="tarif"
+                                value={formData.tarif}
+                                onChange={handleInputChange}
+                                fullWidth
+                                required
+                                disabled
+                                margin="normal"
+                                sx={{ display: 'none' }}  // Macht das Tarif-Feld unsichtbar
+                            />
+
                             {Item.PackageName === 'Premium' && (
                                 <div className="PremiumNotice" style={{ color: 'red', marginTop: 10 }}>
                                     Die Premium-Option ist derzeit nicht verfügbar. Wir nehmen jedoch gerne Ihre Registrierung entgegen und informieren Sie umgehend per E-Mail, sobald die Premium-Option wieder zur Verfügung steht.
@@ -275,7 +349,7 @@ export default function PriceCard({ Item }: PriceItemProps) {
                                 variant="contained"
                                 color="primary"
                                 sx={{ mt: 2 }}
-                                disabled={!!errors.firstName || !!errors.lastName || !!errors.email || !formData.firstName || !formData.lastName || !formData.email}
+                                disabled={!!errors.first_name || !!errors.last_name || !!errors.email || !!errors.password || !!errors.password_confirmation || !formData.first_name || !formData.last_name || !formData.email || !formData.password || !formData.password_confirmation}
                             >
                                 Registrieren
                             </Button>
