@@ -25,48 +25,40 @@ Merge-Konflikte traten auf, weil mehrere Teammitglieder gleichzeitig an denselbe
 Unzureichende Tests führten dazu, dass Fehler erst spät auffielen. Ohne automatisierte Unit-, Integrations- und End-to-End-Tests war die Codequalität schwer sicherzustellen, was Mehraufwand verursachte.
 
 4. Unterschiedliches Fähigkeitsniveau
-Wissenslücken im Team verlangsamten die Entwicklung, da fundamentale Probleme noch existierten.`,
+Wissenslücken im Team verlangsamten die Entwicklung, da fundamentale Probleme noch existierten.
+
+5. Aufgrund des Ausfalls mehrerer Mitarbeiter musste die Arbeitsverteilung neu organisiert werden, was mit einem erheblichen zeitlichen Aufwand verbunden war.`,
 
         `
-1. Teamwork und Zusammenarbeit
-In unserem Team teilen wir Aufgaben auf, sodass mehrere Mitglieder gleichzeitig daran arbeiten können. Das spart Zeit und macht uns effizienter.
-Wir tauschen unser Wissen aus, damit jeder von den Stärken der anderen lernen kann und das Team insgesamt besser wird.
+1. Teamwork und Zusammenarbeit  
+Aufgaben werden verteilt, damit mehrere gleichzeitig arbeiten können, was Zeit spart und die Effizienz steigert.
 
-2. Effektive Kommunikation
-Wir halten regelmäßige Meetings, um wichtige Themen zu besprechen und offene Fragen zu klären.
-Wenn ein Problem auftritt, sprechen wir es direkt an, damit es schnell gelöst wird.
-Wir nutzen Tools wie Slack oder Trello, um den Überblick über Aufgaben und Fortschritte zu behalten.
+2. Effektive Kommunikation  
+Regelmäßige Meetings und direkte Kommunikation helfen, Probleme schnell zu lösen und den Überblick zu behalten.
 
-3. Klare Rollen und Verantwortlichkeiten
-Bei uns weiß jeder genau, welche Aufgabe er übernehmen soll. Das verhindert Verwirrung und sorgt dafür, dass alles reibungslos läuft.
-Jeder hat klar definierte Verantwortlichkeiten, was die Zusammenarbeit einfacher macht.
+3. Klare Rollen und Verantwortlichkeiten  
+Jeder kennt seine Aufgaben, was Verwirrung vermeidet und den Arbeitsablauf optimiert.
 
-4. Gemeinsame Zielorientierung
-Wir arbeiten gemeinsam auf ein Ziel hin, was uns als Team motiviert.
-Regelmäßige Zielüberprüfungen helfen uns, den Fokus nicht zu verlieren und unsere Prioritäten klar zu setzen.
+4. Gemeinsame Zielorientierung  
+Wir arbeiten auf gemeinsame Ziele hin, um fokussiert und motiviert zu bleiben.
 
-5. Code-Qualität und Standards
-Wir überprüfen unseren Code regelmäßig gegenseitig, um Fehler zu vermeiden und die Qualität zu verbessern.
+5. Code-Qualität und Standards  
+Regelmäßige Code-Reviews verbessern Qualität und reduzieren Fehler.
 
-6. Effiziente Nutzung von Tools
-Automatisierte Prozesse wie CI/CD helfen uns, unsere Arbeit schneller und ohne viel manuelle Eingriffe zu erledigen.
-Plattformen wie GitHub machen es einfach, Fortschritte und Änderungen im Code für alle sichtbar zu machen.
+6. Effiziente Nutzung von Tools  
+Automatisierte Prozesse und Tools wie GitHub beschleunigen die Arbeit und sorgen für Transparenz.
 
-7. Flexibilität und Anpassungsfähigkeit
-Wenn sich Anforderungen ändern, passen wir uns schnell an und finden eine Lösung.
-Mit agilen Methoden wie Scrum können wir regelmäßig Feedback einholen und unsere Arbeit verbessern.
+7. Flexibilität und Anpassungsfähigkeit  
+Anpassungen an neue Anforderungen erfolgen schnell, unterstützt durch agile Methoden.
 
-8. Motivation und Teamgeist
-Gemeinsam Erfolge feiern, stärkt unseren Teamgeist und motiviert uns für die nächsten Aufgaben.
-Herausforderungen gehen wir als Team an, was das Engagement jedes Einzelnen steigert.
+8. Motivation und Teamgeist  
+Erfolge werden gemeinsam gefeiert, was den Teamgeist stärkt und motiviert.
 
-9. Schnellere Problemlösung
-In unserem Team finden wir Probleme schneller, weil mehrere Leute daran arbeiten können.
-Bei Brainstormings kommen oft kreative und bessere Lösungen heraus.
+9. Schnellere Problemlösung  
+Probleme werden schnell identifiziert und durch Teamarbeit effizient gelöst.
 
-10. Wissenstransfer und Weiterbildung
-Die erfahrenen Teammitglieder unterstützen die Jüngeren und teilen ihr Wissen, damit alle besser werden.
-Beim Pair Programming lernen wir durch Zusammenarbeit direkt voneinander.`];
+10. Wissenstransfer und Weiterbildung  
+Erfahrene Teammitglieder teilen ihr Wissen, um das gesamte Team zu fördern.`];
 
     return (
         <div className="ContainerFAQ">
