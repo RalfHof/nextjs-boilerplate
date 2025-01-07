@@ -10,7 +10,7 @@ export default function ProjektItem({ Item }: ProjektItemProps) {
 
     return (
         <>
-            <section className="project-item">
+            <div className="project-item">
                 <h2 className="project-title">{Item.Titel}</h2>
                 <div className="projekt-text">{Item.Text}</div>
 
@@ -21,7 +21,7 @@ export default function ProjektItem({ Item }: ProjektItemProps) {
                         })}
                     </ol>
                 </div>
-            </section>
+            </div>
         </>
     );
 }

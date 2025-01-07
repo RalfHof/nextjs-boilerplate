@@ -362,6 +362,39 @@ a:hover {
 
 /* -------------------------------------------------------------- */
 
+
+.project-item {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.project-title {
+  color: green;
+  margin: 0;
+  padding: 0;
+}
+
+.projekt-text {
+  color: red;
+}
+
+.project-item-list {
+  color: brown;
+
+}
+
+
+
+/* -------------------------------------------------------------- */
+
 /* Responsive Design */
 @media (max-width: 1150px) {
 

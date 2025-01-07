@@ -56,7 +56,6 @@ export default function Navigation() {
   const handleHomeClick = () => {
     const currentUrl = window.location.href;
     if (!currentUrl.endsWith("/info")) {
-      // Wenn die URL nicht auf /info endet, leite weiter
       window.location.href = "/info";
     } else {
       // Andernfalls scrolle zur Sektion "Home"
@@ -71,6 +70,23 @@ export default function Navigation() {
   const handleProductClick = () => {
     router.push("/product")
   }
+
+  const handleScrollToSection = (id: string) => {
+    const currentUrl = window.location.href;
+
+    // Überprüfe, ob die URL nicht auf /info endet
+    if (!currentUrl.endsWith("/info")) {
+      // Leite zu /info weiter und speichere den Zielbereich in der URL
+      window.history.pushState({}, '', '/info');
+
+      setTimeout(() => {
+        scrollToSection(id);
+      }, 500); // Eine kleine Verzögerung, um sicherzustellen, dass die Seite geladen ist
+    } else {
+      // Wenn die URL bereits /info ist, scrolle direkt
+      scrollToSection(id);
+    }
+  };
 
   return (
     <header
@@ -129,20 +145,18 @@ export default function Navigation() {
             </button>
           </li>
 
-
-
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Team")} className="nav-btn">
+            <button onClick={() => handleScrollToSection("Team")} className="nav-btn">
               TEAM
             </button>
           </li>
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Technologien")} className="nav-btn">
+            <button onClick={() => handleScrollToSection("Technologien")} className="nav-btn">
               TECHNOLOGIEN
             </button>
           </li>
           <li className="nav-item">
-            <button onClick={() => scrollToSection("Kontakt")} className="nav-btn">
+            <button onClick={() => handleScrollToSection("Kontakt")} className="nav-btn">
               KONTAKT
             </button>
           </li>

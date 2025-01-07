@@ -41,17 +41,13 @@ export default function ProjektPage() {
   const BadItem = { Titel: "Was lief nicht gut", Text: "Beispieltext2", Liste: BadElementItems.map(item => item.Element) };
 
   return (
-    <div className="impressum-page" id="impressum-page">
-      <h1 className="page-title">Projektseite</h1>
-
-
+    <div className='project-itemd'>
+      <h1>Projektseite</h1>
       <ProjektItem Item={TargetItem} />
       <ProjektItem Item={TimeItem} />
 
       <ProjektItem Item={GoodItem} />
       <ProjektItem Item={BadItem} />
-
-      <main className="content" id="main-content"></main>
     </div>
   );
 }
