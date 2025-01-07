@@ -1,12 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Logo from "./logo";
+import { useRouter } from "next/navigation";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
+  const router = useRouter()
 
   useEffect(() => {
     // Check only in the browser
@@ -59,6 +61,12 @@ export default function Navigation() {
       scrollToSection("Home");
     }
   };
+
+
+  const handleLoginClick = () => {
+    router.push("https://app.linkify.cloud/login")
+
+  }
 
   return (
     <header
@@ -120,10 +128,10 @@ export default function Navigation() {
               KONTAKT
             </button>
           </li>
-          <li className="nav-item login">
-            <Link href="https://app.linkify.cloud/login" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+          <li className="nav-item">
+            <button className="nav-btn" onClick={handleLoginClick}>
               LOGIN
-            </Link>
+            </button>
           </li>
         </ul>
       </nav>

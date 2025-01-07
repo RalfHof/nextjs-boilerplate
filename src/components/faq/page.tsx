@@ -8,11 +8,11 @@ export default function FAQ() {
     ];
 
     const ContentAnswerArray = [
-        "Antwort auf Frage 1",
-        "Antwort auf Frage 2",
-        "Antwort auf Frage 3",
-        "Antwort auf Frage 4",
-        "Antwort auf Frage 5"
+        "Linkify bietet zurzeit Integrationsmöglichkeiten mit Lexoffice und ecoDMS an. Diese Integrationen ermöglichen es, Dokumente und Daten nahtlos zwischen den Systemen auszutauschen.",
+        "Ein Dokumentenmanagementsystem (DMS) ist eine Software, die zur Speicherung, Verwaltung und Nachverfolgung von elektronischen Dokumenten verwendet wird. Es ermöglicht eine effiziente Verwaltung von Dokumenten über deren gesamten Lebenszyklus.",
+        "Buchungssoftware ist eine Lösung, die Unternehmen dabei unterstützt, ihre finanziellen Transaktionen zu verwalten und zu dokumentieren. Sie dient vor allem der Erfassung und Organisation von Buchhaltungsdaten. Zu den Funktionen einer Buchungssoftware gehören unter anderem die Rechnungsstellung, die Erstellung von Finanzberichten und die Berechnung von Steuern",
+        "Um Linkify nutzen zu können, benötigen Sie ein Lexoffice- und ecoDMS-Konto.",
+        "Linkify speichert keine sensiblen persönlichen Informationen. Stattdessen werden nur IDs, die mit den jeweiligen Dokumenten verknüpft sind, gespeichert. So wird der Datenschutz gewährleistet."
     ];
 
     return (

@@ -50,9 +50,8 @@ html,
 }
 
 .main-navigation.open {
-  z-index: 1000;  /* Sicherstellen, dass das Menü über dem Overlay liegt */
+  z-index: 1000;
 }
-
 
 .nav-list {
   list-style: none;
@@ -60,6 +59,7 @@ html,
   gap: 20px;
   margin: 0;
   padding: 0;
+
 }
 
 .nav-link {
@@ -69,7 +69,6 @@ html,
 }
 
 .nav-item {
-  cursor: pointer;
   display: flex;
   font-weight: 900;
   font-size: 1.1rem;
@@ -111,9 +110,12 @@ html,
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);  /* Semi-transparentes Schwarz */
-  z-index: 999;  /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
-  pointer-events: auto;  /* Erlaubt das Klicken auf das Overlay */
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparentes Schwarz */
+  z-index: 999;
+  /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
+  pointer-events: auto;
+  /* Erlaubt das Klicken auf das Overlay */
 }
 
 
