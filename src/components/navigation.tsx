@@ -10,7 +10,7 @@ export default function Navigation() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const handleResize = () => {
-        setIsMobile(window.innerWidth <= 920);
+        setIsMobile(window.innerWidth <= 1150);
       };
       const handleScroll = () => {
         setScrollY(window.scrollY);

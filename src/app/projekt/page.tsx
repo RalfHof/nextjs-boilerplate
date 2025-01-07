@@ -37,8 +37,6 @@ export default function ProjektPage() {
     {
       Element: "Linkify minimiert das Risiko von Fehlern, indem es den manuellen Aufwand verringert und den Datenaustausch einfacher und präziser macht.",
     }
-
-
   ];
 
   const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify?", Liste: TargetElementItems.map(item => item.Element) };
