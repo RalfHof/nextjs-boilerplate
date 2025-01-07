@@ -32,11 +32,13 @@ export default function ProjektPage() {
 
   const TargetElementItems = [
     {
-      Element: "Unternehmen verlieren wertvolle Zeit mit manuellen Prozessen. Linkify verbindet Ihre ecoDMS und Buchungssoftware.",
+      Element: "Linkify ermöglicht Ihnen eine einfache und schnelle Möglichkeit, Daten von Ihrer Buchungssoftware zu ecoDMS zu übertragen.",
     },
     {
-      Element: "Erleichtert den Datenaustausch und sorgt für effizientere Abläufe. Einfach, schnell und zuverlässig.",
-    },
+      Element: "Linkify minimiert das Risiko von Fehlern, indem es den manuellen Aufwand verringert und den Datenaustausch einfacher und präziser macht.",
+    }
+
+
   ];
 
   const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify?", Liste: TargetElementItems.map(item => item.Element) };
