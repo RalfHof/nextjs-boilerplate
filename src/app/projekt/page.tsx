@@ -27,11 +27,11 @@ export default function ProjektPage() {
   ];
 
   const TimeElementItems = [
-    { Element: "Login seite fertig designen " }
+    { Element: "Login seite fertig designen" }
   ];
 
   const TargetElementItems = [
-    { Element: "Login seite fertig designen " }
+    { Element: "Welches Problem löst Linkify ? " }
   ];
 
   const TargetItem = { Titel: "Problemlösung", Text: "Beispieltext2", Liste: TargetElementItems.map(item => item.Element) };
@@ -41,8 +41,8 @@ export default function ProjektPage() {
   const BadItem = { Titel: "Was lief nicht gut", Text: "Beispieltext2", Liste: BadElementItems.map(item => item.Element) };
 
   return (
-    <div className='project-itemd'>
-      <h1>Projektseite</h1>
+    <div className='project-item'>
+      <h1 className='HeaderItems'>Projektseite</h1>
       <ProjektItem Item={TargetItem} />
       <ProjektItem Item={TimeItem} />
 

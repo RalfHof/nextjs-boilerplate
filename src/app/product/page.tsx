@@ -43,8 +43,7 @@ export default function ProductPage() {
 
   return (
     <div className='project-item'>
-      <h1>Produktseite</h1>
-
+      <h1 className='HeaderItems'>Produktseite</h1>
 
       <ProjektItem Item={TargetItem} />
       <ProjektItem Item={TimeItem} />
