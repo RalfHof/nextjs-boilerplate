@@ -3,15 +3,17 @@
 import { useState } from "react";
 import { RiNextjsFill, RiVercelFill } from "react-icons/ri";
 import { SiTypescript, } from "react-icons/si";
-import { FaPhp, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 
+import { SiLumen } from "react-icons/si";
 export default function TechnologyPage() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const technologies = [
     { title: "Nextjs", icon: <RiNextjsFill />, description: "Next.js ist ein React-Framework für serverseitiges Rendering und Webseiten." },
-    { title: "PHP Lumen (Laravel)", icon: <FaPhp />, description: "PHP ist eine serverseitige Skriptsprache für die Webentwicklung." },
+
+    {title: "PHP Lumen (Laravel)", icon: <SiLumen />, description: "Lumen ist ein leichtgewichtiges PHP-Microframework, basierend auf Laravel, ideal für APIs und Microservices."},
     { title: "Vercel", icon: <RiVercelFill />, description: "Vercel ist eine Cloud-Plattform für das Hosting von Webseiten und Serverless-Funktionen." },
     { title: "Github", icon: <FaGithub />, description: "GitHub ist eine Plattform für die Versionskontrolle von Code und die Zusammenarbeit von Entwicklern." },
     { title: "MySQL", icon: <DiMysql />, description: "MySQL ist ein relationales Datenbankmanagementsystem zur Verwaltung von Daten." },
