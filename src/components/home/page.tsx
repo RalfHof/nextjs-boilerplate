@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <>
-            <div className='HomeImg '></div>
+            {/* <div className='HomeImg '></div> */}
             <div className='ContainerHome' >
 
                 <div className='HeaderContent'>
