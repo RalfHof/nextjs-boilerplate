@@ -28,7 +28,7 @@ export default function Navigation() {
   const navBackgroundColor =
     typeof window !== "undefined" && scrollY > (window.innerHeight || 800) * 0.2
       ? "#1c042e"
-      : "inherit"
+      : "#37075d"
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
       const element = document.getElementById(id);
