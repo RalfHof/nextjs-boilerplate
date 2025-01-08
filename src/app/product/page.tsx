@@ -17,7 +17,7 @@ export default function ProductPage() {
   const TargetItem = { Titel: "Produktbeschreibung", Text: "Was ist Linkify?", Liste: TargetElementItems.map(item => item.Element) };
 
   return (
-    <div className='project-item'>
+    <div className='project-item product-item'>
       <h1 className='HeaderItems'>Produktseite</h1>
 
       <ProjektItem Item={TargetItem} />
