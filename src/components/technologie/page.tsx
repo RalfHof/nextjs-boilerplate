@@ -12,7 +12,7 @@ export default function TechnologyPage() {
   const technologies = [
     { title: "Nextjs", icon: <RiNextjsFill />, description: "Next.js ist ein React-Framework für serverseitiges Rendering und Webseiten." },
     { title: "Typescript", icon: <SiTypescript />, description: "TypeScript ist eine JavaScript-Erweiterung mit statischer Typisierung." },
-    { title: "PHP", icon: <FaPhp />, description: "PHP ist eine serverseitige Skriptsprache für die Webentwicklung." },
+    { title: "PHP Lumen (Laravel)", icon: <FaPhp />, description: "PHP ist eine serverseitige Skriptsprache für die Webentwicklung." },
     { title: "Vercel", icon: <RiVercelFill />, description: "Vercel ist eine Cloud-Plattform für das Hosting von Webseiten und Serverless-Funktionen." },
     { title: "Github", icon: <FaGithub />, description: "GitHub ist eine Plattform für die Versionskontrolle von Code und die Zusammenarbeit von Entwicklern." },
     { title: "MySQL", icon: <DiMysql />, description: "MySQL ist ein relationales Datenbankmanagementsystem zur Verwaltung von Daten." },
