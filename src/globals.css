@@ -1590,7 +1590,7 @@ a:hover {
   color: #f2c76e;
   background: transparent;
   border: 2px solid #f2c76e;
-  z-index: 9;
+  z-index: 3;
   cursor: pointer;
   margin-right: 20px;
 }
