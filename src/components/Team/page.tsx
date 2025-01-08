@@ -83,14 +83,15 @@ export default function Team() {
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    padding: "20px",
-    paddingBottom: "60px",
+    padding: "200px",
+    paddingTop: "100px",
+    paddingBottom: "100px",
     backgroundColor: "#1d0332",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    height: "800px"
+    height: "auto",
   },
   title: {
     fontSize: "3rem",
@@ -114,8 +115,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(350px, 2fr))",
     width: "100%",
+    marginTop: "40px"
   },
   teamMember: {
     padding: "0",
