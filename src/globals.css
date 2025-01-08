@@ -257,8 +257,8 @@ html,
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: 90px;
-  padding-bottom: 100px;
+  top: 120px;
+  padding-bottom: 200px;
 }
 
 /* Titel der Seite */
@@ -267,7 +267,8 @@ html,
   color: #007acc;
   margin: 0;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 /* Kontaktdaten und Abschnitte */
@@ -277,6 +278,7 @@ html,
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
 }
 
 /* Abschnittstitel */
@@ -354,7 +356,7 @@ a:hover {
   color: #007acc;
   margin: 0;
   text-align: center;
-  margin-top: 35px;
+  margin-top: 85px;
 }
 
 .section {
@@ -401,7 +403,7 @@ a:hover {
 .HeaderItems {
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 120px;
   color: #007acc;
   font-size: 2rem;
 }
@@ -1505,7 +1507,7 @@ a:hover {
 
 /* Canvas */
 .ContainerHome {
-  height: 1170px;
+  height: 873px;
   width: 100%;
   background-color: #1c042e;
   font-family: Arial, Helvetica, sans-serif;
@@ -1520,11 +1522,10 @@ a:hover {
   position: absolute;
   background-image: url("/img/hero-bg.png");
   background-repeat: no-repeat;
-  background-size: 120% 100%;
+  background-size: 114% 100%;
   height: 100%;
   width: 100%;
   background-color: #37075d;
-  opacity: 1;
 }
 
 #HeaderText span {
@@ -1534,24 +1535,24 @@ a:hover {
 }
 
 .HeaderContent {
-  position: relative;
-  top: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 100%;
   z-index: 2;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #HeaderText {
+  position: relative;
+  top: 250px;
   width: 60%;
   padding: 0;
   margin: 0;
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 5px;
   font-weight: lighter;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -1561,27 +1562,29 @@ a:hover {
   color: #a2a2a2;
   width: 60%;
   font-weight: 100;
+  position: relative;
+  top: 250px;
 }
 
 .BtnHomeContainer {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  z-index: 9;
+  position: relative;
+  top: -210px;
+  left: -54px;
 }
 
 .BtnHome {
   width: 70%;
   display: flex;
   justify-content: center;
-  z-index: 9;
 }
 
 .BtnDesign {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   letter-spacing: 1px;
-  padding: 22px 40px;
+  padding: 17px 40px;
   border-radius: 50px;
   transition: 0.3s;
   color: #f2c76e;
@@ -1589,9 +1592,6 @@ a:hover {
   border: 2px solid #f2c76e;
   z-index: 9;
   cursor: pointer;
-  position: relative;
-  top: -280px;
-  left: -110px;
   margin-right: 20px;
 }
 
