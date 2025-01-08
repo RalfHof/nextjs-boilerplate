@@ -62,20 +62,41 @@ export default function ProjektPage() {
     }
   ];
 
+
+  const TimerItems = [
+    { Element: "Kickoff am: X Dezember 2024." },
+    { Element: "Dauer: X Werktagen." },
+    { Element: "Erreicht: 85%." },
+    { Element: "Startdatum: 2. Dezember 2024." },
+    { Element: "Geplantes Enddatum: 15. Januar 2025." },
+    { Element: "Aktueller Fortschritt: 60% abgeschlossen." },
+    { Element: "Verfügbare Ressourcen: 3 Entwickler." },
+    { Element: "Nächster Schritt: Testphase starten." },
+    { Element: "Verzögerungen: Ja." },
+    { Element: "Aktuelle Probleme: Keine kritischen Blocker außer Zeitmangel." },
+  ];
+
+  const TimerItem = {
+    Titel: "Zeitachse",
+    Text: "Zeitschätzung",
+    Liste: TimerItems.map(item => item.Element)
+  };
   const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify?", Liste: TargetElementItems.map(item => item.Element) };
-  const TimeItem = { Titel: "Planung", Text: "Wie war unsere Planung?", Liste: TimeElementItems.map(item => item.Element) };
+  const TimeItem = { Titel: "Technische Vorgehensweise", Text: "Wie war unsere Planung?", Liste: TimeElementItems.map(item => item.Element) };
 
   const GoodItem = { Titel: "Erfolge des Projekts", Text: "Was gut funktioniert hat?", Liste: GoodElementItems.map(item => item.Element) };
   const BadItem = { Titel: "Schwierigkeiten im Projekt", Text: "Welche Probleme gab es?", Liste: BadElementItems.map(item => item.Element) };
+
 
   return (
     <div className='project-item'>
       <h1 className='HeaderItems'>Projektseite</h1>
       <ProjektItem Item={TargetItem} />
-      <ProjektItem Item={TimeItem} />
+      <ProjektItem Item={TimerItem} />
 
       <ProjektItem Item={GoodItem} />
       <ProjektItem Item={BadItem} />
+      <ProjektItem Item={TimeItem} />
     </div>
   );
 }
