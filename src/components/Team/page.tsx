@@ -90,6 +90,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
+    height: "800px"
   },
   title: {
     fontSize: "3rem",
@@ -102,14 +103,14 @@ const styles: Record<string, React.CSSProperties> = {
     color: "#f2c76e",
   },
   paragraph: {
-    fontSize: "1rem",
+    fontSize: "1.3rem",
     color: "#b9b9b9",
     textAlign: "center",
     width: "100%",
     maxWidth: "800px",
     padding: "0",
     margin: "0",
-    marginBottom: "15px"
+    marginBottom: "15px",
   },
   teamGrid: {
     display: "grid",
@@ -129,14 +130,15 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: "bold",
     color: "#f2c76e",
     padding: "0",
-    margin: "0"
+    margin: "0",
+    fontSize: "1.3rem"
   },
   teamRole: {
-    fontSize: "1rem",
+    fontSize: "1.3rem",
     fontStyle: "italic",
     color: "#b9b9b9",
     marginBottom: "10px",
-    padding: "0"
+    padding: "0",
   },
   emailContainer: {
     display: "flex",
@@ -150,7 +152,8 @@ const styles: Record<string, React.CSSProperties> = {
     marginRight: "10px",
   },
   emailText: {
-    fontSize: "1rem",
     color: "#475569",
+    fontSize: "1.2rem",
+
   },
 };
