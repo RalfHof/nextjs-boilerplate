@@ -12,17 +12,17 @@ export default function Home() {
 
                 <div className='HeaderContent'>
                     <h1 id='HeaderText'>
-                        <span>Linkify </span> - Effiziente Datenübertragung zwischen <span>ecoDMS </span>  und  <span> Buchungssoftware</span>
+                        <span>Linkify </span> - Effiziente Datenübertragung zwischen <span>DMS </span>  und  <span> Buchungssoftware</span>
                     </h1>
 
                     <p className='HeaderSubText'>
-                        Mit Linkify bieten wir Ihnen eine einfache und schnelle Möglichkeit, Daten nahtlos von lexoffice zu ecoDMS zu übertragen. So reduzieren Sie den manuellen Aufwand erheblich und steigern die Effizienz Ihrer Prozesse. Vertrauen Sie auf unsere Lösung, um Ihre Arbeit zu erleichtern und wertvolle Zeit zu sparen.
+                    Mit Linkify übertragen Sie Daten mühelos zwischen Buchungssoftware und DMS. Sparen Sie Zeit, reduzieren Sie manuelle Arbeit und optimieren Sie Ihre Abläufe.
                     </p>
                 </div>
                 <div className='BtnHomeContainer'>
 
                     <div className='BtnHome'>
-                        <Link href={"/product"} className='BtnDesign'>Get Started</Link >
+                        <Link href={"#PriceHeadline"} className='BtnDesign'>Get Started</Link >
                         <Link href={"/product"} className='BtnDesign'>Produktseite</Link >
                     </div>
                 </div>
