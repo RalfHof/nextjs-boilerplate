@@ -6,25 +6,25 @@ import React, { useState } from "react";
 const teamMembers = [
   {
     name: "Akin Kale",
-    image: "/img/bild1.jpg",
+    image: "/img/bild1.png",
     email: "akinkale054@hotmail.com",
     role: "Frontend-App, -Demo",
   },
   {
     name: "Marc Ehrlich",
-    image: "/img/bild2.jpg",
+    image: "/img/bild2.png",
     email: "marc.ehrlich@example.com",
     role: "Dokumentation",
   },
   {
     name: "Ralf Hofmann",
-    image: "/img/bild3.jpg",
+    image: "/img/bild3.png",
     email: "Ralf-Hofmann82@outlook.de",
     role: "Frontend-Demo",
   },
   {
     name: "Viktor Nikolayev",
-    image: "/img/bild4.jpg",
+    image: "/img/bild4.png",
     email: "viktor.nikolayev@gmail.com",
     role: "Backend-Api, -Frontend-App, DevOps",
   },
