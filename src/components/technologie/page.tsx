@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { RiNextjsFill, RiVercelFill } from "react-icons/ri";
-import {  SiEslint } from "react-icons/si";
+import { SiTypescript, } from "react-icons/si";
 import { FaPhp, FaGithub } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 
@@ -15,8 +15,8 @@ export default function TechnologyPage() {
     { title: "Vercel", icon: <RiVercelFill />, description: "Vercel ist eine Cloud-Plattform für das Hosting von Webseiten und Serverless-Funktionen." },
     { title: "Github", icon: <FaGithub />, description: "GitHub ist eine Plattform für die Versionskontrolle von Code und die Zusammenarbeit von Entwicklern." },
     { title: "MySQL", icon: <DiMysql />, description: "MySQL ist ein relationales Datenbankmanagementsystem zur Verwaltung von Daten." },
-    { title: "ESLint", icon: <SiEslint />, description: "ESLint ist ein Linter(Code Analysierer) für JavaScript, der hilft, Code-Qualität zu gewährleisten." },
-    // { title: "Typescript", icon: <SiTypescript />, description: "TypeScript ist eine JavaScript-Erweiterung mit statischer Typisierung." },
+    { title: "Typescript", icon: <SiTypescript />, description: "TypeScript ist eine JavaScript-Erweiterung mit statischer Typisierung." },
+    // { title: "ESLint", icon: <SiEslint />, description: "ESLint ist ein Linter(Code Analysierer) für JavaScript, der hilft, Code-Qualität zu gewährleisten." },
     // { title: "React", icon: <FaReact />, description: "React ist eine JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen, insbesondere für Single-Page-Apps." },
   ];
 
