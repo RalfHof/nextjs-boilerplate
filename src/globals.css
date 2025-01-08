@@ -22,7 +22,7 @@ html,
   background-color: #1c042e;
   color: white;
   width: 100%;
-  height: 90px;
+  height: 120px;
   position: fixed;
   z-index: 9;
 }
@@ -93,6 +93,14 @@ html,
   border: 2px solid var(--Lightgold-color);
   padding: 14px 20px;
   border-radius: 50px;
+}
+
+.borderlogin {
+  color: #f2c76e;
+  background: transparent;
+  border: 2px solid #f2c76e;
+  border-radius: 50px;
+  padding: 10px 20px;
 }
 
 .burger-menu {
@@ -715,6 +723,7 @@ a:hover {
   height: auto;
   padding-bottom: 100px;
 }
+
 
 #ContainerHeader {
   display: flex;
@@ -1487,9 +1496,9 @@ a:hover {
 
 /* Canvas */
 .ContainerHome {
-  height: 600px;
+  height: 1170px;
   width: 100%;
-  background-color: #4c1b5e;
+  background-color: #1c042e;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
@@ -1498,40 +1507,96 @@ a:hover {
   z-index: 0;
 }
 
-#HeaderText {
+.HomeImg {
+  position: absolute;
+  background-image: url("/img/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  gap: 7px;
-  flex-wrap: wrap;
+  background-color: #37075d;
+  opacity: 1;
 }
 
 #HeaderText span {
   color: var(--Lightgold-color);
-}
-
-
-#particles-js {
-  width: 100%;
-  height: 100%;
-  z-index: 2
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .HeaderContent {
-  position: absolute;
+  position: relative;
+  top: 400px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   width: 100%;
   height: 100%;
   z-index: 2;
+  font-size: 1.3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+#HeaderText {
+  width: 60%;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.HeaderSubText {
+  color: #a2a2a2;
+  width: 60%;
+  font-weight: 100;
+}
+
+.BtnHomeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 9;
+}
+
+.BtnHome {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+}
+
+.BtnDesign {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 22px 40px;
+  border-radius: 50px;
+  transition: 0.3s;
+  color: #f2c76e;
+  background: transparent;
+  border: 2px solid #f2c76e;
+  z-index: 9;
+  cursor: pointer;
+  position: relative;
+  top: -280px;
+  left: -110px;
+  margin-right: 20px;
+}
+
+.BtnDesign:hover {
+  text-decoration: none;
+  background-color: #36075d71;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2
+}
 
 /* ------------------------------- */
 
@@ -1566,12 +1631,13 @@ details summary {
   position: relative;
   left: 20px;
   padding: 10px 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+
 }
 
 details summary::before {
@@ -1582,10 +1648,12 @@ details summary::before {
   border-radius: 50px;
   padding: 3px 5px;
   margin-right: 10px;
+  font-size: 1.2rem;
 }
 
 details[open] summary::before {
   content: "▲";
+  font-size: 1.2rem;
 }
 
 details p {
@@ -1593,7 +1661,7 @@ details p {
   margin-left: 20px;
   margin-right: 30px;
   padding-top: 10px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   white-space: pre-wrap;
   word-wrap: break-word;

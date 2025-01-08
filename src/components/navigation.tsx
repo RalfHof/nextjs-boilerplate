@@ -27,8 +27,8 @@ export default function Navigation() {
   }, []);
   const navBackgroundColor =
     typeof window !== "undefined" && scrollY > (window.innerHeight || 800) * 0.2
-      ? "#1D0332"
-      : "rgb(76, 27, 94)";
+      ? "#1c042e"
+      : "#37075d"
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
       const element = document.getElementById(id);
@@ -152,10 +152,13 @@ export default function Navigation() {
             </button>
           </li>
           <li className="nav-item">
-            <button className="nav-btn" onClick={handleLoginClick}>
+            <button
+              className={`nav-btn ${isMobile ? "" : "borderlogin"}`}
+              onClick={handleLoginClick}>
               LOGIN
             </button>
           </li>
+
         </ul>
       </nav>
     </header>
