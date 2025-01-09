@@ -5,11 +5,11 @@ type ProjektItemProps = {
         Titel: string;
         Text?: string;
         Liste?: Array<string>;
-    
+
     };
 };
 
-export default function ProjektItem({ Item,  }: ProjektItemProps) { 
+export default function ProjektItem({ Item, }: ProjektItemProps) {
     return (
         <>
             <div className="project-item ">
@@ -18,14 +18,14 @@ export default function ProjektItem({ Item,  }: ProjektItemProps) {
                     <h2 className="project-title">{Item.Titel}</h2>
                     <div className="projekt-text">{Item.Text}</div>
 
-                    <ol>
+                    <ul style={{ listStyle: "none", padding: "0" }}>
                         {Item.Liste?.map((Element, index) => (
                             <React.Fragment key={index}>
                                 <li>{Element}</li>
                                 <br />
                             </React.Fragment>
                         ))}
-                    </ol>
+                    </ul>
                 </div>
             </div>
         </>
