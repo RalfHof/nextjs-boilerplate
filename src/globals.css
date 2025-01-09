@@ -364,6 +364,7 @@ a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: #555;
 }
 
 .DataProtectionParagraphs {
@@ -1686,4 +1687,45 @@ details p {
   width: 100%;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+/* ------------------------------------ */
+
+
+.impressum-page {
+  background-color: #1D0332;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  padding-bottom: 200px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #F2C76E;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.section {
+  border: 1px solid #F2C76E;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.section-title {
+  color: #F2C76E;
+  margin-bottom: 10px;
+}
+
+.datenschutz {
+  height: auto;
+  padding-bottom: 200px;
 }
