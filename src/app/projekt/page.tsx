@@ -78,25 +78,27 @@ export default function ProjektPage() {
 
   const TimerItem = {
     Titel: "Zeitachse",
-    Text: "Zeitschätzung",
+    Text: "Zeitschätzung:",
     Liste: TimerItems.map(item => item.Element)
   };
-  const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify?", Liste: TargetElementItems.map(item => item.Element) };
-  const TimeItem = { Titel: "Technische Vorgehensweise", Text: "Wie war unsere Planung?", Liste: TimeElementItems.map(item => item.Element) };
+  const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify:", Liste: TargetElementItems.map(item => item.Element) };
+  const TimeItem = { Titel: "Technische Vorgehensweise", Text: "Wie war unsere Planung:", Liste: TimeElementItems.map(item => item.Element) };
 
-  const GoodItem = { Titel: "Erfolge des Projekts", Text: "Was gut funktioniert hat?", Liste: GoodElementItems.map(item => item.Element) };
-  const BadItem = { Titel: "Schwierigkeiten im Projekt", Text: "Welche Probleme gab es?", Liste: BadElementItems.map(item => item.Element) };
-
+  const GoodItem = { Titel: "Erfolge des Projekts", Text: "Was gut funktioniert hat:", Liste: GoodElementItems.map(item => item.Element) };
+  const BadItem = { Titel: "Schwierigkeiten im Projekt", Text: "Welche Probleme gab es:", Liste: BadElementItems.map(item => item.Element) };
 
   return (
-    <div className='project-item project-elements'>
+    <div className='project-elements'>
       <h1 className='HeaderItems ProjectHeader'>Projektseite</h1>
-      <ProjektItem Item={TargetItem} />
-      <ProjektItem Item={TimerItem} />
+      <div className='ContainerHeader ContainerProject'>
 
-      <ProjektItem Item={GoodItem} />
-      <ProjektItem Item={BadItem} />
-      <ProjektItem Item={TimeItem} />
+        <ProjektItem Item={TargetItem} />
+        <ProjektItem Item={TimerItem} />
+
+        <ProjektItem Item={GoodItem} />
+        <ProjektItem Item={BadItem} />
+        <ProjektItem Item={TimeItem} />
+      </div>
     </div>
   );
 }

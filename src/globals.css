@@ -119,11 +119,8 @@ html,
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  /* Semi-transparentes Schwarz */
   z-index: 999;
-  /* Sicherstellen, dass das Overlay über anderen Inhalten liegt */
   pointer-events: auto;
-  /* Erlaubt das Klicken auf das Overlay */
 }
 
 
@@ -392,7 +389,7 @@ a:hover {
 
 
 .project-elements {
-  background-color: #b91991;
+  background: linear-gradient(90deg, #1d0332 30%, #f0abfc 100%);
 }
 
 .HeaderItems {
@@ -402,6 +399,11 @@ a:hover {
   padding: 0;
   position: relative;
   top: 100px;
+}
+
+.ProjectHeader {
+  top: 160px;
+  color: #fff;
 }
 
 .ContainerHeader {
@@ -415,6 +417,12 @@ a:hover {
   margin-bottom: 250px;
 }
 
+.ContainerProject {
+  padding-bottom: 200px;
+  margin-bottom: 0;
+  top: 120px;
+}
+
 .project-item-list {
   width: 100%;
   font-size: 1.2rem;
@@ -423,6 +431,7 @@ a:hover {
   border: 2px solid #fff;
   height: 370px;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .project-title {
@@ -437,6 +446,11 @@ a:hover {
 .projekt-text {
   margin: 0;
   padding: 0;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  width: fit-content;
+  text-decoration: underline;
 }
 
 .projectunsortedlist {
@@ -465,7 +479,7 @@ a:hover {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: var(--Lightgold-color);
+    background: linear-gradient(180deg, black 65%, #fff 100%);
   }
 
   .open {

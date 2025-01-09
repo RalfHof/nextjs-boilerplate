@@ -15,7 +15,6 @@ export default function ProductPage() {
       Element:
         "Die Hauptstärke von Linkify liegt in der Optimierung des Datenaustauschs durch Automatisierung. Anstatt Daten manuell von einem System ins andere zu übertragen, übernimmt Linkify diesen Prozess vollständig automatisiert. Dadurch werden nicht nur menschliche Fehler minimiert, sondern auch die Bearbeitungszeiten signifikant reduziert. Dies führt zu einer deutlichen Steigerung der Gesamteffizienz in den relevanten Geschäftsprozessen.",
     },
-
   ];
   const TargetElementItems3 = [
     {
@@ -77,7 +76,7 @@ export default function ProductPage() {
   return (<>
 
     <div className="project-item product-item">
-      <h1 className="HeaderItems ProductHeader">Produktseite</h1>
+      <h1 className="HeaderItems">Produktseite</h1>
       <div className='ContainerHeader'>
 
         <ProjektItem Item={TargetItem1} />
