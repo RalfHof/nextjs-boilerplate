@@ -27,8 +27,8 @@ export default function Navigation() {
   }, []);
   const navBackgroundColor =
     typeof window !== "undefined" && scrollY > (window.innerHeight || 800) * 0.2
-    ? "#37075d"
-    : "#1c042e"
+      ? "#37075d"
+      : "#1c042e"
   const scrollToSection = (id: string) => {
     if (typeof document !== "undefined") {
       const element = document.getElementById(id);
@@ -61,9 +61,11 @@ export default function Navigation() {
   const handleLoginClick = () => {
     router.push("https://app.linkify.cloud/login");
   };
+
   const handleHomeClick = () => {
     navigateToInfoAndScroll("Home");
   };
+
   const handleProjektClick = () => {
     // Sicherstellen, dass die Projekt-Seite voll geladen wird
     if (window.location.pathname !== "/projekt") {
@@ -76,6 +78,7 @@ export default function Navigation() {
       window.location.href = "/product";
     }
   };
+
   return (
     <header
       className="header"
@@ -84,7 +87,7 @@ export default function Navigation() {
         transition: "background-color 0.7s ease",
       }}
     >
-      <div className="logo">
+      <div className="logo" onClick={handleHomeClick} >
         <Logo />
       </div>
       {/* Burger-Menü für mobile Ansicht */}
