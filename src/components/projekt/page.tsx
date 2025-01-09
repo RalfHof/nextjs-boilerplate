@@ -5,13 +5,14 @@ type ProjektItemProps = {
         Titel: string;
         Text?: string;
         Liste?: Array<string>;
+    
     };
 };
 
-export default function ProjektItem({ Item }: ProjektItemProps) {
+export default function ProjektItem({ Item,  }: ProjektItemProps) { 
     return (
         <>
-            <div className="project-item">
+            <div className="project-item ">
                 <div className="project-item-list">
 
                     <h2 className="project-title">{Item.Titel}</h2>

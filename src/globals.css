@@ -1729,3 +1729,10 @@ details p {
   height: auto;
   padding-bottom: 200px;
 }
+
+/* ----------------------------------- */
+
+.product-item{
+background-color: #007acc;
+height: 100vh;z-index: -5;position: relative;
+}
