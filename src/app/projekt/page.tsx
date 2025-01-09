@@ -89,8 +89,8 @@ export default function ProjektPage() {
 
 
   return (
-    <div className='project-item'>
-      <h1 className='HeaderItems'>Projektseite</h1>
+    <div className='project-item project-elements'>
+      <h1 className='HeaderItems ProjectHeader'>Projektseite</h1>
       <ProjektItem Item={TargetItem} />
       <ProjektItem Item={TimerItem} />
 

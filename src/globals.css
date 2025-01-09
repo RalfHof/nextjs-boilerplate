@@ -1737,3 +1737,8 @@ details p {
   height: 100%;
   background-color: #007acc;
 }
+
+
+.project-elements{
+  background-color: red;
+}

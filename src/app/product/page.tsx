@@ -76,7 +76,7 @@ export default function ProductPage() {
 
   return (
     <div className="project-item product-item">
-      <h1 className="HeaderItems">Produktseite</h1>
+      <h1 className="HeaderItems ProductHeader">Produktseite</h1>
 
       <ProjektItem Item={TargetItem1} />
 
