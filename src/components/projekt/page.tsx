@@ -17,11 +17,10 @@ export default function ProjektItem({ Item, }: ProjektItemProps) {
 
                     <h2 className="project-title">{Item.Titel}</h2>
                     <div className="projekt-text">{Item.Text}</div>
-
-                    <ul style={{ listStyle: "none", padding: "0" }}>
+                    <ul className="projectunsortedlist">
                         {Item.Liste?.map((Element, index) => (
                             <React.Fragment key={index}>
-                                <li>{Element}</li>
+                                <li className="projectlist" >{Element}</li>
                                 <br />
                             </React.Fragment>
                         ))}

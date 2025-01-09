@@ -376,56 +376,80 @@ a:hover {
 .project-item {
   height: auto;
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   padding: 0;
   margin: 0;
   position: relative;
   top: 85px;
   background: inherit;
-  padding-bottom: 130px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .product-item {
-  height: 1035px;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(90deg, #1d0332 30%, #f0abfc 100%);
 }
 
 
+.project-elements {
+  background-color: #b91991;
+}
+
 .HeaderItems {
+  font-size: 2rem;
+  text-align: center;
   margin: 0;
   padding: 0;
-  margin-top: 120px;
-  color: #007acc;
-  font-size: 2rem;
+  position: relative;
+  top: 100px;
+}
+
+.ContainerHeader {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  position: relative;
+  top: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 250px;
 }
 
 .project-item-list {
-  border: 5px solid #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  background: #fff;
-  width: 75%;
-  padding: 30px;
+  width: 100%;
   font-size: 1.2rem;
-  color: #555;
-  position: relative;
-  top: -30px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #fff;
+  height: 370px;
+  width: 100%;
 }
 
 .project-title {
   margin: 0;
   padding: 0;
-  color: black;
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: 1.5rem;
 }
 
 .projekt-text {
-  margin-top: 20px;
+  margin: 0;
+  padding: 0;
 }
 
+.projectunsortedlist {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.projectlist {
+  margin: 0;
+  padding: 0;
+}
 
 /* -------------------------------------------------------------- */
 
@@ -1731,14 +1755,3 @@ details p {
 }
 
 /* ----------------------------------- */
-
-.product-item {
-  position: relative;
-  height: 100%;
-  background-color: #007acc;
-}
-
-
-.project-elements{
-  background-color: red;
-}
