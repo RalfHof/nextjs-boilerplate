@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: "Marc Ehrlich",
     image: "/img/bild2.png",
-    email: "marc.ehrlich@example.com",
+    email: "marc.schuetze@hotmail.com",
     role: "Dokumentation",
   },
   {
