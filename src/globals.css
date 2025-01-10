@@ -1429,7 +1429,7 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 1rem;
   color: #fff;
   font-weight: 900;
 }
@@ -1653,13 +1653,13 @@ a:hover {
 }
 
 @media (max-width: 622px) {
-  .BtnDesign{
+  .BtnDesign {
     padding: 12px 15px;
   }
 }
 
 @media (max-width: 455px) {
-  .BtnDesign{
+  .BtnDesign {
     padding: 12px 10px;
   }
 }
