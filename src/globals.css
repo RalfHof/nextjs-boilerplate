@@ -130,12 +130,13 @@ html,
   background-color: #37075d;
   color: white;
   width: 100%;
-  height: 755px;
+  height: 735px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding-bottom: 20px;
 }
 
 .FooterContainer {
@@ -195,7 +196,7 @@ html,
 
 #ApplicationDiv {
   position: relative;
-  top: -12px;
+  top: 20px;
 }
 
 .footer-link-btn {
@@ -1562,16 +1563,13 @@ a:hover {
   background-color: #37075d;
 }
 
-#HeaderText span {
-  color: var(--Lightgold-color);
-  font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 
 .HeaderContent {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 100px;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -1582,14 +1580,22 @@ a:hover {
 #HeaderText {
   position: relative;
   top: 250px;
-  width: 60%;
   padding: 0;
   margin: 0;
+  width: 61%;
   color: #fff;
-  font-size: 3rem;
+  font-size: 5rem;
   letter-spacing: 5px;
   font-weight: lighter;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--Lightgold-color);
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#HeaderText span {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .HeaderSubText {
@@ -1601,18 +1607,11 @@ a:hover {
 }
 
 .BtnHomeContainer {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
   position: relative;
-  top: -210px;
-  left: -54px;
-}
-
-.BtnHome {
-  width: 70%;
-  display: flex;
-  justify-content: center;
+  top: 250px;
 }
 
 .BtnDesign {
@@ -1627,6 +1626,7 @@ a:hover {
   z-index: 3;
   cursor: pointer;
   margin-right: 20px;
+  position: static;
 }
 
 .BtnDesign:hover {
