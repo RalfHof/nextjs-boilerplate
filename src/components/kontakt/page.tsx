@@ -13,6 +13,7 @@ export default function KontaktPage() {
 
   const [error, setError] = useState<string | null>(null); // Fehlernachricht
   const [success, setSuccess] = useState<string | null>(null); // Erfolgsnachricht
+  const [showPopup, setShowPopup] = useState(false); // Zustand für das Popup
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,10 +29,15 @@ export default function KontaktPage() {
       setError(null);
       setSuccess(null);
 
-      const response = await axios.post("https://api.linkify.cloud/service/contact", formData);
+      const response = await axios.post(
+        "https://api.linkify.cloud/service/contact",
+        formData
+      );
 
       if (response.status === 200) {
         setSuccess("Ihr Formular wurde erfolgreich abgeschickt!");
+        setShowPopup(true); // Popup anzeigen
+
         // Felder leeren
         setFormData({
           name: "",
@@ -39,6 +45,11 @@ export default function KontaktPage() {
           subject: "",
           message: "",
         });
+
+        // Popup nach 3 Sekunden schließen
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000);
       } else {
         setError(`Unerwartete Antwort: ${response.statusText}`);
       }
@@ -60,26 +71,24 @@ export default function KontaktPage() {
       <div id="ContainerContact">
         <div className="SectionContact">
           <h2>Kontakt</h2>
-          <div id="ContainerAroundContactInfos"
-          >
+          <div id="ContainerAroundContactInfos">
             <div id="ContactInfos">
-
-              <p> <span> Adresse: </span><br />
-                <span> Techstarter GmbH</span><br />
-                <span>Stadtdeich 2-4</span><br />
-                <span>20097 Hamburg, Deutschland</span> <br />
+              <p>
+                <span> Adresse: </span>
+                <br />
+                <span> Techstarter GmbH</span>
+                <br />
+                <span>Stadtdeich 2-4</span>
+                <br />
+                <span>20097 Hamburg, Deutschland</span>
+                <br />
                 <span>Email: info@linkify.cloud</span>
               </p>
             </div>
           </div>
 
-
-
-          <form onSubmit={handleSubmit} id="FormAroundInputFieldsContact"
-          >
-            <div
-              id="ContainerAroundInputFieldsContact"
-            >
+          <form onSubmit={handleSubmit} id="FormAroundInputFieldsContact">
+            <div id="ContainerAroundInputFieldsContact">
               <input
                 type="text"
                 name="name"
@@ -101,9 +110,7 @@ export default function KontaktPage() {
               />
             </div>
 
-            <div
-              id="ContainerAroundSubjectContact"
-            >
+            <div id="ContainerAroundSubjectContact">
               <input
                 type="text"
                 name="subject"
@@ -113,11 +120,9 @@ export default function KontaktPage() {
                 value={formData.subject}
                 onChange={handleChange}
               />
-
             </div>
 
-            <div id="ContainerAroundTextareaContact"
-            >
+            <div id="ContainerAroundTextareaContact">
               <textarea
                 name="message"
                 id="TextareaFieldContact"
@@ -127,42 +132,65 @@ export default function KontaktPage() {
                 onChange={handleChange}
               ></textarea>
 
-              <div id="RequiredField">
-                * Pflichtfelder
-              </div>
+              <div id="RequiredField">* Pflichtfelder</div>
             </div>
-
 
             <div className="DataProtectionContainer">
               <input id="RequiredCheckbox" type="checkbox" required />
-              <span>Ich bin mit den <Link href={"/datenschutz"} target="_blank">Datenschutzerklärungen</Link> einverstanden</span>
+              <span>
+                Ich bin mit den{" "}
+                <Link href={"/datenschutz"} target="_blank">
+                  Datenschutzerklärungen
+                </Link>{" "}
+                einverstanden
+              </span>
             </div>
 
-            {/* ------------------------- */}
-
-            <div
-              id="ContainerAroundBtnContact"
-            >
-              <button
-                id="BtnContact"
-                type="submit"
-              >
+            <div id="ContainerAroundBtnContact">
+              <button id="BtnContact" type="submit">
                 Abschicken
               </button>
-              {error &&
+              {error && (
                 <div className="MessagesFromBackendContact">
                   <p className="BackendMessage">{error}</p>
-                </div>}
-
-              {success &&
-                <div className="MessagesFromBackendContact">
-                  <p className="BackendMessage" id="SuccesMessage">{success}</p>
                 </div>
-              }
+              )}
             </div>
           </form>
         </div>
       </div>
+
+      {/* Popup-Fenster */}
+      {showPopup && (
+        <div className="PopupContainer">
+          <div className="PopupMessage">
+            <p>{success}</p>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        .PopupContainer {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+        }
+        .PopupMessage {
+          background: white;
+          padding: 50px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          text-align: center;
+          color: green;
+        }
+      `}</style>
     </>
   );
 }

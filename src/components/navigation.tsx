@@ -44,7 +44,6 @@ export default function Navigation() {
       // Wenn nicht auf /info, leiten wir weiter und fügen das Ziel-Hash hinzu
       window.location.href = `/info#${sectionId}`;
     } else {
-      // Wenn bereits auf /info, scrollen wir direkt
       scrollToSection(sectionId);
     }
   };
@@ -67,13 +66,11 @@ export default function Navigation() {
   };
 
   const handleProjektClick = () => {
-    // Sicherstellen, dass die Projekt-Seite voll geladen wird
     if (window.location.pathname !== "/projekt") {
       window.location.href = "/projekt";
     }
   };
   const handleProductClick = () => {
-    // Sicherstellen, dass die Produkt-Seite voll geladen wird
     if (window.location.pathname !== "/product") {
       window.location.href = "/product";
     }
@@ -101,7 +98,6 @@ export default function Navigation() {
           </button>
         </div>
       )}
-      {/* Overlay, das den Rest der Seite blockiert, wenn das Burger-Menü geöffnet ist */}
       {isMenuOpen && (
         <div className="overlay" onClick={() => setIsMenuOpen(false)} />
       )}

@@ -12,6 +12,7 @@ html,
   padding: 0;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
 }
 
 /* Header Styles */
@@ -142,7 +143,7 @@ html,
 .FooterContainer {
   display: flex;
   height: 100%;
-  width: 100%;
+  width: 25%;
   justify-content: center;
   flex-direction: column;
   position: relative;
@@ -476,11 +477,12 @@ a:hover {
     right: 0;
     top: 0;
     height: 100%;
-    width: 510px;
+    max-width: 510px;
+    width: 100%;
     margin: 0;
     padding: 0;
     display: none;
-    background: linear-gradient(180deg, black 65%, #fff 100%);
+    background-color: #17c0a5;
   }
 
   .open {
@@ -541,7 +543,6 @@ a:hover {
     font-weight: bold;
   }
 
-
   #ContainerBurgermenu {
     display: flex;
     width: 100%;
@@ -551,6 +552,20 @@ a:hover {
 
   .burger-menu {
     display: block;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    height: 100%;
+    gap: 30px;
+    line-height: 20px;
+  }
+
+  #ApplicationDiv {
+    margin-bottom: 40px;
   }
 }
 
@@ -1419,7 +1434,6 @@ a:hover {
   font-weight: 900;
 }
 
-
 .ToggleIcon {
   cursor: pointer;
 }
@@ -1430,16 +1444,25 @@ a:hover {
 }
 
 #SaveMoney {
-  color: "#f2c76e"
+  color: "#f2c76e";
+  width: 100%;
 }
 
 .PriceCardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   height: 100%;
   width: 100%;
+}
+
+.PriceCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  width: fit-content;
 }
 
 
@@ -1511,23 +1534,23 @@ a:hover {
   }
 
   #ToggleButtonPricing {
-    transform: scale(1.5);
-    margin-left: 10px;
-    margin-right: 10px;
+    transform: scale(1.3);
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   #MonthyPrice {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   #YearlyPrice {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 
 @media(max-width:1012px) {
-  .PriceCardContainer {
+  .PriceCard {
     flex-wrap: wrap;
   }
 }
@@ -1542,7 +1565,7 @@ a:hover {
 
 /* Canvas */
 .ContainerHome {
-  height: 873px;
+  height: 870px;
   width: 100%;
   background-color: #1c042e;
   font-family: Arial, Helvetica, sans-serif;
@@ -1629,6 +1652,18 @@ a:hover {
   position: static;
 }
 
+@media (max-width: 622px) {
+  .BtnDesign{
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 455px) {
+  .BtnDesign{
+    padding: 12px 10px;
+  }
+}
+
 .BtnDesign:hover {
   text-decoration: none;
   background-color: #36075d71;
@@ -1637,7 +1672,7 @@ a:hover {
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 85%;
   z-index: 2
 }
 
@@ -1680,7 +1715,6 @@ details summary {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-
 }
 
 details summary::before {
@@ -1704,7 +1738,7 @@ details p {
   margin-left: 20px;
   margin-right: 30px;
   padding-top: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -1722,9 +1756,7 @@ details p {
   padding: 20px 50px 20px 20px;
   color: #ffffff;
   max-width: 900px;
-  width: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 83%;
 }
 
 /* ------------------------------------ */
@@ -1769,3 +1801,11 @@ details p {
 }
 
 /* ----------------------------------- */
+
+#QrLinkify {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #37075d;
+}
