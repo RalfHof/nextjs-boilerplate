@@ -409,30 +409,28 @@ a:hover {
 }
 
 .ContainerHeader {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: flex;
   gap: 20px;
   position: relative;
   top: 80px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 0;
   margin-bottom: 250px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .ContainerProject {
-  padding-bottom: 200px;
+  padding-bottom: 250px;
   margin-bottom: 0;
   top: 120px;
 }
 
 .project-item-list {
-  width: 100%;
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
   border: 2px solid #fff;
-  height: 370px;
-  width: 100%;
+  height: 250px;
   overflow-y: scroll;
 }
 
@@ -458,8 +456,8 @@ a:hover {
 .projectunsortedlist {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   padding: 20px;
+  margin-left: 20px;
 }
 
 .projectlist {
