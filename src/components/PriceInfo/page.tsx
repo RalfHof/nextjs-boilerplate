@@ -64,24 +64,26 @@ export default function PriceInfoModul() {
                         <button id='ToggleButtonPricing' onClick={handleToggle}>
                             {isToggleOn ? <ToggleOffIcon className="ToggleIcon" /> : <ToggleOnIcon className="ToggleIcon ToggleOnnIcon" />}
                         </button>
-                        <p id="YearlyPrice">Jährlich <span id="SaveMoney">(spare über 33%)</span></p>
+                        <p id="YearlyPrice">Jährlich <span id="SaveMoney">(spare über 33% bei Einmalzahlung)</span></p>
                     </div>
                 </div>
 
                 <div className="PriceCardContainer">
-                    {isToggleOn ? (
-                        <>
-                            <PriceCard Item={PriceItemFree} />
-                            <PriceCard Item={PriceItemStandard} />
-                            <PriceCard Item={PriceItemPremium} />
-                        </>
-                    ) : (
-                        <>
-                            <PriceCard Item={PriceItemFree} />
-                            <PriceCard Item={PriceItemStandardJahr} />
-                            <PriceCard Item={PriceItemPremiumJahr} />
-                        </>
-                    )}
+                    <div className="PriceCard">
+                        {isToggleOn ? (
+                            <>
+                                <PriceCard Item={PriceItemFree} />
+                                <PriceCard Item={PriceItemStandard} />
+                                <PriceCard Item={PriceItemPremium} />
+                            </>
+                        ) : (
+                            <>
+                                <PriceCard Item={PriceItemFree} />
+                                <PriceCard Item={PriceItemStandardJahr} />
+                                <PriceCard Item={PriceItemPremiumJahr} />
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </>

@@ -50,10 +50,14 @@ export default function Footer() {
               <Link href="https://app.linkify.cloud/login">Login</Link>
             </li>
             <li>
-              <Link href="https://app.linkify.cloud/registrierung">Sign Up</Link>
+              <button onClick={() => navigateToInfoAndScroll("Pricing")} className="footer-link-btn footer-links">Sign Up</button>
             </li>
             <li>
-              <Link href="https://github.com/RalfHof/nextjs-boilerplate" target="_blank">Github</Link>
+              <Link href="https://github.com/RalfHof/nextjs-boilerplate" target="_blank">Github Demo</Link>
+            </li>
+
+            <li>
+              <Link href="https://github.com/RalfHof/nextjs-boilerplate" target="_blank">Github Application</Link>
             </li>
           </ul>
         </div>

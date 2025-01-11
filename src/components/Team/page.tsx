@@ -50,17 +50,22 @@ export default function Team() {
               alt={member.name}
               onMouseEnter={() => setHovered(member.name)}
               onMouseLeave={() => setHovered(null)}
-              width={300}
-              height={350}
+              width={300} // Breite für Querformat
+              height={200} // Höhe für Querformat
               style={{
-                borderRadius: "25px",
-                height: "350px",
+                borderRadius: "15px",
                 padding: "10px",
                 cursor: "pointer",
                 transform: hovered === member.name ? "scale(1.2)" : "scale(1)",
                 transition: "transform 0.3s ease",
+                objectFit: "cover", // Bild skalieren und zuschneiden
+                width: "100%", // Füllt die Breite des Containers
+                maxWidth: "300px", // Maximale Breite für Querformat
+                height: "auto", // Beibehaltung des Seitenverhältnisses
               }}
             />
+
+
             <p style={styles.teamName}>{member.name}</p>
             <p style={styles.teamRole}>{member.role}</p>
 
@@ -96,11 +101,11 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "3rem",
     textAlign: "center",
     width: "100%",
-    maxWidth: "800px",
     padding: "0",
     margin: "0",
     marginBottom: "10px",
     color: "#f2c76e",
+    marginTop: "20px"
   },
   paragraph: {
     fontSize: "1.3rem",
@@ -118,13 +123,9 @@ const styles: Record<string, React.CSSProperties> = {
     width: "100%",
   },
   teamMember: {
-    padding: "0",
-    margin: "0",
     display: "flex",
-    justifyContent: "space-evenly",
     alignItems: "center",
     flexDirection: "column",
-    width: "100%",
   },
   teamName: {
     fontWeight: "bold",
