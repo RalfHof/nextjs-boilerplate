@@ -19,11 +19,18 @@ export default function ProjektPage() {
   ];
 
   const BadElementItems = [
-    { Element: "Unterschiedliches Fähigkeitsniveau Wissenslücken im Team verlangsamten die Entwicklung, da fundamentale Probleme noch existierten." },
-    { Element: "Aufgrund des Ausfalls mehrerer Mitarbeiter musste die Arbeitsverteilung neu organisiert werden, was mit einem erheblichen zeitlichen Aufwand verbunden war." },
-    { Element: "Fehlende Tests Unzureichende Tests führten dazu, dass Fehler erst spät auffielen. Ohne automatisierte Unit-, Integrations- und End-to-End-Tests war die Codequalität schwer sicherzustellen, was Mehraufwand verursachte." },
-    { Element: "Versionierungskonflikte Merge-Konflikte traten auf, weil mehrere Teammitglieder gleichzeitig an denselben Dateien arbeiteten. Ohne klare Branching-Strategie und regelmäßige Synchronisierung ging Zeit für Konfliktlösungen verloren, und Änderungen wurden teils überschrieben." },
-    { Element: "Die erste EC2-Instanz konnte erfolgreich die Verbindung zur Domain linkify.cloud herstellen. Allerdings war es bei der zweiten EC2-Instanz nicht möglich, eine Verbindung zur Domain app.linkify.cloud herzustellen. Trotz verschiedener Lösungsansätze konnte das Problem nicht behoben werden. Dadurch entstand ein Zeitverlust, der dazu führte, dass wir unsere Planung anpassen und unsere GitHub Actions neu strukturieren mussten." },
+    {
+      Element: "Unterschiedliches Fähigkeitsniveau im Team und Wissenslücken verlangsamten die Entwicklung, da fundamentale Probleme noch existierten."
+    },
+    {
+      Element: "Aufgrund des Ausfalls mehrerer Mitarbeiter musste die Arbeitsverteilung neu organisiert werden, was mit einem erheblichen zeitlichen Aufwand verbunden war."
+    },
+    {
+      Element: "Fehlende Tests führten dazu, dass Fehler erst spät auffielen. Ohne automatisierte Unit-, Integrations- und End-to-End-Tests war die Codequalität schwer sicherzustellen, was Mehraufwand verursachte."
+    },
+    {
+      Element: "Die erste EC2-Instanz konnte erfolgreich eine Verbindung zur Domain linkify.cloud herstellen. Bei der zweiten EC2-Instanz konnte keine Verbindung zur Domain app.linkify.cloud hergestellt werden."
+    }
   ];
 
   const TimeElementItems = [
