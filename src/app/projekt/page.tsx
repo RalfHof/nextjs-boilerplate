@@ -86,13 +86,37 @@ export default function ProjektPage() {
   const TimerItem = {
     Titel: "Zeitachse",
     Text: "Zeitschätzung:",
-    Liste: TimerItems.map(item => item.Element)
+    Liste: TimerItems.map(item => item.Element),
+    Image: "/img/Zeit.png",
+    alt: "Zeitachse"
   };
-  const TargetItem = { Titel: "Problemlösung", Text: "Welches Problem löst Linkify:", Liste: TargetElementItems.map(item => item.Element) };
-  const TimeItem = { Titel: "Technische Vorgehensweise", Text: "Wie war unsere Planung:", Liste: TimeElementItems.map(item => item.Element) };
+  const TargetItem = {
+    Titel: "Problemlösung",
+    Text: "Welches Problem löst Linkify:", Liste: TargetElementItems.map(item => item.Element),
+    Image: "/img/Solution.png",
+    alt: "Problemlösung"
+  };
+  const TimeItem = {
+    Titel: "Technische Vorgehensweise",
+    Text: "Wie war unsere Planung:", Liste: TimeElementItems.map(item => item.Element),
+    Image: "/img/Technik.png",
+    alt: "Technische Vorgehensweise"
+  };
 
-  const GoodItem = { Titel: "Erfolge des Projekts", Text: "Was gut funktioniert hat:", Liste: GoodElementItems.map(item => item.Element) };
-  const BadItem = { Titel: "Schwierigkeiten im Projekt", Text: "Welche Probleme gab es:", Liste: BadElementItems.map(item => item.Element) };
+  const GoodItem = {
+    Titel: "Erfolge des Projekts",
+    Text: "Was gut funktioniert hat:", Liste: GoodElementItems.map(item => item.Element),
+    Image: "/img/Erfolge.png",
+    alt: "Erfolge des Projekts"
+  };
+  const BadItem = {
+    Titel: "Schwierigkeiten im Projekt",
+    Text: "Welche Probleme gab es:",
+    Liste: BadElementItems.map(item => item.Element),
+    Image: "/img/Schwierigkeiten.png",
+    alt: "Schwierigkeiten im Projekt"
+  };
+
 
   return (
     <div className='project-elements'>

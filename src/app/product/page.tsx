@@ -95,31 +95,43 @@ export default function ProductPage() {
     Titel: "Was ist Linkify?",
     Text: "",
     Liste: TargetElementItems1.map((item) => item.Element),
+    Image: "/img/Linkify.png",
+    alt: "Was ist Linkify?"
   };
   const TargetItem2 = {
     Titel: "Stärken von Linkify",
     Text: "",
     Liste: TargetElementItems2.map((item) => item.Element),
+    Image: "/img/vorteile.png",
+    alt: "Stärken"
   };
   const TargetItem3 = {
     Titel: "Benutzerfreundlich",
     Text: "",
     Liste: TargetElementItems3.map((item) => item.Element),
+    Image: "/img/UX.png",
+    alt: "Bild zeigt ein Beispiel für das Problem"
   };
   const TargetItem4 = {
     Titel: "Transparenz",
     Text: "",
     Liste: TargetElementItems4.map((item) => item.Element),
+    Image: "/img/Transparenz.png",
+    alt: "Transparenz"
   };
   const TargetItem5 = {
     Titel: "Datensicherheit",
     Text: "",
     Liste: TargetElementItems5.map((item) => item.Element),
+    Image: "/img/dataprotection.png",
+    alt: "Datensicherheit"
   };
   const TargetItem6 = {
     Titel: "Fortlaufende Verbesserungen",
     Text: "",
     Liste: TargetElementItems6.map((item) => item.Element),
+    Image: "/img/Update.png",
+    alt: "Fortlaufende Verbesserungen"
   };
 
 
