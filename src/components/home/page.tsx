@@ -13,7 +13,7 @@ export default function Home() {
 
                 <div className='HeaderContent'>
                     <h1 id='HeaderText'>
-                        <span>Linkify<span>.Cloud</span></span>
+                        <span>www.</span><span style={{color:"#fff"}}>Linkify<span>.cloud</span></span>
                     </h1>
 
                     <p className='HeaderSubText'>
@@ -21,7 +21,7 @@ export default function Home() {
                     </p>
 
                     <div className='BtnHomeContainer'>
-                        <Link href={"#PriceHeadline"} className='BtnDesign'>Get Started</Link >
+                        <Link href={"#PriceHeadline"} className='BtnDesign invert'>Get Started</Link >
                         <Link href={"/product"} className='BtnDesign'>Produktseite</Link >
                     </div>
 

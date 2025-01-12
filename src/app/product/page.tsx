@@ -138,8 +138,8 @@ export default function ProductPage() {
   return (<>
 
     <div className="project-item product-item">
-      <h1 className="HeaderItems">Produktseite</h1>
-      <div className='ContainerHeader'>
+      <h1 className="HeaderItems productheader">Produktseite</h1>
+      <div className='ContainerHeader ContainerProduct'>
 
         <ProjektItem Item={TargetItem1} />
         <ProjektItem Item={TargetItem2} />

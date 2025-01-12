@@ -4,7 +4,6 @@ import KontaktPage from "@/src/components/kontakt/page";
 import Home from "@/src/components/home/page";
 import FAQ from "@/src/components/faq/page";
 import PriceInfoModul from "@/src/components/PriceInfo/page";
-import QrLinkify from "@/src/components/qr-linkify/page";
 
 export default function Info() {
   return (
@@ -29,10 +28,6 @@ export default function Info() {
 
       <div id="Kontakt">
         <KontaktPage />
-      </div>
-
-      <div id="QrLinkify">
-        <QrLinkify />
       </div>
 
       <div id="FAQ">

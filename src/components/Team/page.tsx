@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 const teamMembers = [
   {
@@ -28,58 +28,72 @@ const teamMembers = [
     email: "viktor.nikolayev@gmail.com",
     role: "Backend-Api, -Frontend-App, DevOps",
   },
+  {
+    name: "Scan Me",
+    image: "/img/QR-LinkifyTeam.png",
+    web: "https://linkify.cloud",
+    role: "Geht zu Teambereich",
+  },
 ];
 
 export default function Team() {
-  const [hovered, setHovered] = useState<string | null>(null);
-
   return (
     <div style={styles.container}>
       <div>
         <h1 style={styles.title}>Team</h1>
-        <p style={styles.paragraph}>Ein starkes Team, das mit Leidenschaft und Engagement zusammenarbeitet, um großartige Ergebnisse zu erzielen.</p>
+        <p style={styles.paragraph}>
+          Ein starkes Team, das mit Leidenschaft und Engagement zusammenarbeitet, um großartige Ergebnisse zu erzielen.
+        </p>
       </div>
       <div style={styles.teamGrid}>
         {teamMembers.map((member) => (
-          <div
-            key={member.name}
-            style={styles.teamMember}
-          >
+          <div key={member.name} style={styles.teamMember}>
             <Image
               src={member.image}
               alt={member.name}
-              onMouseEnter={() => setHovered(member.name)}
-              onMouseLeave={() => setHovered(null)}
-              width={300} // Breite für Querformat
-              height={200} // Höhe für Querformat
+              width={300}
+              height={200}
               style={{
                 borderRadius: "15px",
                 padding: "10px",
                 cursor: "pointer",
-                transform: hovered === member.name ? "scale(1.2)" : "scale(1)",
                 transition: "transform 0.3s ease",
-                objectFit: "cover", // Bild skalieren und zuschneiden
-                width: "100%", // Füllt die Breite des Containers
-                maxWidth: "300px", // Maximale Breite für Querformat
-                height: "auto", // Beibehaltung des Seitenverhältnisses
+                objectFit: "cover",
+                width: "100%",
+                maxWidth: "300px",
+                height: "auto",
               }}
             />
-
-
             <p style={styles.teamName}>{member.name}</p>
             <p style={styles.teamRole}>{member.role}</p>
 
-            <div style={styles.emailContainer}>
-              <a
-                href={`mailto:${member.email}`}
-                style={styles.emailIcon}
-                title={`E-Mail an ${member.name}`}
-              >
-                📧
-              </a>
-              <span style={styles.emailText}>{member.email}</span>
-            </div>
+            {member.email && (
+              <div style={styles.emailContainer}>
+                <a
+                  href={`mailto:${member.email}`}
+                  style={styles.emailIcon}
+                  title={`E-Mail an ${member.name}`}
+                >
+                  📧
+                </a>
+                <span style={styles.emailText}>{member.email}</span>
+              </div>
+            )}
+
+            {member.web && (
+              <div style={styles.emailContainer}>
+                <a
+                  href={`${member.web}`}
+                  style={styles.emailIcon}
+                  title={`E-Mail an ${member.web}`}
+                >
+                  🌐
+                </a>
+                <span style={styles.emailText}>{member.web}</span>
+              </div>
+            )}
           </div>
+
         ))}
       </div>
     </div>
@@ -95,7 +109,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    height: "auto"
+    height: "auto",
   },
   title: {
     fontSize: "3rem",
@@ -105,7 +119,7 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0",
     marginBottom: "10px",
     color: "#f2c76e",
-    marginTop: "20px"
+    marginTop: "20px",
   },
   paragraph: {
     fontSize: "1.3rem",
@@ -119,25 +133,27 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))",
     width: "100%",
   },
+
   teamMember: {
     display: "flex",
-    alignItems: "center",
     flexDirection: "column",
+    paddingBottom: "30px",
+    justifyContent: "center",
+    alignItems: "center",
   },
   teamName: {
     fontWeight: "bold",
     color: "#f2c76e",
     padding: "0",
     margin: "0",
-    fontSize: "1.3rem"
+    fontSize: "1.3rem",
   },
   teamRole: {
     fontSize: "1.3rem",
-    fontStyle: "italic",
-    color: "#b9b9b9",
+    color: "#ccc",
     marginBottom: "10px",
     padding: "0",
   },
@@ -148,14 +164,12 @@ const styles: Record<string, React.CSSProperties> = {
   },
   emailIcon: {
     fontSize: "1.5rem",
-    color: "#007acc",
+    color: "#ccc",
     textDecoration: "none",
     marginRight: "10px",
   },
   emailText: {
-    color: "#475569",
+    color: "#ccc",
     fontSize: "1.2rem",
-
   },
 };
-
