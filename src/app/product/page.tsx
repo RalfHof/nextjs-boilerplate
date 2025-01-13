@@ -41,7 +41,6 @@ export default function ProductPage() {
 
   const TargetElementItems4 = [
     { Element: "Linkify gewährleistet Transparenz in den übertragenen Daten." },
-    { Element: "Unternehmen können den Datenaustausch detailliert nachvollziehen." },
     { Element: "Alle Informationen werden korrekt und vollständig übertragen." },
     { Element: "Kontrolle ermöglicht effizientere und sicherere Buchhaltungsprozesse." }
   ];
