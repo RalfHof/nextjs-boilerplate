@@ -418,7 +418,7 @@ a:hover {
 
 .product-item {
   background: linear-gradient(90deg, #1d0332 30%, #f0abfc 100%);
-  padding-bottom: 300px;
+  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
 }
