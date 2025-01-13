@@ -6,19 +6,19 @@ import React from 'react';
 export default function ProductPage() {
 
   const TargetElementItems = [
-    { Element: "Gesetzliche Vorgaben: Firmen mit ≥ 60.000 € Gewinn oder ≥ 300.000 € Umsatz müssen Unterlagen revisionssicher und DSGVO-konform speichern." },
-    { Element: "Strafen: 2 % des Jahresumsatzes, max. 2,5 Mio. €." },
+    { Element: "Gesetzliche Vorgaben: Firmen mit mindestens 60.000 € Gewinn oder mindestens 300.000 € Umsatz müssen Unterlagen revisionssicher und DSGVO-konform speichern." },
+    { Element: "Strafen: 2 % des Jahresumsatzes, max. 2,5 Mio. € für Alle Unternehmen in der Gruppe." },
     { Element: "Aufbewahrung: Bis zu 10 Jahre je nach Dokumentart." },
     { Element: "DMS-Lösung: Erfüllt gesetzliche Anforderungen." },
-    { Element: "Ab 2025: Firmen müssen Rechnungen digital erstellen, empfangen und im DMS speichern." },
+    { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und im DMS speichern." },
     { Element: "Aktueller Prozess: Manuell, zeit- und kostenintensiv." },
-    { Element: "Unsere Lösung: Automatisierung spart Zeit, Kosten und erfüllt Anforderungen." }
+    { Element: "Unsere Lösung: Linkify spart Zeit, Kosten und erfüllt Gesetzliche Anforderungen." }
   ];
 
   const TargetElementItems1 = [
     { Element: "Linkify vereinfacht die Datenübertragung." },
     { Element: "Reduziert manuellen, fehleranfälligen Aufwand." },
-    { Element: "Verbindet Buchhaltungs- und Dokumentensysteme." },
+    { Element: "Verbindet Buchhaltungssoftware mit Dokumentensoftware." },
     { Element: "Ermöglicht effizientere Arbeitsweise." },
     { Element: "Sorgt für eine reibungslose Datenübertragung." },
     { Element: "Alles Regelkonform." },
@@ -56,7 +56,7 @@ export default function ProductPage() {
   ];
 
   const TargetItem = {
-    Titel: "Ihr Problem",
+    Titel: "Das Problem",
     Text: "",
     Liste: TargetElementItems.map(item => item.Element),
     Image: "/img/Solution.png",
