@@ -47,9 +47,8 @@ export default function ProductPage() {
 
 
   const TargetElementItems5 = [
-    { Element: "Sensible Informationen durch Verschlüsselung geschützt." },
+    { Element: "Sensible Informationen durch Verschlüsselung geschützt(HTTPS-Protokoll)." },
     { Element: "Datenübertragung mit HTTPS-Protokollen für Datensicherheit." },
-    { Element: "Daten vor unbefugtem Zugriff geschützt." },
     { Element: "Es werden Keine Daten gespeichert, sondern Live von A nach B transportiert." }
   ];
 
