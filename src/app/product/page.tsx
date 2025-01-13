@@ -12,7 +12,6 @@ export default function ProductPage() {
     { Element: "DMS-Lösung: Erfüllt gesetzliche Anforderungen." },
     { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und im DMS speichern." },
     { Element: "Aktueller Prozess: Manuell, zeit- und kostenintensiv." },
-    { Element: "Unsere Lösung: Linkify spart Zeit, Kosten und erfüllt Gesetzliche Anforderungen." }
   ];
 
   const TargetElementItems1 = [
