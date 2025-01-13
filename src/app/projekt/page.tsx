@@ -41,7 +41,7 @@ export default function ProjektPage() {
 
   const GoodItem = {
     Titel: "Erfolge des Projekts",
-    Text: "", 
+    Text: "",
     Liste: GoodElementItems.map(item => item.Element),
     Image: "/img/Erfolge.png",
     alt: "Erfolge des Projekts"

@@ -5,14 +5,24 @@ import React from 'react';
 
 export default function ProductPage() {
 
+  const TargetElementItems = [
+    { Element: "Gesetzliche Vorgaben: Firmen mit ≥ 60.000 € Gewinn oder ≥ 300.000 € Umsatz müssen Unterlagen revisionssicher und DSGVO-konform speichern." },
+    { Element: "Strafen: 2 % des Jahresumsatzes, max. 2,5 Mio. €." },
+    { Element: "Aufbewahrung: Bis zu 10 Jahre je nach Dokumentart." },
+    { Element: "DMS-Lösung: Erfüllt gesetzliche Anforderungen." },
+    { Element: "Ab 2025: Firmen müssen Rechnungen digital erstellen, empfangen und im DMS speichern." },
+    { Element: "Aktueller Prozess: Manuell, zeit- und kostenintensiv." },
+    { Element: "Unsere Lösung: Automatisierung spart Zeit, Kosten und erfüllt Anforderungen." }
+  ];
+
   const TargetElementItems1 = [
     { Element: "Linkify vereinfacht die Datenübertragung." },
     { Element: "Reduziert manuellen, fehleranfälligen Aufwand." },
     { Element: "Verbindet Buchhaltungs- und Dokumentensysteme." },
     { Element: "Ermöglicht effizientere Arbeitsweise." },
     { Element: "Sorgt für eine reibungslose Datenübertragung." },
+    { Element: "Alles Regelkonform." },
   ];
-
 
   const TargetElementItems2 = [
     { Element: "Optimierung des Datenaustauschs durch weniger Manuelles Handeln." },
@@ -45,8 +55,16 @@ export default function ProductPage() {
     { Element: "Es werden Keine Daten gespeichert, sondern Live von A nach B transportiert." }
   ];
 
+  const TargetItem = {
+    Titel: "Ihr Problem",
+    Text: "",
+    Liste: TargetElementItems.map(item => item.Element),
+    Image: "/img/Solution.png",
+    alt: "Problemlösung"
+  };
+
   const TargetItem1 = {
-    Titel: "Was ist Linkify?",
+    Titel: "Unsere Lösung",
     Text: "",
     Liste: TargetElementItems1.map((item) => item.Element),
     Image: "/img/Linkify.png",
@@ -87,6 +105,7 @@ export default function ProductPage() {
     <div className="project-item product-item">
       <h1 className="HeaderItems productheader">Produktseite</h1>
       <div className='ContainerHeader ContainerProduct'>
+        <ProjektItem Item={TargetItem} />
 
 
         <ProjektItem Item={TargetItem1} />
