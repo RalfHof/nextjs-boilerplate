@@ -5,104 +5,45 @@ import React from 'react';
 
 export default function ProductPage() {
 
-
-  const TargetElementItems = [
-    {
-      Element: "Linkify ermöglicht es eine einfache und schnelle Möglichkeit, Daten von einer Buchungssoftware zu ecoDMS zu übertragen.",
-    },
-    {
-      Element: "Linkify minimiert das Risiko von Fehlern, indem es den manuellen Aufwand verringert und den Datenaustausch einfacher und präziser macht.",
-    }
-  ];
-
-
   const TargetElementItems1 = [
-    {
-      Element: "Linkify ist eine innovative Lösung zur Vereinfachung der Datenübertragung."
-    },
-    {
-      Element: "Speziell entwickelt, um den zeitaufwändigen und fehleranfälligen Prozess der manuellen Datenübertragung zu reduzieren."
-    },
-    {
-      Element: "Verbindet Buchhaltungs- und Dokumentenmanagement-Systeme miteinander."
-    },
-    {
-      Element: "Ermöglicht eine effizientere Arbeitsweise für Unternehmen."
-    },
-    {
-      Element: "Zielt darauf ab, Fehler zu minimieren und Prozesse zu optimieren."
-    },
+    { Element: "Linkify vereinfacht die Datenübertragung." },
+    { Element: "Reduziert manuellen, fehleranfälligen Aufwand." },
+    { Element: "Verbindet Buchhaltungs- und Dokumentensysteme." },
+    { Element: "Ermöglicht effizientere Arbeitsweise." },
+    { Element: "Sorgt für eine reibungslose Datenübertragung." },
   ];
+
+
   const TargetElementItems2 = [
-    {
-      Element: "Optimierung des Datenaustauschs durch weniger Manuelles Handeln."
-    },
-    {
-      Element: "Minimierung menschlicher Fehler."
-    },
-    {
-      Element: "Reduzierung der Bearbeitungs- und Arbeitszeit."
-    },
-
-    {
-      Element: "Deutliche Steigerung der Gesamteffizienz in relevanten Geschäftsprozessen"
-    },
-
+    { Element: "Optimierung des Datenaustauschs durch weniger Manuelles Handeln." },
+    { Element: "Minimierung menschlicher Fehler." },
+    { Element: "Reduzierung der Bearbeitungs- und Arbeitszeit." },
+    { Element: "Steigerung der Gesamteffizienz in Geschäftsprozessen" },
   ];
+
   const TargetElementItems3 = [
-    {
-      Element: "Linkify zeichnet sich durch eine benutzerfreundliche Oberfläche aus."
-    },
-    {
-      Element: "Dank einer übersichtlichen Struktur und verständlichen Funktionen können auch Nutzer ohne technische Vorkenntnisse das System schnell einrichten."
-    },
-    {
-      Element: "Linkify lässt sich problemlos in den Arbeitsalltag integrieren."
-    },
-    {
-      Element: "Die Konfiguration ist so gestaltet, dass keine aufwendigen Anpassungen an bestehenden Systemen nötig sind."
-    },
-    {
-      Element: "Dies spart sowohl Zeit als auch Kosten."
-    }
+    { Element: "Benutzerfreundliche Oberfläche von Linkify." },
+    { Element: "Einfache Einrichtung ohne technische Vorkenntnisse." },
+    { Element: "Nahtlose Integration in den Arbeitsalltag." },
+    { Element: "Keine aufwendigen Anpassungen an bestehende Systeme nötig." },
+    { Element: "Zeit- und Kostenersparnis durch einfache Konfiguration." }
   ];
+
+
   const TargetElementItems4 = [
-    {
-      Element: "Linkify gewährleistet volle Transparenz in den übertragenen Daten."
-    },
-    {
-      Element: "Unternehmen haben die Möglichkeit, den Datenaustausch detailliert nachzuvollziehen."
-    },
-    {
-      Element: "Es wird sichergestellt, dass alle Informationen korrekt und vollständig übertragen werden."
-    },
-    {
-      Element: "Dieses Maß an Kontrolle ermöglicht eine effizientere und sicherere Gestaltung von Buchhaltungs- und Dokumentationsprozessen."
-    }
+    { Element: "Linkify gewährleistet Transparenz in den übertragenen Daten." },
+    { Element: "Unternehmen können den Datenaustausch detailliert nachvollziehen." },
+    { Element: "Alle Informationen werden korrekt und vollständig übertragen." },
+    { Element: "Kontrolle ermöglicht effizientere und sicherere Buchhaltungsprozesse." }
   ];
+
+
   const TargetElementItems5 = [
-    {
-      Element: "Sensible Informationen werden während der Übertragung durch Verschlüsselung geschützt."
-    },
-    {
-      Element: "Das System verwendet moderne HTTPS-Protokolle zur Sicherstellung der Datensicherheit."
-    },
-    {
-      Element: "Unternehmen erhalten die Sicherheit, dass ihre Daten vor unbefugtem Zugriff oder Manipulation geschützt sind."
-    },
-    {
-      Element: "Linkify speichert keine Echten Daten, es wird Live zwischen Systemen transportiert."
-    }
+    { Element: "Sensible Informationen durch Verschlüsselung geschützt." },
+    { Element: "Datenübertragung mit HTTPS-Protokollen für Datensicherheit." },
+    { Element: "Daten vor unbefugtem Zugriff geschützt." },
+    { Element: "Es werden Keine Daten gespeichert, sondern Live von A nach B transportiert." }
   ];
-
-
-  const TargetItem = {
-    Titel: "Problemlösung",
-    Text: "Welches Problem löst Linkify:", Liste: TargetElementItems.map(item => item.Element),
-    Image: "/img/Solution.png",
-    alt: "Problemlösung"
-  };
-
 
   const TargetItem1 = {
     Titel: "Was ist Linkify?",
@@ -147,7 +88,6 @@ export default function ProductPage() {
       <h1 className="HeaderItems productheader">Produktseite</h1>
       <div className='ContainerHeader ContainerProduct'>
 
-        <ProjektItem Item={TargetItem} />
 
         <ProjektItem Item={TargetItem1} />
         <ProjektItem Item={TargetItem2} />

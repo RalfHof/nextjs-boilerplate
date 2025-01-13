@@ -33,7 +33,7 @@ export default function ProjektPage() {
 
   const TimerItem = {
     Titel: "Zeitachse",
-    Text: "Zeitschätzung:",
+    Text: "",
     Liste: TimerItems.map(item => item.Element),
     Image: "/img/Zeit.png",
     alt: "Zeitachse"
@@ -41,13 +41,14 @@ export default function ProjektPage() {
 
   const GoodItem = {
     Titel: "Erfolge des Projekts",
-    Text: "Was gut funktioniert hat:", Liste: GoodElementItems.map(item => item.Element),
+    Text: "", 
+    Liste: GoodElementItems.map(item => item.Element),
     Image: "/img/Erfolge.png",
     alt: "Erfolge des Projekts"
   };
   const BadItem = {
     Titel: "Schwierigkeiten im Projekt",
-    Text: "Welche Probleme gab es:",
+    Text: "",
     Liste: BadElementItems.map(item => item.Element),
     Image: "/img/Schwierigkeiten.png",
     alt: "Schwierigkeiten im Projekt"
