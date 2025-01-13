@@ -390,7 +390,7 @@ a:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   font-size: 2rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid grey;
   padding-top: 60px;
 }
 

@@ -117,7 +117,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "0",
     margin: "0",
     marginBottom: "10px",
-    color: "#f2c76e",
+    color: "#d4a017",
     marginTop: "20px",
   },
   paragraph: {
@@ -147,7 +147,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   teamName: {
     fontWeight: "bold",
-    color: "#f2c76e",
+    color: "#d4a017",
     padding: "0",
     margin: "0",
     fontSize: "1.3rem",
