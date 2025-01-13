@@ -56,8 +56,6 @@ export default function Team() {
               style={{
                 borderRadius: "15px",
                 padding: "10px",
-                cursor: "pointer",
-                transition: "transform 0.3s ease",
                 objectFit: "cover",
                 width: "100%",
                 maxWidth: "300px",
@@ -110,6 +108,7 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: "center",
     flexDirection: "column",
     height: "auto",
+
   },
   title: {
     fontSize: "3rem",
@@ -131,9 +130,10 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0",
     marginBottom: "15px",
   },
+
   teamGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(450px, 2fr))",
     width: "100%",
   },
 
@@ -143,6 +143,7 @@ const styles: Record<string, React.CSSProperties> = {
     paddingBottom: "30px",
     justifyContent: "center",
     alignItems: "center",
+
   },
   teamName: {
     fontWeight: "bold",
