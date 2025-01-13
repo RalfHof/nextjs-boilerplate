@@ -1595,9 +1595,7 @@ a:hover {
   }
 }
 
-
 /* ---------------------------------- */
-
 
 #Home {
   background-color: inherit;
@@ -1614,6 +1612,7 @@ a:hover {
   justify-content: center;
   flex-direction: column;
   z-index: 0;
+  padding-bottom: 150px;
 }
 
 .HomeImg {
@@ -1655,11 +1654,14 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#HeaderText span:nth-child(2) {
+  color: #fff;
+}
+
 #HeaderText span {
-  /* display: flex; */
-  flex-wrap: wrap;
   font-weight: 900;
   color: var(--gold-color);
+  display: inline-block;
 }
 
 .HeaderSubText {

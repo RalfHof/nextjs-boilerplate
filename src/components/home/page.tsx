@@ -13,7 +13,7 @@ export default function Home() {
 
                 <div className='HeaderContent'>
                     <h1 id='HeaderText'>
-                        <span>www.</span><span style={{color:"#fff"}}>Linkify<span>.cloud</span></span>
+                        <span>www.</span><span>Linkify<span>.cloud</span></span>
                     </h1>
 
                     <p className='HeaderSubText'>
