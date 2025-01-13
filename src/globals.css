@@ -199,6 +199,11 @@ html,
   font-size: 1.4rem;
 }
 
+.footer-content-div{
+  position: relative;
+  top: 21px;
+}
+
 #ApplicationDiv {
   position: relative;
   top: 20px;
@@ -505,6 +510,17 @@ a:hover {
 .projectlist {
   margin: 0;
   padding: 0;
+}
+
+/* -------------------------------------------------------------- */
+
+.QuestionContainer {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d0332;
 }
 
 /* -------------------------------------------------------------- */

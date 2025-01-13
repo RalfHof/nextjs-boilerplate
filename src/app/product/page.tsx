@@ -10,8 +10,8 @@ export default function ProductPage() {
     { Element: "Strafen: 2 % des Jahresumsatzes, max. 2,5 Mio. € für Alle Unternehmen in der Gruppe" },
     { Element: "Aufbewahrung: Bis zu 10 Jahre je nach Dokumentart" },
     { Element: "DMS-Lösung: Erfüllt gesetzliche Anforderungen" },
-    { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und im DMS speichern" },
-    { Element: "Aktueller Prozess: Manuell, zeit- und kostenintensiv" },
+    { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und verarbeitet (verbucht) werden " },
+    { Element: "Aktueller Prozess: Manuell und Papierbasiert, zeit- und kostenintensiv" },
   ];
 
   const TargetElementItems1 = [
@@ -26,7 +26,7 @@ export default function ProductPage() {
   const TargetElementItems2 = [
     { Element: "Datenaustausch durch Automatisierung" },
     { Element: "Minimierung menschlicher Fehler" },
-    { Element: "5 Sprachen (Internationalisierung)" },
+    { Element: "Internationalisierung: 5 Sprachen" },
     { Element: "Reduzierung der Bearbeitungs- und Arbeitszeit" },
     { Element: "Steigerung der Gesamteffizienz in Geschäftsprozessen" },
   ];
@@ -43,14 +43,15 @@ export default function ProductPage() {
   const TargetElementItems4 = [
     { Element: "Linkify gewährleistet Transparenz in den übertragenen Daten" },
     { Element: "Alle Informationen werden korrekt und vollständig übertragen" },
-    { Element: "Es werden Keine Daten gespeichert, sondern Live von A nach B transportiert" },
+    { Element: "Es werden Keine Dokumente gespeichert, sondern Live von A nach B transportiert" },
   ];
-  
-  
+
+
   const TargetElementItems5 = [
-    { Element: "Sensible Informationen durch Verschlüsselung geschützt(HTTPS-Protokoll)" },
+    { Element: "Sensible Informationen durch Verschlüsselung geschützt (HTTPS-Protokoll)" },
     { Element: "Daten vor unbefugtem Zugriff geschützt" },
-    { Element: "Strikte Datentrennung, Rollen: Superadmin, Admin, User, Mandantenfähigkeit" },
+    { Element: "Strikte Datentrennung durch Mandantenfähigkeit" },
+    { Element: "Rollen: Superadmin, Admin, User" },
   ];
 
 

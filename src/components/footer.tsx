@@ -63,14 +63,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="FooterContainer">
-        <div className="HeadlineContainer">
+      <div className="FooterContainer footer-content-div">
+        <div className="HeadlineContainer ">
           <p className="HeadlineContent">Information</p>
           <hr className="FooterHorizontalLine" />
         </div>
 
         <div className="ContainerAroundLinks">
-          <ul className="footer-links">
+          <ul className="footer-links" >
             <li>
               <button onClick={() => navigateToInfoAndScroll("FAQ")} className="footer-link-btn footer-links">FAQ</button>
             </li>
@@ -79,6 +79,9 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/product">Produkt Beschreibung</Link>
+            </li>
+            <li>
+              <Link href="https://linkify.cloud/fragen">Fragen</Link>
             </li>
           </ul>
         </div>

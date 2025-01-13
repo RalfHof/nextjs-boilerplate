@@ -26,9 +26,9 @@ export default function ProjektPage() {
     { Element: "Dauer: 24 Werktagen" },
     { Element: "Erreicht: 90%" },
     { Element: "Verfügbare Ressourcen: 3 Entwickler" },
-    { Element: "Nächster Schritt: Investor finden" },
     { Element: "Verzögerungen: Ja" },
     { Element: "Aktuelle Probleme: Keine kritischen Blocker außer Zeitmangel" },
+    { Element: "Nächster Schritt: Investor finden" },
   ];
 
   const TimerItem = {
