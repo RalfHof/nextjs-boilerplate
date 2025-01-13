@@ -4,6 +4,18 @@ import ProjektItem from '@/src/components/projekt/page';
 import React from 'react';
 
 export default function ProductPage() {
+
+
+  const TargetElementItems = [
+    {
+      Element: "Linkify ermöglicht es eine einfache und schnelle Möglichkeit, Daten von einer Buchungssoftware zu ecoDMS zu übertragen.",
+    },
+    {
+      Element: "Linkify minimiert das Risiko von Fehlern, indem es den manuellen Aufwand verringert und den Datenaustausch einfacher und präziser macht.",
+    }
+  ];
+
+
   const TargetElementItems1 = [
     {
       Element: "Linkify ist eine innovative Lösung zur Vereinfachung der Datenübertragung."
@@ -29,7 +41,7 @@ export default function ProductPage() {
       Element: "Minimierung menschlicher Fehler."
     },
     {
-      Element: "Reduzierung der Bearbeitungszeiten."
+      Element: "Reduzierung der Bearbeitungs- und Arbeitszeit."
     },
 
     {
@@ -62,7 +74,7 @@ export default function ProductPage() {
       Element: "Unternehmen haben die Möglichkeit, den Datenaustausch detailliert nachzuvollziehen."
     },
     {
-      Element: "Es wird sichergestellt, dass alle Informationen korrekt und vollständig übertragen wurden."
+      Element: "Es wird sichergestellt, dass alle Informationen korrekt und vollständig übertragen werden."
     },
     {
       Element: "Dieses Maß an Kontrolle ermöglicht eine effizientere und sicherere Gestaltung von Buchhaltungs- und Dokumentationsprozessen."
@@ -77,19 +89,20 @@ export default function ProductPage() {
     },
     {
       Element: "Unternehmen erhalten die Sicherheit, dass ihre Daten vor unbefugtem Zugriff oder Manipulation geschützt sind."
-    }
-  ];
-  const TargetElementItems6 = [
-    {
-      Element: "Linkify wird kontinuierlich weiterentwickelt, um den neuesten technologischen Standards zu entsprechen."
     },
     {
-      Element: "Regelmäßige Updates und neue Funktionen machen es zu einem zukunftssicheren Werkzeug."
-    },
-    {
-      Element: "Linkify unterstützt die langfristige Optimierung von Unternehmensprozessen."
+      Element: "Linkify speichert keine Echten Daten, es wird Live zwischen Systemen transportiert."
     }
   ];
+
+
+  const TargetItem = {
+    Titel: "Problemlösung",
+    Text: "Welches Problem löst Linkify:", Liste: TargetElementItems.map(item => item.Element),
+    Image: "/img/Solution.png",
+    alt: "Problemlösung"
+  };
+
 
   const TargetItem1 = {
     Titel: "Was ist Linkify?",
@@ -126,13 +139,6 @@ export default function ProductPage() {
     Image: "/img/dataprotection.png",
     alt: "Datensicherheit"
   };
-  const TargetItem6 = {
-    Titel: "Fortlaufende Verbesserungen",
-    Text: "",
-    Liste: TargetElementItems6.map((item) => item.Element),
-    Image: "/img/Update.png",
-    alt: "Fortlaufende Verbesserungen"
-  };
 
 
   return (<>
@@ -141,12 +147,13 @@ export default function ProductPage() {
       <h1 className="HeaderItems productheader">Produktseite</h1>
       <div className='ContainerHeader ContainerProduct'>
 
+        <ProjektItem Item={TargetItem} />
+
         <ProjektItem Item={TargetItem1} />
         <ProjektItem Item={TargetItem2} />
         <ProjektItem Item={TargetItem3} />
         <ProjektItem Item={TargetItem4} />
         <ProjektItem Item={TargetItem5} />
-        <ProjektItem Item={TargetItem6} />
       </div>
 
     </div>
