@@ -81,7 +81,7 @@ export default function Footer() {
               <Link href="/product">Produkt Beschreibung</Link>
             </li>
             <li>
-              <Link href="https://linkify.cloud/fragen">Fragen</Link>
+              <Link href="/fragen">Fragen</Link>
             </li>
           </ul>
         </div>
