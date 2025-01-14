@@ -24,19 +24,18 @@ export default function ProductPage() {
   ];
 
   const TargetElementItems2 = [
-    { Element: "Datenaustausch durch Automatisierung" },
+    { Element: "Direkter Datenaustausch" },
     { Element: "Minimierung menschlicher Fehler" },
-    { Element: "Internationalisierung: 5 Sprachen" },
     { Element: "Reduzierung der Bearbeitungs- und Arbeitszeit" },
     { Element: "Steigerung der Gesamteffizienz in Geschäftsprozessen" },
   ];
-
+  
   const TargetElementItems3 = [
     { Element: "Benutzerfreundliche Oberfläche von Linkify" },
     { Element: "Einfache Einrichtung ohne technische Vorkenntnisse" },
     { Element: "Nahtlose Integration in den Arbeitsalltag" },
     { Element: "Keine aufwendigen Anpassungen an bestehende Systeme nötig" },
-    { Element: "Zeit- und Kostenersparnis durch einfache Konfiguration" }
+    { Element: "Internationalisierung: 5 Sprachen" },
   ];
 
 
@@ -71,7 +70,7 @@ export default function ProductPage() {
     alt: "Was ist Linkify?"
   };
   const TargetItem2 = {
-    Titel: "Stärken von Linkify",
+    Titel: "Stärken durch Automatisierung mit Linkify",
     Text: "",
     Liste: TargetElementItems2.map((item) => item.Element),
     Image: "/img/vorteile.png",
