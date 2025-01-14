@@ -11,16 +11,16 @@ const teamMembers = [
     role: "Frontend-App, -Demo",
   },
   {
-    name: "Marc Ehrlich",
-    image: "/img/bild2.png",
-    email: "marc.schuetze@hotmail.com",
-    role: "Dokumentation, Texte",
-  },
-  {
     name: "Ralf Hofmann",
     image: "/img/bild3.png",
     email: "Ralf-Hofmann82@outlook.de",
     role: "Frontend-Demo",
+  },
+  {
+    name: "Marc Ehrlich",
+    image: "/img/bild2.png",
+    email: "marc.schuetze@hotmail.com",
+    role: "Dokumentation, Texte",
   },
   {
     name: "Viktor Nikolayev",
