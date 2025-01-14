@@ -7,8 +7,6 @@ import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import { useState } from "react";
 import WorkIcon from '@mui/icons-material/Work';
 import { TbPremiumRights } from "react-icons/tb";
-import Link from "next/link";
-
 export default function PriceInfoModul() {
 
     const [isToggleOn, setIsToggleOn] = useState(true);
@@ -88,9 +86,6 @@ export default function PriceInfoModul() {
                         )}
 
                     </div>
-                </div>
-                <div className="LinkSame">
-                    <Link href="/info#Pricing">Zum Preismodell</Link>
                 </div>
             </div>
         </>

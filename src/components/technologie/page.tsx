@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { DiMysql } from "react-icons/di";
 
 import { SiLumen } from "react-icons/si";
+import Link from "next/link";
 export default function TechnologyPage() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -48,6 +49,10 @@ export default function TechnologyPage() {
           </div>
         ))}
       </div>
+      <div className="LinkSame">
+        <Link href="/diagramm">Linkify Infrastruktur</Link>
+      </div>
+
     </div>
   );
 }
