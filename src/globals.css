@@ -523,6 +523,9 @@ a:hover {
   background-color: #1d0332;
   flex-direction: column;
   color: var(--gold-color);
+  position: relative;
+  top: 80px;
+  padding-bottom: 150px;
 }
 
 .QuestionContainer h1 {
