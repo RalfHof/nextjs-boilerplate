@@ -199,7 +199,7 @@ html,
   font-size: 1.4rem;
 }
 
-.footer-content-div{
+.footer-content-div {
   position: relative;
   top: 21px;
 }
@@ -521,6 +521,45 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: #1d0332;
+  flex-direction: column;
+  color: var(--gold-color);
+}
+
+.QuestionContainer h1{
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.QuestionContainer h2{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.QuestionContainer div span{
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.question-img {
+  border-radius: 15px;
+  padding: 10px;
+  object-fit: cover;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.Diagramm{
+  width: 100%;
+  position: relative;
+  top: 200px;
+  padding-bottom: 300px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Diagramm img {
+  width: 90%;
 }
 
 /* -------------------------------------------------------------- */

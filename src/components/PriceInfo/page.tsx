@@ -7,6 +7,7 @@ import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import { useState } from "react";
 import WorkIcon from '@mui/icons-material/Work';
 import { TbPremiumRights } from "react-icons/tb";
+import Link from "next/link";
 
 export default function PriceInfoModul() {
 
@@ -83,6 +84,7 @@ export default function PriceInfoModul() {
                                 <PriceCard Item={PriceItemPremiumJahr} />
                             </>
                         )}
+
                     </div>
                 </div>
             </div>

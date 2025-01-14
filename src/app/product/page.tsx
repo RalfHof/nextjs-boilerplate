@@ -1,16 +1,17 @@
 "use client";
 
 import ProjektItem from '@/src/components/projekt/page';
+import Link from 'next/link';
 import React from 'react';
 
 export default function ProductPage() {
 
   const TargetElementItems = [
+    { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und verarbeitet (verbucht) werden " },
     { Element: "Gesetzliche Vorgaben: Firmen mit mindestens 60.000 € Gewinn oder mindestens 300.000 € Umsatz müssen Unterlagen revisionssicher und DSGVO-konform speichern" },
     { Element: "Strafen: 2 % des Jahresumsatzes, max. 2,5 Mio. € für Alle Unternehmen in der Gruppe" },
     { Element: "Aufbewahrung: Bis zu 10 Jahre je nach Dokumentart" },
     { Element: "DMS-Lösung: Erfüllt gesetzliche Anforderungen" },
-    { Element: "Ab dem 1. Januar  2025: Firmen müssen Rechnungen digital erstellen, empfangen und verarbeitet (verbucht) werden " },
     { Element: "Aktueller Prozess: Manuell und Papierbasiert, zeit- und kostenintensiv" },
   ];
 
@@ -20,7 +21,6 @@ export default function ProductPage() {
     { Element: "Verbindet Buchhaltungssoftware mit Dokumentensoftware" },
     { Element: "Ermöglicht effizientere Arbeitsweise" },
     { Element: "Sorgt für eine reibungslose Datenübertragung" },
-    { Element: "Alles Regelkonform" },
   ];
 
   const TargetElementItems2 = [
@@ -113,6 +113,9 @@ export default function ProductPage() {
         <ProjektItem Item={TargetItem3} />
         <ProjektItem Item={TargetItem4} />
         <ProjektItem Item={TargetItem5} />
+
+
+        <Link href="/info#Pricing">Zum Preismodell</Link>
       </div>
 
     </div>

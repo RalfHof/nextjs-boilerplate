@@ -80,6 +80,11 @@ export default function Footer() {
             <li>
               <Link href="/product">Produkt Beschreibung</Link>
             </li>
+
+            <li>
+              <Link href="/diagramm">Diagramm</Link>
+            </li>
+
             <li>
               <Link href="/fragen">Fragen</Link>
             </li>
