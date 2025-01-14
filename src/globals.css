@@ -673,6 +673,10 @@ a:hover {
   #ApplicationDiv {
     margin-bottom: 40px;
   }
+
+  .footer-content-div {
+    top: 10px;
+  }
 }
 
 /* ---------------------------------------*/
@@ -1394,7 +1398,7 @@ a:hover {
   }
 }
 
-@media (max-width:850px) {
+@media (max-width:860px) {
 
   .MessagesFromBackendContact {
     display: flex;
@@ -1404,6 +1408,11 @@ a:hover {
     margin-top: 30px;
     font-size: 25px;
   }
+
+  .BtnHomeContainer a {
+    padding: 10px 10px;
+  }
+
 }
 
 
@@ -1700,6 +1709,14 @@ a:hover {
   padding-bottom: 150px;
 }
 
+@media (max-width:922px) {
+
+  .ContainerHome {
+    padding-bottom: 220px;
+
+  }
+}
+
 .HomeImg {
   position: absolute;
   background-image: url("/img/hero-bg.png");
@@ -1787,15 +1804,128 @@ a:hover {
   background-color: #fff;
 }
 
-@media (max-width: 622px) {
-  .BtnDesign {
-    padding: 12px 15px;
+@media (max-width: 660px) {
+
+  .BtnHomeContainer a {
+    font-size: 1.1rem;
   }
 }
 
-@media (max-width: 455px) {
-  .BtnDesign {
-    padding: 12px 10px;
+@media (max-width: 572px) {
+
+
+
+  .HeaderContent {
+    top: -80px;
+  }
+
+  .HeaderContent h1 span {
+    font-size: 4rem;
+  }
+
+  .HeaderContent p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width:700px) {
+
+  .ContainerHome {
+    padding-bottom: 0px;
+  }
+
+  .HeaderItems {
+    font-size: 3rem;
+  }
+
+  .rightitem .project-title {
+    font-size: 2rem;
+  }
+
+  .rightitem {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 532px) {
+
+  .BtnHomeContainer a {
+    font-size: 1rem;
+
+    padding: 2%;
+  }
+}
+
+
+@media (max-width: 471px) {
+
+  .BtnHomeContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-right: 12px;
+    padding: 5px;
+  }
+
+  body {
+    width: 110%;
+  }
+}
+
+@media (max-width: 441px) {
+
+  .BtnHomeContainer a {
+    margin-right: 6px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 426px) {
+
+  .BtnHomeContainer a {
+    font-size: 0.9rem;
+  }
+
+  body {
+    width: 120%;
+  }
+}
+
+@media (max-width: 390px) {
+
+  body {
+    width: 130%;
+  }
+}
+
+@media (max-width: 361px) {
+
+  body {
+    width: 140%;
+  }
+}
+
+
+@media (max-width: 336px) {
+
+  body {
+    width: 150%;
+  }
+}
+
+@media (max-width: 312px) {
+
+  body {
+    width: 160%;
+  }
+}
+
+@media (max-width: 294px) {
+
+  body {
+    width: 170%;
   }
 }
 
@@ -1920,9 +2050,12 @@ details p {
 
 .section {
   border: 1px solid #F2C76E;
+  margin: 0;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .section-title {
