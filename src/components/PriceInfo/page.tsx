@@ -76,6 +76,7 @@ export default function PriceInfoModul() {
                                 <PriceCard Item={PriceItemFree} />
                                 <PriceCard Item={PriceItemStandard} />
                                 <PriceCard Item={PriceItemPremium} />
+
                             </>
                         ) : (
                             <>
@@ -83,10 +84,12 @@ export default function PriceInfoModul() {
                                 <PriceCard Item={PriceItemStandardJahr} />
                                 <PriceCard Item={PriceItemPremiumJahr} />
                             </>
+
                         )}
 
                     </div>
                 </div>
+                    <Link href="/info#Pricing">Zum Preismodell</Link>
             </div>
         </>
     );
