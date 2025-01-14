@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Diagramm() {
@@ -7,9 +8,9 @@ export default function Diagramm() {
         <div className="Diagramm">
             <h1>Linkify Infrastruktur</h1>
 
-            <img src="/img/linkify-diagramm.jpg" alt="Linkify-Diagramm" />
+            <Image width={1000} height={200} src="/img/linkify-diagramm.jpg" alt="Linkify-Diagramm" />
 
-<br />
+            <br />
             <Link href="https://app.linkify.cloud">Get Started</Link>
         </div>
     </>)
