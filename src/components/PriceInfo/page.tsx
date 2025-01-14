@@ -89,7 +89,9 @@ export default function PriceInfoModul() {
 
                     </div>
                 </div>
+                <div className="LinkSame">
                     <Link href="/info#Pricing">Zum Preismodell</Link>
+                </div>
             </div>
         </>
     );

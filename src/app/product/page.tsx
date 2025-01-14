@@ -29,7 +29,7 @@ export default function ProductPage() {
     { Element: "Reduzierung der Bearbeitungs- und Arbeitszeit" },
     { Element: "Steigerung der Gesamteffizienz in Geschäftsprozessen" },
   ];
-  
+
   const TargetElementItems3 = [
     { Element: "Benutzerfreundliche Oberfläche von Linkify" },
     { Element: "Einfache Einrichtung ohne technische Vorkenntnisse" },
@@ -104,9 +104,8 @@ export default function ProductPage() {
     <div className="project-item product-item">
       <h1 className="HeaderItems productheader">Produktseite</h1>
       <div className='ContainerHeader ContainerProduct'>
+
         <ProjektItem Item={TargetItem} />
-
-
         <ProjektItem Item={TargetItem1} />
         <ProjektItem Item={TargetItem2} />
         <ProjektItem Item={TargetItem3} />
@@ -114,9 +113,10 @@ export default function ProductPage() {
         <ProjektItem Item={TargetItem5} />
 
 
-        <Link href="/info#Pricing">Zum Preismodell</Link>
+        <div className='LinkSame'>
+          <Link href="/info#Pricing">Zum Preismodell</Link>
+        </div>
       </div>
-
     </div>
   </>
   );
